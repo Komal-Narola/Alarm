@@ -13,11 +13,13 @@
 		DD9902D317969758006D1C48 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD9902D117969758006D1C48 /* InfoPlist.strings */; };
 		DD9902D517969758006D1C48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9902D417969758006D1C48 /* main.m */; };
 		DD9902D917969758006D1C48 /* YELAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9902D817969758006D1C48 /* YELAppDelegate.m */; };
-		DD9902DB17969758006D1C48 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9902DA17969758006D1C48 /* Default.png */; };
-		DD9902DD17969758006D1C48 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9902DC17969758006D1C48 /* Default@2x.png */; };
-		DD9902DF17969758006D1C48 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9902DE17969758006D1C48 /* Default-568h@2x.png */; };
 		DD9902E217969758006D1C48 /* YELViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9902E117969758006D1C48 /* YELViewController.m */; };
 		DD9902E517969758006D1C48 /* YELViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD9902E317969758006D1C48 /* YELViewController.xib */; };
+		DD9902EC1796987D006D1C48 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9902EB1796987D006D1C48 /* Default@2x.png */; };
+		DD9902EE179698D6006D1C48 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9902ED179698D6006D1C48 /* Default.png */; };
+		DD9902F0179698F6006D1C48 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9902EF179698F6006D1C48 /* Default-568h@2x.png */; };
+		DD9902F31796A2AC006D1C48 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9902F21796A2AC006D1C48 /* icon.png */; };
+		DD9902F51796A2B5006D1C48 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9902F41796A2B5006D1C48 /* icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,12 +33,14 @@
 		DD9902D617969758006D1C48 /* Alarm-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Alarm-Prefix.pch"; sourceTree = "<group>"; };
 		DD9902D717969758006D1C48 /* YELAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YELAppDelegate.h; sourceTree = "<group>"; };
 		DD9902D817969758006D1C48 /* YELAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YELAppDelegate.m; sourceTree = "<group>"; };
-		DD9902DA17969758006D1C48 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		DD9902DC17969758006D1C48 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		DD9902DE17969758006D1C48 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DD9902E017969758006D1C48 /* YELViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YELViewController.h; sourceTree = "<group>"; };
 		DD9902E117969758006D1C48 /* YELViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YELViewController.m; sourceTree = "<group>"; };
 		DD9902E417969758006D1C48 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/YELViewController.xib; sourceTree = "<group>"; };
+		DD9902EB1796987D006D1C48 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		DD9902ED179698D6006D1C48 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		DD9902EF179698F6006D1C48 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		DD9902F21796A2AC006D1C48 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		DD9902F41796A2B5006D1C48 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		DD9902BC17969758006D1C48 = {
 			isa = PBXGroup;
 			children = (
+				DD9902F41796A2B5006D1C48 /* icon@2x.png */,
+				DD9902F21796A2AC006D1C48 /* icon.png */,
 				DD9902CE17969758006D1C48 /* Alarm */,
 				DD9902C717969758006D1C48 /* Frameworks */,
 				DD9902C617969758006D1C48 /* Products */,
@@ -100,9 +106,9 @@
 				DD9902D117969758006D1C48 /* InfoPlist.strings */,
 				DD9902D417969758006D1C48 /* main.m */,
 				DD9902D617969758006D1C48 /* Alarm-Prefix.pch */,
-				DD9902DA17969758006D1C48 /* Default.png */,
-				DD9902DC17969758006D1C48 /* Default@2x.png */,
-				DD9902DE17969758006D1C48 /* Default-568h@2x.png */,
+				DD9902ED179698D6006D1C48 /* Default.png */,
+				DD9902EB1796987D006D1C48 /* Default@2x.png */,
+				DD9902EF179698F6006D1C48 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -160,10 +166,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD9902D317969758006D1C48 /* InfoPlist.strings in Resources */,
-				DD9902DB17969758006D1C48 /* Default.png in Resources */,
-				DD9902DD17969758006D1C48 /* Default@2x.png in Resources */,
-				DD9902DF17969758006D1C48 /* Default-568h@2x.png in Resources */,
 				DD9902E517969758006D1C48 /* YELViewController.xib in Resources */,
+				DD9902EC1796987D006D1C48 /* Default@2x.png in Resources */,
+				DD9902EE179698D6006D1C48 /* Default.png in Resources */,
+				DD9902F0179698F6006D1C48 /* Default-568h@2x.png in Resources */,
+				DD9902F31796A2AC006D1C48 /* icon.png in Resources */,
+				DD9902F51796A2B5006D1C48 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +272,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Alarm/Alarm-Prefix.pch";
 				INFOPLIST_FILE = "Alarm/Alarm-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -275,7 +285,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Alarm/Alarm-Prefix.pch";
 				INFOPLIST_FILE = "Alarm/Alarm-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
