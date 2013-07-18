@@ -1,0 +1,37 @@
+//
+//  YELSysConfig.h
+//  Alarm
+//
+//  Created by rock on 13-7-18.
+//  Copyright (c) 2013年 Ye Erliang. All rights reserved.
+//
+
+
+#ifndef YELSysConfig_h
+#define YELSysConfig_h
+
+//DEBUG  模式下打印日志,当前行
+#ifdef DEBUG
+#   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#   define DLog(...)
+#endif
+//NSUserDefaults 实例化
+#define USER_DEFAULT [NSUserDefaults standardUserDefaults]
+#define PLATFORM @"1"
+#define ACCOUNT @"account"
+#define PWD @"passWord"
+//wangjc
+//123456
+//读取本地图片
+#define LOADIMAGE(file,ext) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:ext]]
+
+//定义UIImage对象
+#define IMAGE(A) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:A ofType:nil]]
+
+//定义一个API
+#define APIURL                @"http://202.99.45.117:20881/minf/api/"
+//登陆API
+#define APILogin              [APIURL stringByAppendingString:@"user/login.json"]
+
+#endif

@@ -7,7 +7,7 @@
 //
 
 #import "YELAppDelegate.h"
-
+#import "ETNavigationViewController.h"
 #import "YELViewController.h"
 
 @implementation YELAppDelegate
@@ -16,8 +16,9 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[YELViewController alloc] initWithNibName:@"YELViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    YELViewController *yelViewcontroller= [[YELViewController alloc] initWithNibName:@"YELViewController" bundle:nil];
+    ETNavigationViewController *navigationController=[[ETNavigationViewController alloc]initWithRootViewController:yelViewcontroller];
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }

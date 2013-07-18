@@ -11,4 +11,7 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import "YELSysConfig.h"
+    #import "MBHUDView.h"
+    #import "YELHttpHelper.h"
 #endif

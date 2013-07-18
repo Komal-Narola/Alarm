@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YELViewController : UIViewController
+@interface YELViewController : UIViewController<UITextFieldDelegate>
+
 
 @end
