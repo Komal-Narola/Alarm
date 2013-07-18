@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YELMainControllerViewController : UIViewController
+@interface YELMainControllerViewController : UIViewController<UIScrollViewDelegate>
 
 @end

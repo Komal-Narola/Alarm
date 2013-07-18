@@ -30,7 +30,7 @@
     NSString *pwd=[USER_DEFAULT objectForKey:PWD];
     if(pwd!=nil) {
         [self.rememberButton setSelected:YES];
-        [self sendRequest];
+        [self sendRequest:pwd];
     }
 }
 - (void)viewDidLoad
@@ -90,7 +90,7 @@
         [USER_DEFAULT removeObjectForKey:PWD];
         [USER_DEFAULT synchronize];
     }
-    [self sendRequest];
+    [self sendRequest:self.pwdTextField.text];
 }
 -(void)viewWillDisappear:(BOOL)animated
 {
@@ -108,10 +108,9 @@
     [super touchesBegan:touches withEvent:event];
     [self.view endEditing:YES];
 }
--(void)sendRequest
+-(void)sendRequest :(NSString *)pwd
 {
     NSString *account=[USER_DEFAULT objectForKey:ACCOUNT];
-    NSString *pwd=[USER_DEFAULT objectForKey:PWD];
     NSString *udid=[OpenUDID value];
     NSDictionary*dict=[NSDictionary dictionaryWithObjectsAndKeys:account,@"name",
                        pwd,@"pwd",
@@ -121,6 +120,11 @@
     [[YELHttpHelper defaultHelper]loginWithParamter:dict sucess:^(NSDictionary *dict) {
         DLog(@"aaa=%@",dict);
         if ([[dict objectForKey:@"code"] intValue]==0) {
+            NSString *token=[dict objectForKey:@"data"];
+            if (token!=nil) {
+                [USER_DEFAULT setObject:token forKey:@"token"];
+                [USER_DEFAULT synchronize];
+            }
             YELMainControllerViewController *mainController=[[YELMainControllerViewController alloc]initWithNibName:@"YELMainControllerViewController" bundle:nil];
             [self .navigationController pushViewController:mainController animated:YES];
         }else

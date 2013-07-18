@@ -8,6 +8,7 @@
 
 #import "YELSettingControllerViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "YELChangePwdViewController.h"
 @interface YELSettingControllerViewController ()
 @property (weak, nonatomic) IBOutlet UIView *setView;
 - (IBAction)logOut:(UIButton *)sender;
@@ -29,7 +30,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    DLog(@"aaaaa=%@",NSStringFromCGRect(self.setView.frame));
     [self.setView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
     [self.setView.layer setBorderWidth:1.0];
     [self.setView.layer setShadowColor:[UIColor blackColor].CGColor];
@@ -49,8 +49,12 @@
     [super viewDidUnload];
 }
 - (IBAction)logOut:(UIButton *)sender {
+    [USER_DEFAULT removeObjectForKey:PWD];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (IBAction)changePwd:(UIButton *)sender {
+    YELChangePwdViewController *changePwdController=[[YELChangePwdViewController alloc]initWithNibName:@"YELChangePwdViewController" bundle:nil];
+    [self.navigationController pushViewController:changePwdController animated:YES];
 }
 @end
