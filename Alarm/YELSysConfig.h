@@ -31,6 +31,8 @@
 
 //定义一个API
 #define APIURL                @"http://202.99.45.117:20881/minf/api/"
+//图片下载地址
+#define IMAGEURL                @"http://202.99.45.117:20881/minf/"
 //登陆API
 #define APILogin              [APIURL stringByAppendingString:@"user/login.json"]
 //修改密码API

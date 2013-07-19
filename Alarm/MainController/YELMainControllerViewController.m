@@ -44,19 +44,9 @@
                 [self initTopScrollView:[array count]];
                 for (int i=0; i<[array count]; i++) {
                     NSString *path=[[array objectAtIndex:i]objectForKey:@"URI"];
-                    NSString *url=[APIURL stringByAppendingString:path];
+                    NSString *url=[IMAGEURL stringByAppendingString:path];
                     UIImageView *imageView=[[UIImageView alloc]initWithFrame:CGRectMake(320*i, 0, 320, 120)];
                     [imageView setImageWithURL:[NSURL URLWithString:url]];
-                    if (i==0) {
-                        [imageView setBackgroundColor:[UIColor blueColor]];
-                    }else if (i==1)
-                    {
-                        [imageView setBackgroundColor:[UIColor redColor]];
-                    }else
-                    {
-                        [imageView setBackgroundColor:[UIColor yellowColor]];
-                    }
-                    
                     [topScrollView addSubview:imageView];
                 }
             }
@@ -76,7 +66,6 @@
     topScrollView.pagingEnabled=YES;
     topScrollView.delegate=self;
     [topScrollView setContentSize:CGSizeMake(320*count, 120)];
-    [topScrollView setBackgroundColor:[UIColor yellowColor]];
     [self.view addSubview:topScrollView];
     //pageControl
     pageControl = [[StyledPageControl alloc] initWithFrame:CGRectMake(136, 103, 50, 15)];
