@@ -14,4 +14,6 @@
 - (void)changePwdWithParamter:(NSDictionary *)dictionary sucess:(void (^) (NSDictionary *))sucess falid:(void (^) (NSString *errorMsg))faild;
 //下载首页图片
 - (void)getImageWithParamter:(NSDictionary *)dictionary sucess:(void (^) (NSDictionary *))sucess falid:(void (^) (NSString *errorMsg))faild;
+//待办事项
+- (void)getTodoListWithParamter:(NSDictionary *)dictionary sucess:(void (^) (NSDictionary *))sucess falid:(void (^) (NSString *errorMsg))faild;
 @end

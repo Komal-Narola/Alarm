@@ -21,10 +21,13 @@
 #define PLATFORM @"1"
 #define ACCOUNT @"account"
 #define PWD @"passWord"
+#define TOKEN [USER_DEFAULT objectForKey:@"token"]
+#define PAGESIZE @"10"
+
 //wangjc
 //123456
 //读取本地图片
-#define LOADIMAGE(file,ext) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:ext]]
+#define LOADIMAGE(file,png) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:png]]
 
 //定义UIImage对象
 #define IMAGE(A) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:A ofType:nil]]
@@ -39,4 +42,6 @@
 #define APIChangePwd              [APIURL stringByAppendingString:@"user/modifyPwd.json"]
 //获取图片API
 #define APIGetImage              [APIURL stringByAppendingString:@"image/getImages.json"]
+//获取待办事项API
+#define APIGetOrderList              [APIURL stringByAppendingString:@"waitOrder/getOrderList.json"]
 #endif

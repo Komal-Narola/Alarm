@@ -10,12 +10,19 @@
 #import "YELSettingControllerViewController.h"
 #import "UIImageView+WebCache.h"
 #import "StyledPageControl.h"
+#import "YELSystemRunStateViewController.h"
+#import "YELAlarmNumberViewController.h"
+#import "YELAlarmListViewController.h"
+#import "YELProvinceAlarmStatisticsViewController.h"
+#import "YELTodoListViewController.h"
+#import "YELHeadquartersAlarmTrendViewController.h"
+
 @interface YELMainControllerViewController ()
 {
-    UIScrollView *topScrollView;
-    UIScrollView *bottomScrollView;
     StyledPageControl *pageControl;
 }
+@property (weak, nonatomic) IBOutlet UIScrollView *bottomScrollview;
+@property (weak, nonatomic) IBOutlet UIScrollView *topScrollview;
 @end
 
 @implementation YELMainControllerViewController
@@ -31,6 +38,7 @@
     }
     return self;
 }
+/*
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -56,23 +64,24 @@
         }];
     }
 }
+ */
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self initTopScrollView:3];
+    [self initBottomScrollview];
 }
 -(void)initTopScrollView:(int)count
 {
-    topScrollView=[[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, 320, 120)];
-    topScrollView.pagingEnabled=YES;
-    topScrollView.delegate=self;
-    [topScrollView setContentSize:CGSizeMake(320*count, 120)];
-    [self.view addSubview:topScrollView];
+    [self.topScrollview setContentSize:CGSizeMake(320*count, 120)];
+    [self.topScrollview setBackgroundColor:[UIColor greenColor]];
     //pageControl
     pageControl = [[StyledPageControl alloc] initWithFrame:CGRectMake(136, 103, 50, 15)];
     [pageControl setPageControlStyle:PageControlStyleThumb];
     [pageControl setThumbImage:[UIImage imageNamed:@"pagecontrol-thumb-normal.png"]];
     [pageControl setSelectedThumbImage:[UIImage imageNamed:@"pagecontrol-thumb-selected.png"]];
     [pageControl setNumberOfPages:count];
+    [pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:pageControl];
 }
 - (void)changePage:(id)sender
@@ -80,19 +89,85 @@
     int page = pageControl.currentPage;
     
 	// update the scroll view to the appropriate page
-    CGRect frame = topScrollView.frame;
+    CGRect frame = self.topScrollview.frame;
     frame.origin.x = frame.size.width * page;
     frame.origin.y = 0;
-    [topScrollView scrollRectToVisible:frame animated:YES];
+    [self.topScrollview scrollRectToVisible:frame animated:YES];
     
 	// Set the boolean used when scrolls originate from the UIPageControl. See scrollViewDidScroll: above.
 //    pageControlUsed = YES;
 }
 
--(void)initUiKit
+-(void)initBottomScrollview
 {
 
+    [self.bottomScrollview setContentSize:CGSizeMake(640, self.bottomScrollview.frame.size.height)];
+    int num=1;
+    for (int i =0; i<3; i++) {
+        for (int y =0 ; y<2; y++) {
+            UIButton *button=[UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame=CGRectMake(20*(i+1) + (i*80), 40+(y*120), 80, 80);
+            [button setBackgroundColor:[UIColor redColor]];
+            NSArray *buttonArray=[NSArray arrayWithObjects:
+                            [NSArray arrayWithObjects:@"",@"", nil],
+                            [NSArray arrayWithObjects:@"",@"",nil],
+                            [NSArray arrayWithObjects:@"",@"", nil],
+                            nil];
+            [button setBackgroundImage:LOADIMAGE([[buttonArray objectAtIndex:i] objectAtIndex:y], @"png") forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(pressButton:) forControlEvents:UIControlEventTouchUpInside];
+            button.tag=num;
+            num++;
+            [self.bottomScrollview addSubview:button];
+            
+            float orgin= [YELUtil orginfromView:button];
+            UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(20*(i+1) + (i*80),orgin+5, 80, 20)];
+            NSArray *array=[NSArray arrayWithObjects:
+                             [NSArray arrayWithObjects:@"系统运行状态",@"告警排名", nil],
+                             [NSArray arrayWithObjects:@"当前告警列表",@"省份告警统计",nil],
+                             [NSArray arrayWithObjects:@"待办事项",@"总部告警趋势", nil],
+                             nil];
+            [label setFont:[UIFont systemFontOfSize:13]];
+            [label setTextAlignment:NSTextAlignmentCenter];
+            [label setBackgroundColor:[UIColor clearColor]];
+            label.text=[[array objectAtIndex:i]objectAtIndex:y];
+            [self.bottomScrollview addSubview:label];
+        }
+    }
     
+}
+-(void)pressButton:(UIButton *)sender
+{
+    if (sender.tag==1) {
+        
+        YELSystemRunStateViewController *system=[[YELSystemRunStateViewController alloc]initWithNibName:@"YELSystemRunStateViewController" bundle:nil];
+        [self.navigationController pushViewController:system animated:YES];
+        
+    }else if (sender.tag==2)
+    {
+        YELAlarmNumberViewController *alarmNumber=[[YELAlarmNumberViewController alloc]initWithNibName:@"YELAlarmNumberViewController" bundle:nil];
+        [self.navigationController pushViewController:alarmNumber animated:YES];
+        
+    }else if (sender.tag==3)
+    {
+        YELAlarmListViewController *alarmList=[[YELAlarmListViewController alloc]initWithNibName:@"YELAlarmListViewController" bundle:nil];
+        [self.navigationController pushViewController:alarmList animated:YES];
+        
+    }else if (sender.tag==4)
+    {
+        YELProvinceAlarmStatisticsViewController *province=[[YELProvinceAlarmStatisticsViewController alloc]initWithNibName:@"YELProvinceAlarmStatisticsViewController" bundle:nil];
+        [self.navigationController pushViewController:province animated:YES];
+        
+    }else if (sender.tag==5)
+    {
+        YELTodoListViewController *todoList=[[YELTodoListViewController alloc]initWithNibName:@"YELTodoListViewController" bundle:nil];
+        [self.navigationController pushViewController:todoList animated:YES];
+        
+    }else if (sender.tag==6)
+    {
+        YELHeadquartersAlarmTrendViewController *headquarters=[[YELHeadquartersAlarmTrendViewController alloc]initWithNibName:@"YELHeadquartersAlarmTrendViewController" bundle:nil];
+        [self.navigationController pushViewController:headquarters animated:YES];
+        
+    }
 }
 - (void)didReceiveMemoryWarning
 {
@@ -116,15 +191,16 @@
     UIBarButtonItem *rightBarButtonItem= [[UIBarButtonItem alloc] initWithCustomView:setButton];
     return rightBarButtonItem;
 }
+
 - (void)viewDidUnload {
-    topScrollView=nil;
-    bottomScrollView=nil;
+    [self setTopScrollview:nil];
+    [self setBottomScrollview:nil];
     [super viewDidUnload];
 }
 #pragma mark Scorllview Delegate
 - (void)scrollViewDidScroll:(UIScrollView *)sender
 {
-    if (sender==topScrollView) {
+    if (sender==self.topScrollview) {
         CGFloat pageWidth = sender.frame.size.width;
         int page = floor((sender.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
         pageControl.currentPage = page;
