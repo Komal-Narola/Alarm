@@ -23,6 +23,7 @@
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *bottomScrollview;
 @property (weak, nonatomic) IBOutlet UIScrollView *topScrollview;
+@property (weak, nonatomic) IBOutlet UIImageView *bottomBackImage;
 @end
 
 @implementation YELMainControllerViewController
@@ -81,7 +82,7 @@
     [pageControl setThumbImage:[UIImage imageNamed:@"pagecontrol-thumb-normal.png"]];
     [pageControl setSelectedThumbImage:[UIImage imageNamed:@"pagecontrol-thumb-selected.png"]];
     [pageControl setNumberOfPages:count];
-    [pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
+//    [pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:pageControl];
 }
 - (void)changePage:(id)sender
@@ -101,6 +102,8 @@
 -(void)initBottomScrollview
 {
 
+    UIImage *image=[LOADIMAGE(@"mainPageBackGround@2x",@"png") resizableImageWithCapInsets:UIEdgeInsetsMake(50, 1, 1, 1) resizingMode:UIImageResizingModeStretch];
+    self.bottomBackImage.image=image;
     [self.bottomScrollview setContentSize:CGSizeMake(640, self.bottomScrollview.frame.size.height)];
     int num=1;
     for (int i =0; i<3; i++) {
@@ -195,6 +198,7 @@
 - (void)viewDidUnload {
     [self setTopScrollview:nil];
     [self setBottomScrollview:nil];
+    [self setBottomBackImage:nil];
     [super viewDidUnload];
 }
 #pragma mark Scorllview Delegate

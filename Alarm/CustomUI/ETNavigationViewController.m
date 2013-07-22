@@ -26,10 +26,18 @@ NSString *const kETNavigationControllerBack = @"kETNavigationControllerBack";
     }
     return self;
 }
-
+-(void)loadView
+{
+    [super loadView];
+    UIImage *image=[UIImage imageNamed:@"naviLine.png"];
+    UIImageView *lineImageView=[[UIImageView alloc]initWithImage:image];
+    lineImageView.frame=CGRectMake(0, 43, image.size.width ,image.size.height);
+    [self.navigationBar addSubview:lineImageView];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view.
 }
 
