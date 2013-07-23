@@ -19,11 +19,10 @@
 
 @interface YELMainControllerViewController ()
 {
-    StyledPageControl *pageControl;
+    UIPageControl *pageControl;
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *bottomScrollview;
 @property (weak, nonatomic) IBOutlet UIScrollView *topScrollview;
-@property (weak, nonatomic) IBOutlet UIImageView *bottomBackImage;
 @end
 
 @implementation YELMainControllerViewController
@@ -59,7 +58,7 @@
                 for (int i=0; i<[array count]; i++) {
                     NSString *path=[[array objectAtIndex:i]objectForKey:@"URI"];
                     NSString *url=[IMAGEURL stringByAppendingString:path];
-                    UIImageView *imageView=[[UIImageView alloc]initWithFrame:CGRectMake(320*i, 0, 320, 120)];
+                    UIImageView *imageView=[[UIImageView alloc]initWithFrame:CGRectMake(self.topScrollview.bounds.size.width*i, 0, self.topScrollview.bounds.size.width, self.topScrollview.bounds.size.height)];
                     [imageView setImageWithURL:[NSURL URLWithString:url]];
                     [self.topScrollview addSubview:imageView];
                 }
@@ -75,41 +74,36 @@
 -(void)initTopScrollView:(int)count
 {
     [self.topScrollview setContentSize:CGSizeMake(320*count, 120)];
-    [self.topScrollview setBackgroundColor:[UIColor greenColor]];
-    //pageControl
-    pageControl = [[StyledPageControl alloc] initWithFrame:CGRectMake(136, 103, 50, 15)];
-    [pageControl setPageControlStyle:PageControlStyleThumb];
-    [pageControl setThumbImage:[UIImage imageNamed:@"pagecontrol-thumb-normal.png"]];
-    [pageControl setSelectedThumbImage:[UIImage imageNamed:@"pagecontrol-thumb-selected.png"]];
-    [pageControl setNumberOfPages:count];
-//    [pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
+    pageControl=[[UIPageControl alloc]initWithFrame:CGRectMake(136, 123, 50, 15)];
+    pageControl.numberOfPages=count;
+    [pageControl setPageIndicatorTintColor:[UIColor whiteColor]];
+    [pageControl setCurrentPageIndicatorTintColor:[UIColor redColor]];
+    pageControl.defersCurrentPageDisplay=YES;
     [self.view addSubview:pageControl];
 }
-- (void)changePage:(id)sender
-{
-    int page = pageControl.currentPage;
-    
-	// update the scroll view to the appropriate page
-    CGRect frame = self.topScrollview.frame;
-    frame.origin.x = frame.size.width * page;
-    frame.origin.y = 0;
-    [self.topScrollview scrollRectToVisible:frame animated:YES];
-    
-	// Set the boolean used when scrolls originate from the UIPageControl. See scrollViewDidScroll: above.
-//    pageControlUsed = YES;
-}
+//- (void)changePage:(id)sender
+//{
+//    int page = pageControl.currentPage;
+//    
+//	// update the scroll view to the appropriate page
+//    CGRect frame = self.topScrollview.frame;
+//    frame.origin.x = frame.size.width * page;
+//    frame.origin.y = 0;
+//    [self.topScrollview scrollRectToVisible:frame animated:YES];
+//    
+//	// Set the boolean used when scrolls originate from the UIPageControl. See scrollViewDidScroll: above.
+////    pageControlUsed = YES;
+//}
 
 -(void)initBottomScrollview
 {
 
-    UIImage *image=[LOADIMAGE(@"mainPageBackGround@2x",@"png") resizableImageWithCapInsets:UIEdgeInsetsMake(50, 1, 1, 1) resizingMode:UIImageResizingModeStretch];
-    self.bottomBackImage.image=image;
     [self.bottomScrollview setContentSize:CGSizeMake(640, self.bottomScrollview.frame.size.height)];
     int num=1;
     for (int i =0; i<3; i++) {
         for (int y =0 ; y<2; y++) {
             UIButton *button=[UIButton buttonWithType:UIButtonTypeCustom];
-            button.frame=CGRectMake(20*(i+1) + (i*80), 10+(y*120), 80, 80);
+            button.frame=CGRectMake(20*(i+1) + (i*80), 30+(y*120), 80, 80);
             [button setBackgroundColor:[UIColor redColor]];
             NSArray *buttonArray=[NSArray arrayWithObjects:
                             [NSArray arrayWithObjects:@"",@"", nil],
@@ -199,7 +193,6 @@
 - (void)viewDidUnload {
     [self setTopScrollview:nil];
     [self setBottomScrollview:nil];
-    [self setBottomBackImage:nil];
     [super viewDidUnload];
 }
 #pragma mark Scorllview Delegate

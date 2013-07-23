@@ -18,6 +18,7 @@
         _dominLabel=[[UILabel alloc]init];
         [_dominLabel setBackgroundColor:[UIColor colorWithRed:102.0/255.0 green:102.0/255.0 blue:102.0/255.0 alpha:1.0]];
         [_dominLabel setTextColor:[UIColor whiteColor]];
+        [_dominLabel setAdjustsFontSizeToFitWidth:YES];
         [_dominLabel setTextAlignment:NSTextAlignmentCenter];
         [_dominLabel setFont:[UIFont systemFontOfSize:15.0]];
         [_dominLabel setNumberOfLines:0];
@@ -25,7 +26,7 @@
         [self.contentView addSubview:_dominLabel];
     
         _lineImageView1=[[UIImageView alloc]init];
-        [_lineImageView1 setBackgroundColor:[UIColor colorWithHexString:@"#cfcfcf"]];
+        [_lineImageView1 setBackgroundColor:[UIColor lightGrayColor]];
         [self.contentView addSubview:_lineImageView1];
         _lineImageView2=[[UIImageView alloc]init];
         [_lineImageView2 setBackgroundColor:[UIColor colorWithHexString:@"#cfcfcf"]];

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YELSettingControllerViewController : UIViewController
+@interface YELSettingControllerViewController : UIViewController<UIActionSheetDelegate>
 
 @end

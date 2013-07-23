@@ -19,5 +19,6 @@
 @property (nonatomic,strong)UIImageView *lineImageView2;
 @property (nonatomic,strong)UIImageView *lineImageView3;
 @property (nonatomic,strong)UIImageView *lineImageView4;
+@property (nonatomic,strong)UIImageView *bottomLine;
 + (NSUInteger)neededHeightForDescription:(NSString *)descriptio;
 @end

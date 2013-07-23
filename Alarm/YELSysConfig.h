@@ -44,6 +44,8 @@
 #define APIGetImage              [APIURL stringByAppendingString:@"image/getImages.json"]
 //获取系统运行状态API
 #define APIGetgetSystemState              [APIURL stringByAppendingString:@"systemstate/getSystemState.json"]
+//获取系统运行状态API
+#define APIGetgetAllProvinces              [APIURL stringByAppendingString:@"allprovinces/allprovince.json"]
 //获取待办事项API
 #define APIGetOrderList              [APIURL stringByAppendingString:@"waitOrder/getOrderList.json"]
 #endif

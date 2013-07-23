@@ -54,10 +54,17 @@
     [super viewDidUnload];
 }
 - (IBAction)logOut:(UIButton *)sender {
-    [USER_DEFAULT removeObjectForKey:PWD];
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}
+    UIActionSheet *actionSheet=[[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"退出登录" otherButtonTitles:nil, nil];
+    [actionSheet showInView:self.view];
 
+}
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex==0) {
+        [USER_DEFAULT removeObjectForKey:PWD];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+}
 - (IBAction)changePwd:(UIButton *)sender {
     YELChangePwdViewController *changePwdController=[[YELChangePwdViewController alloc]initWithNibName:@"YELChangePwdViewController" bundle:nil];
     [self.navigationController pushViewController:changePwdController animated:YES];

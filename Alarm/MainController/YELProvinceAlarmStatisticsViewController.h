@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface YELProvinceAlarmStatisticsViewController : UIViewController
+#import "PullingRefreshTableView.h"
+@interface YELProvinceAlarmStatisticsViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,PullingRefreshTableViewDelegate>
 
 @end

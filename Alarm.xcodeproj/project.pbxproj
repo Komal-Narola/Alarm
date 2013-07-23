@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6622BBA7179A6EBC00140AED /* PullingRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6622BBA6179A6EBC00140AED /* PullingRefreshTableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		662A7FC7179EC1E5000F5C83 /* YELPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 662A7FC6179EC1E5000F5C83 /* YELPopView.m */; };
+		662A7FCA179ECF44000F5C83 /* YELProvinecCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662A7FC9179ECF44000F5C83 /* YELProvinecCell.m */; };
 		66371D7E1798119600CD4ADC /* YELChangePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66371D7C1798119600CD4ADC /* YELChangePwdViewController.m */; };
 		66371D7F1798119600CD4ADC /* YELChangePwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66371D7D1798119600CD4ADC /* YELChangePwdViewController.xib */; };
 		66371D9E1798278300CD4ADC /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 66371D821798278300CD4ADC /* MKAnnotationView+WebCache.m */; };
@@ -125,6 +127,10 @@
 /* Begin PBXFileReference section */
 		6622BBA5179A6EBC00140AED /* PullingRefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullingRefreshTableView.h; sourceTree = "<group>"; };
 		6622BBA6179A6EBC00140AED /* PullingRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullingRefreshTableView.m; sourceTree = "<group>"; };
+		662A7FC5179EC1E5000F5C83 /* YELPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELPopView.h; sourceTree = "<group>"; };
+		662A7FC6179EC1E5000F5C83 /* YELPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELPopView.m; sourceTree = "<group>"; };
+		662A7FC8179ECF44000F5C83 /* YELProvinecCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELProvinecCell.h; sourceTree = "<group>"; };
+		662A7FC9179ECF44000F5C83 /* YELProvinecCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELProvinecCell.m; sourceTree = "<group>"; };
 		66371D7B1798119600CD4ADC /* YELChangePwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELChangePwdViewController.h; sourceTree = "<group>"; };
 		66371D7C1798119600CD4ADC /* YELChangePwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELChangePwdViewController.m; sourceTree = "<group>"; };
 		66371D7D1798119600CD4ADC /* YELChangePwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YELChangePwdViewController.xib; sourceTree = "<group>"; };
@@ -323,6 +329,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		662A7FC4179EC1AC000F5C83 /* UIKIT */ = {
+			isa = PBXGroup;
+			children = (
+				662A7FC5179EC1E5000F5C83 /* YELPopView.h */,
+				662A7FC6179EC1E5000F5C83 /* YELPopView.m */,
+			);
+			name = UIKIT;
+			sourceTree = "<group>";
+		};
 		66371D801798278300CD4ADC /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +390,8 @@
 				66833C11179A4E4200B01AA2 /* YELTodoListCell.m */,
 				DD0FBF4F179E671A009B7976 /* YELSystemStateCell.h */,
 				DD0FBF50179E671A009B7976 /* YELSystemStateCell.m */,
+				662A7FC8179ECF44000F5C83 /* YELProvinecCell.h */,
+				662A7FC9179ECF44000F5C83 /* YELProvinecCell.m */,
 			);
 			name = CustomCell;
 			sourceTree = "<group>";
@@ -593,6 +610,7 @@
 		DDF19E6C1797976700CE21C4 /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
+				662A7FC4179EC1AC000F5C83 /* UIKIT */,
 				66833C0F179A4E1B00B01AA2 /* CustomCell */,
 				66BB2FF7179A464900881EA3 /* PullingRefrestTableView */,
 				66371DB01798304500CD4ADC /* CustomPageControl */,
@@ -824,6 +842,8 @@
 				66833C12179A4E4200B01AA2 /* YELTodoListCell.m in Sources */,
 				6622BBA7179A6EBC00140AED /* PullingRefreshTableView.m in Sources */,
 				DD0FBF51179E671A009B7976 /* YELSystemStateCell.m in Sources */,
+				662A7FC7179EC1E5000F5C83 /* YELPopView.m in Sources */,
+				662A7FCA179ECF44000F5C83 /* YELProvinecCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

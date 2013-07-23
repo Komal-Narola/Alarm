@@ -13,6 +13,8 @@
     NSArray *_dataSource;
 }
 @property (weak, nonatomic) IBOutlet UITableView *_myTableView;
+- (IBAction)pressButton:(id)sender;
+
 @end
 
 @implementation YELSystemRunStateViewController
@@ -24,6 +26,7 @@ NSString *const Province= @"省分";
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.title=@"系统运行状态";
     }
     return self;
 }
@@ -48,7 +51,7 @@ NSString *const Province= @"省分";
             [MBHUDView hudWithBody:[dictionary objectForKey:@"msg"] type:MBAlertViewHUDTypeDefault hidesAfter:1.0 show:YES];
         }
     } falid:^(NSString *errorMsg) {
-        
+            [MBHUDView hudWithBody:@"网络不给力" type:MBAlertViewHUDTypeDefault hidesAfter:1.0 show:YES];
     }];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -57,7 +60,6 @@ NSString *const Province= @"省分";
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    NSString *str=[[_dataSource objectAtIndex:indexPath.row]objectForKey:@"sys"];
     NSString *str=[[_dataSource objectAtIndex:indexPath.row]objectForKey:@"SYS"];
     NSInteger height=[YELSystemStateCell neededHeightForDescription:str];
     if (height<44) {
@@ -73,7 +75,7 @@ NSString *const Province= @"省分";
     dominLabel.text=@"所属域";
     [dominLabel setTextAlignment:NSTextAlignmentCenter];
     [dominLabel setFont:[UIFont boldSystemFontOfSize:15.0]];
-    [dominLabel setBackgroundColor:[UIColor colorWithRed:204.0/255.0 green:204.0/255.0 blue:204.0/255.0 alpha:1.0]];
+    [dominLabel setBackgroundColor:[UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1.0]];
     [headView addSubview:dominLabel];
     
     UILabel *systemLabel=[[UILabel alloc]initWithFrame:CGRectMake(73, 0, 105, 30)];
@@ -118,7 +120,7 @@ NSString *const Province= @"省分";
             
         }else
         {
-            cell.contentView.backgroundColor=[UIColor redColor];
+            cell.contentView.backgroundColor=[UIColor colorWithRed:240.0/255.0 green:240.0/255.0 blue:240.0/255.0 alpha:1.0];
         }
     }
     return cell;
@@ -139,13 +141,12 @@ NSString *const Province= @"省分";
     cell.dominLabel.text =dominStr;
     cell.dominLabel.frame=CGRectMake(0, 0, 72, height);
     cell.imageview.frame=CGRectMake(72-cell.imageview.image.size.width, cell.dominLabel.center.y-cell.imageview.image.size.height/2, cell.imageview.image.size.width, cell.imageview.image.size.height);
-    cell.lineImageView1.frame=CGRectMake(72, 0, 1, height);
+    cell.lineImageView1.frame=CGRectMake(0, height-1, 72, 1);
     cell.lineImageView2.frame=CGRectMake(178, 0, 1, height);
     cell.lineImageView3.frame=CGRectMake(225, 0, 1, height);
     cell.lineImageView4.frame=CGRectMake(272, 0, 1, height);
     
     cell.platformsImageView.image=[self getPic:pu];
-    NSLog(@"ssss=%@",cell.platformsImageView.image);
     cell.platformsImageView.frame=CGRectMake(179+23-cell.platformsImageView.image.size.width/2, height/2-cell.platformsImageView.image.size.height/2, cell.platformsImageView.image.size.width, cell.platformsImageView.image.size.height);
     cell.applyImageView.image=[self getPic:au];
     cell.applyImageView.frame=CGRectMake(226+23-cell.applyImageView.image.size.width/2, height/2-cell.applyImageView.image.size.height/2, cell.applyImageView.image.size.width, cell.applyImageView.image.size.height);
@@ -184,5 +185,9 @@ NSString *const Province= @"省分";
 {
     [self set_myTableView:nil];
     [super viewDidUnload];
+}
+- (IBAction)pressButton:(id)sender {
+    UIButton *button=(UIButton *)sender;
+
 }
 @end
