@@ -39,10 +39,15 @@
     }
     return self;
 }
-/*
+
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
     NSString *token=[USER_DEFAULT objectForKey:@"token"];
     if (token!=nil) {
         NSDictionary *dict=[NSDictionary dictionaryWithObject:token forKey:@"token"];
@@ -56,7 +61,7 @@
                     NSString *url=[IMAGEURL stringByAppendingString:path];
                     UIImageView *imageView=[[UIImageView alloc]initWithFrame:CGRectMake(320*i, 0, 320, 120)];
                     [imageView setImageWithURL:[NSURL URLWithString:url]];
-                    [topScrollView addSubview:imageView];
+                    [self.topScrollview addSubview:imageView];
                 }
             }
             
@@ -64,11 +69,6 @@
             
         }];
     }
-}
- */
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
     [self initTopScrollView:3];
     [self initBottomScrollview];
 }
@@ -109,14 +109,15 @@
     for (int i =0; i<3; i++) {
         for (int y =0 ; y<2; y++) {
             UIButton *button=[UIButton buttonWithType:UIButtonTypeCustom];
-            button.frame=CGRectMake(20*(i+1) + (i*80), 40+(y*120), 80, 80);
+            button.frame=CGRectMake(20*(i+1) + (i*80), 10+(y*120), 80, 80);
             [button setBackgroundColor:[UIColor redColor]];
             NSArray *buttonArray=[NSArray arrayWithObjects:
                             [NSArray arrayWithObjects:@"",@"", nil],
                             [NSArray arrayWithObjects:@"",@"",nil],
                             [NSArray arrayWithObjects:@"",@"", nil],
                             nil];
-            [button setBackgroundImage:LOADIMAGE([[buttonArray objectAtIndex:i] objectAtIndex:y], @"png") forState:UIControlStateNormal];
+//            [button setBackgroundImage:LOADIMAGE([[buttonArray objectAtIndex:i] objectAtIndex:y], @"png") forState:UIControlStateNormal];
+            [button setBackgroundColor:[UIColor yellowColor]];
             [button addTarget:self action:@selector(pressButton:) forControlEvents:UIControlEventTouchUpInside];
             button.tag=num;
             num++;

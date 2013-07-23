@@ -42,6 +42,15 @@
 		66BB2FF1179A426500881EA3 /* YELTodoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66BB2FEF179A426500881EA3 /* YELTodoListViewController.xib */; };
 		66BB2FF5179A42A500881EA3 /* YELHeadquartersAlarmTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66BB2FF3179A42A500881EA3 /* YELHeadquartersAlarmTrendViewController.m */; };
 		66BB2FF6179A42A500881EA3 /* YELHeadquartersAlarmTrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66BB2FF4179A42A500881EA3 /* YELHeadquartersAlarmTrendViewController.xib */; };
+		DD0FBF4D179E4369009B7976 /* buttonanzhu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBF4C179E4369009B7976 /* buttonanzhu@2x.png */; };
+		DD0FBF51179E671A009B7976 /* YELSystemStateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0FBF50179E671A009B7976 /* YELSystemStateCell.m */; };
+		DD0FBF53179E8135009B7976 /* zuosanjiao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBF52179E8135009B7976 /* zuosanjiao@2x.png */; };
+		DD0FBF5A179E92FB009B7976 /* er@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBF54179E92FB009B7976 /* er@2x.png */; };
+		DD0FBF5B179E92FB009B7976 /* fuyi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBF55179E92FB009B7976 /* fuyi@2x.png */; };
+		DD0FBF5C179E92FB009B7976 /* ling@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBF56179E92FB009B7976 /* ling@2x.png */; };
+		DD0FBF5D179E92FB009B7976 /* san@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBF57179E92FB009B7976 /* san@2x.png */; };
+		DD0FBF5E179E92FB009B7976 /* si@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBF58179E92FB009B7976 /* si@2x.png */; };
+		DD0FBF5F179E92FB009B7976 /* yi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBF59179E92FB009B7976 /* yi@2x.png */; };
 		DD1F7F341797A09900E2E571 /* naviLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F7F331797A09900E2E571 /* naviLine@2x.png */; };
 		DD1F7F361797ACE300E2E571 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1F7F351797ACE300E2E571 /* QuartzCore.framework */; };
 		DD1F7F3E1797B74100E2E571 /* loginBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F7F3D1797B74100E2E571 /* loginBtn@2x.png */; };
@@ -175,6 +184,16 @@
 		66BB2FF2179A42A500881EA3 /* YELHeadquartersAlarmTrendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELHeadquartersAlarmTrendViewController.h; sourceTree = "<group>"; };
 		66BB2FF3179A42A500881EA3 /* YELHeadquartersAlarmTrendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELHeadquartersAlarmTrendViewController.m; sourceTree = "<group>"; };
 		66BB2FF4179A42A500881EA3 /* YELHeadquartersAlarmTrendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YELHeadquartersAlarmTrendViewController.xib; sourceTree = "<group>"; };
+		DD0FBF4C179E4369009B7976 /* buttonanzhu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonanzhu@2x.png"; sourceTree = "<group>"; };
+		DD0FBF4F179E671A009B7976 /* YELSystemStateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELSystemStateCell.h; sourceTree = "<group>"; };
+		DD0FBF50179E671A009B7976 /* YELSystemStateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELSystemStateCell.m; sourceTree = "<group>"; };
+		DD0FBF52179E8135009B7976 /* zuosanjiao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zuosanjiao@2x.png"; sourceTree = "<group>"; };
+		DD0FBF54179E92FB009B7976 /* er@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "er@2x.png"; sourceTree = "<group>"; };
+		DD0FBF55179E92FB009B7976 /* fuyi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fuyi@2x.png"; sourceTree = "<group>"; };
+		DD0FBF56179E92FB009B7976 /* ling@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ling@2x.png"; sourceTree = "<group>"; };
+		DD0FBF57179E92FB009B7976 /* san@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "san@2x.png"; sourceTree = "<group>"; };
+		DD0FBF58179E92FB009B7976 /* si@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "si@2x.png"; sourceTree = "<group>"; };
+		DD0FBF59179E92FB009B7976 /* yi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yi@2x.png"; sourceTree = "<group>"; };
 		DD1F7F331797A09900E2E571 /* naviLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "naviLine@2x.png"; sourceTree = "<group>"; };
 		DD1F7F351797ACE300E2E571 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DD1F7F371797ADA400E2E571 /* YELSysConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELSysConfig.h; sourceTree = "<group>"; };
@@ -354,6 +373,8 @@
 			children = (
 				66833C10179A4E4200B01AA2 /* YELTodoListCell.h */,
 				66833C11179A4E4200B01AA2 /* YELTodoListCell.m */,
+				DD0FBF4F179E671A009B7976 /* YELSystemStateCell.h */,
+				DD0FBF50179E671A009B7976 /* YELSystemStateCell.m */,
 			);
 			name = CustomCell;
 			sourceTree = "<group>";
@@ -605,6 +626,13 @@
 				DD3EF079179D126D008700CD /* 13.png */,
 				DD3EF07A179D126D008700CD /* 14.png */,
 				DD3EF07B179D126D008700CD /* 16.png */,
+				DD0FBF54179E92FB009B7976 /* er@2x.png */,
+				DD0FBF55179E92FB009B7976 /* fuyi@2x.png */,
+				DD0FBF56179E92FB009B7976 /* ling@2x.png */,
+				DD0FBF57179E92FB009B7976 /* san@2x.png */,
+				DD0FBF58179E92FB009B7976 /* si@2x.png */,
+				DD0FBF59179E92FB009B7976 /* yi@2x.png */,
+				DD0FBF52179E8135009B7976 /* zuosanjiao@2x.png */,
 				DD3EF070179D1256008700CD /* popview@2x.png */,
 				DD3EF071179D1256008700CD /* redButton@2x.png */,
 				DD3EF072179D1256008700CD /* timeImageView@2x.png */,
@@ -614,6 +642,7 @@
 				DD3EF068179D124F008700CD /* bottomLine@2x.png */,
 				DD3EF069179D124F008700CD /* daosanjiao@2x.png */,
 				DD3EF06A179D124F008700CD /* daosanjiaoselect@2x.png */,
+				DD0FBF4C179E4369009B7976 /* buttonanzhu@2x.png */,
 				DD3EF063179D0A8C008700CD /* mainPageBackGround@2x.png */,
 				DD3EF05F179D046E008700CD /* pagecontrol-thumb-normal@2x.png */,
 				DD3EF060179D046F008700CD /* pagecontrol-thumb-selected@2x.png */,
@@ -723,6 +752,14 @@
 				DD3EF07D179D126D008700CD /* 13.png in Resources */,
 				DD3EF07E179D126D008700CD /* 14.png in Resources */,
 				DD3EF07F179D126D008700CD /* 16.png in Resources */,
+				DD0FBF4D179E4369009B7976 /* buttonanzhu@2x.png in Resources */,
+				DD0FBF53179E8135009B7976 /* zuosanjiao@2x.png in Resources */,
+				DD0FBF5A179E92FB009B7976 /* er@2x.png in Resources */,
+				DD0FBF5B179E92FB009B7976 /* fuyi@2x.png in Resources */,
+				DD0FBF5C179E92FB009B7976 /* ling@2x.png in Resources */,
+				DD0FBF5D179E92FB009B7976 /* san@2x.png in Resources */,
+				DD0FBF5E179E92FB009B7976 /* si@2x.png in Resources */,
+				DD0FBF5F179E92FB009B7976 /* yi@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -786,6 +823,7 @@
 				66BB2FF5179A42A500881EA3 /* YELHeadquartersAlarmTrendViewController.m in Sources */,
 				66833C12179A4E4200B01AA2 /* YELTodoListCell.m in Sources */,
 				6622BBA7179A6EBC00140AED /* PullingRefreshTableView.m in Sources */,
+				DD0FBF51179E671A009B7976 /* YELSystemStateCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

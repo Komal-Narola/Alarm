@@ -30,14 +30,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self initUiKit];
+    
+    // Do any additional setup after loading the view from its nib.
+}
+-(void)initUiKit
+{
     [self.setView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
     [self.setView.layer setBorderWidth:1.0];
+    [self.setView.layer setCornerRadius:5.0];
     [self.setView.layer setShadowColor:[UIColor blackColor].CGColor];
     [self.setView.layer setShadowOpacity:0.5];
     [self.setView.layer setShadowOffset:CGSizeMake(1, 1)];
-    // Do any additional setup after loading the view from its nib.
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

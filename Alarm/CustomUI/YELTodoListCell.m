@@ -15,15 +15,15 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        _timeLabel = [[ UILabel alloc]initWithFrame:CGRectZero];
-        _timeLabel.text=@"aaaaa";
-        [_timeLabel setBackgroundColor:[UIColor yellowColor]];
-        [self.contentView addSubview:_timeLabel];
-        
-        _nameLabel=[[UILabel alloc]initWithFrame:CGRectZero];
-        [_timeLabel setBackgroundColor:[UIColor redColor]];
-        _nameLabel.text=@"dddd";
-        [self.contentView addSubview:_nameLabel];
+//        _timeLabel = [[ UILabel alloc]initWithFrame:CGRectZero];
+//        _timeLabel.text=@"aaaaa";
+//        [_timeLabel setBackgroundColor:[UIColor yellowColor]];
+//        [self.contentView addSubview:_timeLabel];
+//        
+//        _nameLabel=[[UILabel alloc]initWithFrame:CGRectZero];
+//        [_timeLabel setBackgroundColor:[UIColor redColor]];
+//        _nameLabel.text=@"dddd";
+//        [self.contentView addSubview:_nameLabel];
     }
     return self;
 }

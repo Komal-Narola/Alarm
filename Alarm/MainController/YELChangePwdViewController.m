@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *oldPwdTextField;
 @property (weak, nonatomic) IBOutlet UITextField *changePwdTextField;
 @property (weak, nonatomic) IBOutlet UITextField *againPwdTextField;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
 
 - (IBAction)savePwd:(UIButton *)sender;
@@ -33,7 +34,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.saveButton.layer setCornerRadius:5.0];
     [self.pwdView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+    [self.pwdView.layer setCornerRadius:5.0];
     [self.pwdView.layer setBorderWidth:1.0];
     [self.pwdView.layer setShadowColor:[UIColor blackColor].CGColor];
     [self.pwdView.layer setShadowOpacity:0.5];
@@ -53,6 +56,7 @@
     [self setChangePwdTextField:nil];
     [self setAgainPwdTextField:nil];
     [self setAgainPwdTextField:nil];
+    [self setSaveButton:nil];
     [super viewDidUnload];
 }
 -(BOOL)textFieldShouldReturn:(UITextField *)textField

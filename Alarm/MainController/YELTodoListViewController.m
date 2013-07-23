@@ -39,7 +39,7 @@
 }
 -(void)sendRequest
 {
-    NSDictionary *dict=[NSDictionary dictionaryWithObjectsAndKeys:TOKEN,@"token",PAGESIZE,@"pageSize",page,@"pageNo", nil];
+    NSDictionary *dict=[NSDictionary dictionaryWithObjectsAndKeys:TOKEN,@"token",PAGESIZE,@"pageSize",[NSString stringWithFormat:@"%d",page],@"pageNo", nil];
     [[YELHttpHelper defaultHelper]getTodoListWithParamter:dict sucess:^(NSDictionary *dictionary) {
         int code=[[dictionary objectForKey:@"code"] intValue];
         if (code==0) {
@@ -77,15 +77,12 @@
     {
         page = 1;
         refreshing = NO;
-//        [self sendRequest];
+        [self sendRequest];
     }
     else
     {
-//        [self sendRequest];
+        [self sendRequest];
     }
-    [myTableView tableViewDidFinishedLoading];
-    myTableView.reachedTheEnd  = NO;
-    [myTableView reloadData];
 }
 
 - (void)viewDidLoad
@@ -100,13 +97,11 @@
     [myTableView setSeparatorColor:[UIColor clearColor]];
     [myTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [self.view addSubview:myTableView];
-
-
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return [dataSource count];
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

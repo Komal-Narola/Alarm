@@ -26,16 +26,16 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden=YES;
-//    //存在密码 进行登录请求 如果成功直接进入主页面 不成功停留在登录页面
-//    
-//    NSString *pwd=[USER_DEFAULT objectForKey:PWD];
-//    if(pwd!=nil) {
-//        [self.rememberButton setSelected:YES];
-//        [self sendRequest:pwd];
-//    }
+    //存在密码 进行登录请求 如果成功直接进入主页面 不成功停留在登录页面
     
-    YELMainControllerViewController *mainController=[[YELMainControllerViewController alloc]initWithNibName:@"YELMainControllerViewController" bundle:nil];
-    [self.navigationController pushViewController:mainController animated:YES];
+    NSString *pwd=[USER_DEFAULT objectForKey:PWD];
+    if(pwd!=nil) {
+        [self.rememberButton setSelected:YES];
+        [self sendRequest:pwd];
+    }
+    
+//    YELMainControllerViewController *mainController=[[YELMainControllerViewController alloc]initWithNibName:@"YELMainControllerViewController" bundle:nil];
+//    [self.navigationController pushViewController:mainController animated:YES];
 }
 - (void)viewDidLoad
 {
@@ -122,7 +122,6 @@
                        udid,@"imei",
                        nil];
     [[YELHttpHelper defaultHelper]loginWithParamter:dict sucess:^(NSDictionary *dict) {
-        DLog(@"aaa=%@",dict);
         if ([[dict objectForKey:@"code"] intValue]==0) {
             NSString *token=[dict objectForKey:@"data"];
             if (token!=nil) {

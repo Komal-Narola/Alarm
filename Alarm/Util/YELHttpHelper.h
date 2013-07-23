@@ -9,11 +9,13 @@
 @interface YELHttpHelper : NSObject
 
 +(YELHttpHelper *)defaultHelper;
-- (void)loginWithParamter:(NSDictionary *)dictionary sucess:(void (^) (NSDictionary *))sucess falid:(void (^) (NSString *errorMsg))faild;
+- (void)loginWithParamter:(NSDictionary *)dictionary sucess:(void (^) (NSDictionary *dictionary))sucess falid:(void (^) (NSString *errorMsg))faild;
 //修改密码
-- (void)changePwdWithParamter:(NSDictionary *)dictionary sucess:(void (^) (NSDictionary *))sucess falid:(void (^) (NSString *errorMsg))faild;
+- (void)changePwdWithParamter:(NSDictionary *)dictionary sucess:(void (^) (NSDictionary *dictionary))sucess falid:(void (^) (NSString *errorMsg))faild;
 //下载首页图片
-- (void)getImageWithParamter:(NSDictionary *)dictionary sucess:(void (^) (NSDictionary *))sucess falid:(void (^) (NSString *errorMsg))faild;
+- (void)getImageWithParamter:(NSDictionary *)dictionary sucess:(void (^) (NSDictionary *dictionary))sucess falid:(void (^) (NSString *errorMsg))faild;
+//系统运行状态
+- (void)getSystemStateWithParamter:(NSDictionary *)dictionary sucess:(void (^) (NSDictionary *dictionary))sucess falid:(void (^) (NSString *errorMsg))faild;
 //待办事项
-- (void)getTodoListWithParamter:(NSDictionary *)dictionary sucess:(void (^) (NSDictionary *))sucess falid:(void (^) (NSString *errorMsg))faild;
+- (void)getTodoListWithParamter:(NSDictionary *)dictionary sucess:(void (^) (NSDictionary *dictionary))sucess falid:(void (^) (NSString *errorMsg))faild;
 @end

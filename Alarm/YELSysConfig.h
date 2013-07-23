@@ -42,6 +42,8 @@
 #define APIChangePwd              [APIURL stringByAppendingString:@"user/modifyPwd.json"]
 //获取图片API
 #define APIGetImage              [APIURL stringByAppendingString:@"image/getImages.json"]
+//获取系统运行状态API
+#define APIGetgetSystemState              [APIURL stringByAppendingString:@"systemstate/getSystemState.json"]
 //获取待办事项API
 #define APIGetOrderList              [APIURL stringByAppendingString:@"waitOrder/getOrderList.json"]
 #endif

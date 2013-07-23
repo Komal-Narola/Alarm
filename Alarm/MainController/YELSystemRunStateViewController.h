@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YELSystemRunStateViewController : UIViewController
+@interface YELSystemRunStateViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 @end
