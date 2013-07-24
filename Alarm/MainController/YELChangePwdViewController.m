@@ -55,7 +55,6 @@
     [self setOldPwdTextField:nil];
     [self setChangePwdTextField:nil];
     [self setAgainPwdTextField:nil];
-    [self setAgainPwdTextField:nil];
     [self setSaveButton:nil];
     [super viewDidUnload];
 }

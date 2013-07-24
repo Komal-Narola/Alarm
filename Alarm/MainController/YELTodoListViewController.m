@@ -26,6 +26,7 @@
     if (self) {
         // Custom initialization
         self.title=@"待办事项";
+        dataSource=[[NSMutableArray alloc]init];
     }
     return self;
 }
@@ -102,7 +103,12 @@
     [myTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [self.view addSubview:myTableView];
 }
-
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *titleStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"TITLE"];
+    NSInteger height=[YELTodoListCell neededHeightForCell:titleStr];
+    return height;
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [dataSource count];
@@ -117,7 +123,41 @@
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     return cell;
+}
+-(void)tableView:(UITableView *)tableView willDisplayCell:(YELTodoListCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *titleStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"TITLE"];
+    NSString *nameStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"USERNAME"];
+    NSString *timeStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"ORDERDATE"];
+    NSInteger cellHeight=[YELTodoListCell neededHeightForCell:titleStr];
+    NSInteger titleHeight=[YELTodoListCell neededHeightForDescription:titleStr];
+    cell.titleLabel.text=titleStr;
+    cell.titleLabel.frame=CGRectMake(70, 2+5, 225, titleHeight);
+    
+    NSMutableAttributedString *attriString=[[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"派单人:%@",nameStr]];
+    [attriString addAttribute:NSForegroundColorAttributeName
+                        value:[UIColor redColor]
+                        range:NSMakeRange(4, [nameStr length])];
+    
+    cell.nameLabel.attributedText=attriString;
 
+    
+    cell.nameLabel.frame=CGRectMake(cell.titleLabel.frame.origin.x, cell.titleLabel.frame.size.height+cell.titleLabel.frame.origin.y+2, cell.titleLabel.frame.size.width, 20);
+    
+    cell.timeLabel.frame=CGRectMake(cell.titleLabel.frame.origin.x, cell.nameLabel.frame.size.height+cell.nameLabel.frame.origin.y+2, cell.titleLabel.frame.size.width, 20);
+    
+    if (timeStr!=nil && [timeStr length]==19) {
+        NSString *dataStr=[timeStr substringWithRange:NSMakeRange(0, 10)];
+        NSMutableAttributedString *timeAttriString=[[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"派发时间:%@",dataStr]];
+
+        [timeAttriString addAttribute:NSForegroundColorAttributeName
+                            value:[UIColor lightGrayColor]
+                            range:NSMakeRange(5, [dataStr length])];
+        cell.timeLabel.attributedText=timeAttriString;
+        NSString *minStr=[timeStr substringWithRange:NSMakeRange(11, 8)];
+        cell.leftTimeLabel.text=[NSString stringWithFormat:@"%@",minStr];
+    }
+    cell.backImageView.frame=CGRectMake(5, 2, 310, cellHeight-4);
 }
 #pragma mark - PullingRefreshTableViewDelegate
 - (void)pullingTableViewDidStartRefreshing:(PullingRefreshTableView *)tableView

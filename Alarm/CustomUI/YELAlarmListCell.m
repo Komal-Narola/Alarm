@@ -1,12 +1,12 @@
 //
-//  YELTodoListCell.m
+//  YELAlarmListCell.m
 //  Alarm
 //
-//  Created by YY on 13-7-20.
+//  Created by rock on 13-7-24.
 //  Copyright (c) 2013年 Ye Erliang. All rights reserved.
 //
 
-#import "YELTodoListCell.h"
+#import "YELAlarmListCell.h"
 #define TITLESIZE_TOP 5
 #define NAME_TOP 2
 #define NAMESIZE 20
@@ -14,7 +14,8 @@
 #define TIME 20
 #define TIMEBOTTOM 5
 #define CELL 2
-@implementation YELTodoListCell
+#define SYS_TOP 2
+@implementation YELAlarmListCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -28,6 +29,7 @@
         [_titleLabel setBackgroundColor:[UIColor clearColor]];
         [_titleLabel setLineBreakMode:NSLineBreakByCharWrapping];
         [_titleLabel setFont:[UIFont systemFontOfSize:17.0f]];
+        [_titleLabel setTextColor:[UIColor redColor]];
         [_titleLabel setNumberOfLines:0];
         [self.contentView addSubview:_titleLabel];
         
@@ -36,21 +38,20 @@
         [_nameLabel setFont:[UIFont systemFontOfSize:15.0f]];
         [self.contentView addSubview:_nameLabel];
         
+        _sysLabel=[[UILabel alloc]initWithFrame:CGRectZero];
+        [_sysLabel setBackgroundColor:[UIColor clearColor]];
+        [_sysLabel setFont:[UIFont systemFontOfSize:15.0f]];
+        [_sysLabel setLineBreakMode:NSLineBreakByCharWrapping];
+        [_sysLabel setNumberOfLines:0];
+        [self.contentView addSubview:_sysLabel];
+        
         _timeLabel = [[ UILabel alloc]initWithFrame:CGRectZero];
         [_timeLabel setBackgroundColor:[UIColor clearColor]];
         [_timeLabel setFont:[UIFont systemFontOfSize:15.0f]];
         [self.contentView addSubview:_timeLabel];
         
-        UIImage *timeImage=[UIImage imageNamed:@"timeImageView.png"];
-        _timeImageView=[[UIImageView alloc]initWithImage:timeImage];
-        _timeImageView.frame=CGRectMake(23, 10, timeImage.size.width, timeImage.size.height);
+        _timeImageView=[[UIImageView alloc]initWithFrame:CGRectZero];
         [self.contentView addSubview:_timeImageView];
-        
-        _leftTimeLabel=[[UILabel alloc]initWithFrame:CGRectMake(10, _timeImageView.frame.size.height+_timeImageView.frame.origin.y+10, 50, 20)];
-        [_leftTimeLabel setAdjustsFontSizeToFitWidth:YES];
-        [_leftTimeLabel setBackgroundColor:[UIColor clearColor]];
-        [self.contentView addSubview:_leftTimeLabel];
-
     }
     return self;
 }
@@ -60,22 +61,23 @@
     _timeLabel.text=nil;
     _nameLabel.text=nil;
     _titleLabel.text=nil;
-    _leftTimeLabel.text=nil;
+    _sysLabel.text=nil;
+    _timeImageView.image=nil;
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
-+(NSUInteger)neededHeightForCell:(NSString *)description
++(NSUInteger)neededHeightForCell:(NSString *)description sysHeight:(NSString *)systext
 {
     CGSize size=[description sizeWithFont:[UIFont systemFontOfSize:17.0] constrainedToSize:CGSizeMake(225, MAXFLOAT) lineBreakMode:NSLineBreakByCharWrapping];
-    return TITLESIZE_TOP+size.height+NAME_TOP+NAMESIZE+TIME_TOP+TIME+TIMEBOTTOM+CELL+CELL;
+    CGSize sysSize=[systext sizeWithFont:[UIFont systemFontOfSize:15.0] constrainedToSize:CGSizeMake(225, MAXFLOAT) lineBreakMode:NSLineBreakByCharWrapping];
+    return TITLESIZE_TOP+size.height+NAME_TOP+NAMESIZE+SYS_TOP+sysSize.height+TIME_TOP+TIME+TIMEBOTTOM+CELL+CELL;
 }
-+ (NSUInteger)neededHeightForDescription:(NSString *)description
++ (NSUInteger)neededHeightForDescription:(NSString *)description font:(UIFont *)font
 {
-    CGSize size=[description sizeWithFont:[UIFont systemFontOfSize:17.0] constrainedToSize:CGSizeMake(225, MAXFLOAT) lineBreakMode:NSLineBreakByCharWrapping];
+    CGSize size=[description sizeWithFont:font constrainedToSize:CGSizeMake(225, MAXFLOAT) lineBreakMode:NSLineBreakByCharWrapping];
     return size.height;
 }
+
 @end

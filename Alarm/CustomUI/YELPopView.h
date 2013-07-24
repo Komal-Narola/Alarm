@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YELPopView : UIView
-
+@interface YELPopView : UIView<TSPopoverTouchesDelegate>
+- (id)initWithFrame:(CGRect)frame array:(NSArray *)array target:(UIViewController*)target;
 @end

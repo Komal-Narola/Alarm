@@ -16,7 +16,7 @@
 #import "YELProvinceAlarmStatisticsViewController.h"
 #import "YELTodoListViewController.h"
 #import "YELHeadquartersAlarmTrendViewController.h"
-
+#import "YELMyAlarmListViewController.h"
 @interface YELMainControllerViewController ()
 {
     UIPageControl *pageControl;
@@ -147,8 +147,14 @@
         
     }else if (sender.tag==3)
     {
-        YELAlarmListViewController *alarmList=[[YELAlarmListViewController alloc]initWithNibName:@"YELAlarmListViewController" bundle:nil];
-        [self.navigationController pushViewController:alarmList animated:YES];
+        YELMyAlarmListViewController *myAlarmList=[[YELMyAlarmListViewController alloc]initWithNibName:@"YELMyAlarmListViewController" bundle:nil];
+        
+            YELAlarmListViewController *alarmList=[[YELAlarmListViewController alloc]initWithNibName:@"YELAlarmListViewController" bundle:nil];
+        
+        UITabBarController *tabbarController=[[UITabBarController alloc]init];
+        tabbarController.viewControllers=[NSArray arrayWithObjects:alarmList,myAlarmList, nil];
+        tabbarController.navigationItem.title=@"告警列表";
+        [self.navigationController pushViewController:tabbarController animated:YES];
         
     }else if (sender.tag==4)
     {
@@ -193,6 +199,7 @@
 - (void)viewDidUnload {
     [self setTopScrollview:nil];
     [self setBottomScrollview:nil];
+    pageControl=nil;
     [super viewDidUnload];
 }
 #pragma mark Scorllview Delegate
