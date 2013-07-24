@@ -9,7 +9,6 @@
 #import "YELMainControllerViewController.h"
 #import "YELSettingControllerViewController.h"
 #import "UIImageView+WebCache.h"
-#import "StyledPageControl.h"
 #import "YELSystemRunStateViewController.h"
 #import "YELAlarmNumberViewController.h"
 #import "YELAlarmListViewController.h"

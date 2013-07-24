@@ -10,6 +10,9 @@
 		6622BBA7179A6EBC00140AED /* PullingRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6622BBA6179A6EBC00140AED /* PullingRefreshTableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		662A7FC7179EC1E5000F5C83 /* YELPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 662A7FC6179EC1E5000F5C83 /* YELPopView.m */; };
 		662A7FCA179ECF44000F5C83 /* YELProvinecCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662A7FC9179ECF44000F5C83 /* YELProvinecCell.m */; };
+		6630C96E17A00E4C00E7EA0E /* YELAlarmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630C96C17A00E4B00E7EA0E /* YELAlarmDetailViewController.m */; };
+		6630C96F17A00E4C00E7EA0E /* YELAlarmDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6630C96D17A00E4B00E7EA0E /* YELAlarmDetailViewController.xib */; };
+		6630C97217A00F4600E7EA0E /* YELDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630C97117A00F4600E7EA0E /* YELDetailCell.m */; };
 		66371D7E1798119600CD4ADC /* YELChangePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66371D7C1798119600CD4ADC /* YELChangePwdViewController.m */; };
 		66371D7F1798119600CD4ADC /* YELChangePwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66371D7D1798119600CD4ADC /* YELChangePwdViewController.xib */; };
 		66371D9E1798278300CD4ADC /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 66371D821798278300CD4ADC /* MKAnnotationView+WebCache.m */; };
@@ -28,7 +31,6 @@
 		66371DAB1798278300CD4ADC /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 66371D9D1798278300CD4ADC /* UIImageView+WebCache.m */; };
 		66371DAD179827F300CD4ADC /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66371DAC179827F300CD4ADC /* ImageIO.framework */; };
 		66371DAF179827F900CD4ADC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66371DAE179827F900CD4ADC /* MapKit.framework */; };
-		66371DB31798306E00CD4ADC /* StyledPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 66371DB21798306E00CD4ADC /* StyledPageControl.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		667DCB64179984FE005571B5 /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 667DCB63179984FE005571B5 /* button@2x.png */; };
 		66833C12179A4E4200B01AA2 /* YELTodoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66833C11179A4E4200B01AA2 /* YELTodoListCell.m */; };
 		66BB2FD8179A373000881EA3 /* YELUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 66BB2FD7179A373000881EA3 /* YELUtil.m */; };
@@ -111,13 +113,11 @@
 		DD276FF6179FD6F20011DBBC /* xuxian@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FF5179FD6F10011DBBC /* xuxian@2x.png */; };
 		DD3EF061179D046F008700CD /* pagecontrol-thumb-normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF05F179D046E008700CD /* pagecontrol-thumb-normal@2x.png */; };
 		DD3EF062179D046F008700CD /* pagecontrol-thumb-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF060179D046F008700CD /* pagecontrol-thumb-selected@2x.png */; };
-		DD3EF064179D0A8C008700CD /* mainPageBackGround@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF063179D0A8C008700CD /* mainPageBackGround@2x.png */; };
 		DD3EF06B179D124F008700CD /* bottomImageLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF066179D124F008700CD /* bottomImageLine@2x.png */; };
 		DD3EF06C179D124F008700CD /* bottomImageview@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF067179D124F008700CD /* bottomImageview@2x.png */; };
 		DD3EF06D179D124F008700CD /* bottomLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF068179D124F008700CD /* bottomLine@2x.png */; };
 		DD3EF06E179D124F008700CD /* daosanjiao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF069179D124F008700CD /* daosanjiao@2x.png */; };
 		DD3EF06F179D124F008700CD /* daosanjiaoselect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF06A179D124F008700CD /* daosanjiaoselect@2x.png */; };
-		DD3EF074179D1256008700CD /* popview@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF070179D1256008700CD /* popview@2x.png */; };
 		DD3EF075179D1256008700CD /* redButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF071179D1256008700CD /* redButton@2x.png */; };
 		DD3EF076179D1256008700CD /* timeImageView@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF072179D1256008700CD /* timeImageView@2x.png */; };
 		DD3EF077179D1256008700CD /* yellowButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF073179D1256008700CD /* yellowButton@2x.png */; };
@@ -150,6 +150,11 @@
 		662A7FC6179EC1E5000F5C83 /* YELPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELPopView.m; sourceTree = "<group>"; };
 		662A7FC8179ECF44000F5C83 /* YELProvinecCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELProvinecCell.h; sourceTree = "<group>"; };
 		662A7FC9179ECF44000F5C83 /* YELProvinecCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELProvinecCell.m; sourceTree = "<group>"; };
+		6630C96B17A00E4B00E7EA0E /* YELAlarmDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELAlarmDetailViewController.h; sourceTree = "<group>"; };
+		6630C96C17A00E4B00E7EA0E /* YELAlarmDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELAlarmDetailViewController.m; sourceTree = "<group>"; };
+		6630C96D17A00E4B00E7EA0E /* YELAlarmDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YELAlarmDetailViewController.xib; sourceTree = "<group>"; };
+		6630C97017A00F4600E7EA0E /* YELDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELDetailCell.h; sourceTree = "<group>"; };
+		6630C97117A00F4600E7EA0E /* YELDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELDetailCell.m; sourceTree = "<group>"; };
 		66371D7B1798119600CD4ADC /* YELChangePwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELChangePwdViewController.h; sourceTree = "<group>"; };
 		66371D7C1798119600CD4ADC /* YELChangePwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELChangePwdViewController.m; sourceTree = "<group>"; };
 		66371D7D1798119600CD4ADC /* YELChangePwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YELChangePwdViewController.xib; sourceTree = "<group>"; };
@@ -184,8 +189,6 @@
 		66371D9D1798278300CD4ADC /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		66371DAC179827F300CD4ADC /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		66371DAE179827F900CD4ADC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		66371DB11798306E00CD4ADC /* StyledPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyledPageControl.h; sourceTree = "<group>"; };
-		66371DB21798306E00CD4ADC /* StyledPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyledPageControl.m; sourceTree = "<group>"; };
 		667DCB63179984FE005571B5 /* button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button@2x.png"; sourceTree = "<group>"; };
 		66833C10179A4E4200B01AA2 /* YELTodoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELTodoListCell.h; sourceTree = "<group>"; };
 		66833C11179A4E4200B01AA2 /* YELTodoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELTodoListCell.m; sourceTree = "<group>"; };
@@ -315,13 +318,11 @@
 		DD276FF5179FD6F10011DBBC /* xuxian@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xuxian@2x.png"; sourceTree = "<group>"; };
 		DD3EF05F179D046E008700CD /* pagecontrol-thumb-normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pagecontrol-thumb-normal@2x.png"; sourceTree = "<group>"; };
 		DD3EF060179D046F008700CD /* pagecontrol-thumb-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pagecontrol-thumb-selected@2x.png"; sourceTree = "<group>"; };
-		DD3EF063179D0A8C008700CD /* mainPageBackGround@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mainPageBackGround@2x.png"; sourceTree = "<group>"; };
 		DD3EF066179D124F008700CD /* bottomImageLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottomImageLine@2x.png"; sourceTree = "<group>"; };
 		DD3EF067179D124F008700CD /* bottomImageview@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottomImageview@2x.png"; sourceTree = "<group>"; };
 		DD3EF068179D124F008700CD /* bottomLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottomLine@2x.png"; sourceTree = "<group>"; };
 		DD3EF069179D124F008700CD /* daosanjiao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daosanjiao@2x.png"; sourceTree = "<group>"; };
 		DD3EF06A179D124F008700CD /* daosanjiaoselect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daosanjiaoselect@2x.png"; sourceTree = "<group>"; };
-		DD3EF070179D1256008700CD /* popview@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popview@2x.png"; sourceTree = "<group>"; };
 		DD3EF071179D1256008700CD /* redButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redButton@2x.png"; sourceTree = "<group>"; };
 		DD3EF072179D1256008700CD /* timeImageView@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timeImageView@2x.png"; sourceTree = "<group>"; };
 		DD3EF073179D1256008700CD /* yellowButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowButton@2x.png"; sourceTree = "<group>"; };
@@ -420,15 +421,6 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
-		66371DB01798304500CD4ADC /* CustomPageControl */ = {
-			isa = PBXGroup;
-			children = (
-				66371DB11798306E00CD4ADC /* StyledPageControl.h */,
-				66371DB21798306E00CD4ADC /* StyledPageControl.m */,
-			);
-			name = CustomPageControl;
-			sourceTree = "<group>";
-		};
 		66833C0F179A4E1B00B01AA2 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -440,6 +432,8 @@
 				662A7FC9179ECF44000F5C83 /* YELProvinecCell.m */,
 				DD276FC6179F9ACB0011DBBC /* YELAlarmListCell.h */,
 				DD276FC7179F9ACB0011DBBC /* YELAlarmListCell.m */,
+				6630C97017A00F4600E7EA0E /* YELDetailCell.h */,
+				6630C97117A00F4600E7EA0E /* YELDetailCell.m */,
 			);
 			name = CustomCell;
 			sourceTree = "<group>";
@@ -477,6 +471,9 @@
 				DD276FC9179FA40B0011DBBC /* YELMyAlarmListViewController.h */,
 				DD276FCA179FA40C0011DBBC /* YELMyAlarmListViewController.m */,
 				DD276FCB179FA40C0011DBBC /* YELMyAlarmListViewController.xib */,
+				6630C96B17A00E4B00E7EA0E /* YELAlarmDetailViewController.h */,
+				6630C96C17A00E4B00E7EA0E /* YELAlarmDetailViewController.m */,
+				6630C96D17A00E4B00E7EA0E /* YELAlarmDetailViewController.xib */,
 				66BB2FE8179A423F00881EA3 /* YELProvinceAlarmStatisticsViewController.h */,
 				66BB2FE9179A423F00881EA3 /* YELProvinceAlarmStatisticsViewController.m */,
 				66BB2FEA179A423F00881EA3 /* YELProvinceAlarmStatisticsViewController.xib */,
@@ -700,7 +697,6 @@
 				662A7FC4179EC1AC000F5C83 /* UIKIT */,
 				66833C0F179A4E1B00B01AA2 /* CustomCell */,
 				66BB2FF7179A464900881EA3 /* PullingRefrestTableView */,
-				66371DB01798304500CD4ADC /* CustomPageControl */,
 				DD1F7F4B1797C9FF00E2E571 /* MBAlertView */,
 				DDF19E6D1797978100CE21C4 /* ETNavigationViewController.h */,
 				DDF19E6E1797978100CE21C4 /* ETNavigationViewController.m */,
@@ -740,7 +736,6 @@
 				DD0FBF59179E92FB009B7976 /* yi@2x.png */,
 				DD276FF5179FD6F10011DBBC /* xuxian@2x.png */,
 				DD0FBF52179E8135009B7976 /* zuosanjiao@2x.png */,
-				DD3EF070179D1256008700CD /* popview@2x.png */,
 				DD3EF071179D1256008700CD /* redButton@2x.png */,
 				DD3EF072179D1256008700CD /* timeImageView@2x.png */,
 				DD3EF073179D1256008700CD /* yellowButton@2x.png */,
@@ -750,7 +745,6 @@
 				DD3EF069179D124F008700CD /* daosanjiao@2x.png */,
 				DD3EF06A179D124F008700CD /* daosanjiaoselect@2x.png */,
 				DD0FBF4C179E4369009B7976 /* buttonanzhu@2x.png */,
-				DD3EF063179D0A8C008700CD /* mainPageBackGround@2x.png */,
 				DD3EF05F179D046E008700CD /* pagecontrol-thumb-normal@2x.png */,
 				DD3EF060179D046F008700CD /* pagecontrol-thumb-selected@2x.png */,
 				667DCB63179984FE005571B5 /* button@2x.png */,
@@ -845,13 +839,11 @@
 				66BB2FF6179A42A500881EA3 /* YELHeadquartersAlarmTrendViewController.xib in Resources */,
 				DD3EF061179D046F008700CD /* pagecontrol-thumb-normal@2x.png in Resources */,
 				DD3EF062179D046F008700CD /* pagecontrol-thumb-selected@2x.png in Resources */,
-				DD3EF064179D0A8C008700CD /* mainPageBackGround@2x.png in Resources */,
 				DD3EF06B179D124F008700CD /* bottomImageLine@2x.png in Resources */,
 				DD3EF06C179D124F008700CD /* bottomImageview@2x.png in Resources */,
 				DD3EF06D179D124F008700CD /* bottomLine@2x.png in Resources */,
 				DD3EF06E179D124F008700CD /* daosanjiao@2x.png in Resources */,
 				DD3EF06F179D124F008700CD /* daosanjiaoselect@2x.png in Resources */,
-				DD3EF074179D1256008700CD /* popview@2x.png in Resources */,
 				DD3EF075179D1256008700CD /* redButton@2x.png in Resources */,
 				DD3EF076179D1256008700CD /* timeImageView@2x.png in Resources */,
 				DD3EF077179D1256008700CD /* yellowButton@2x.png in Resources */,
@@ -879,6 +871,7 @@
 				DD276FE1179FB3A00011DBBC /* jinggao8@2x.png in Resources */,
 				DD276FE2179FB3A00011DBBC /* jinggao9@2x.png in Resources */,
 				DD276FF6179FD6F20011DBBC /* xuxian@2x.png in Resources */,
+				6630C96F17A00E4C00E7EA0E /* YELAlarmDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -932,7 +925,6 @@
 				66371DA91798278300CD4ADC /* UIImage+MultiFormat.m in Sources */,
 				66371DAA1798278300CD4ADC /* UIImage+WebP.m in Sources */,
 				66371DAB1798278300CD4ADC /* UIImageView+WebCache.m in Sources */,
-				66371DB31798306E00CD4ADC /* StyledPageControl.m in Sources */,
 				66BB2FD8179A373000881EA3 /* YELUtil.m in Sources */,
 				66BB2FDC179A41C500881EA3 /* YELSystemRunStateViewController.m in Sources */,
 				66BB2FE1179A41FA00881EA3 /* YELAlarmNumberViewController.m in Sources */,
@@ -952,6 +944,8 @@
 				DD276FF1179FCEC70011DBBC /* TSPopoverPopoverView.m in Sources */,
 				DD276FF2179FCEC70011DBBC /* TSPopoverTouchView.m in Sources */,
 				DD276FF3179FCEC70011DBBC /* UIBarButtonItem+WEPopover.m in Sources */,
+				6630C96E17A00E4C00E7EA0E /* YELAlarmDetailViewController.m in Sources */,
+				6630C97217A00F4600E7EA0E /* YELDetailCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

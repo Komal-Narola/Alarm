@@ -22,7 +22,12 @@
             [button setTitle:[array objectAtIndex:i] forState:UIControlStateNormal];
             [button setImage:[UIImage imageNamed:@"gou.png"] forState:UIControlStateSelected];
             [button setImage:[UIImage imageNamed:@"80.png"] forState:UIControlStateNormal];
-            [button setImageEdgeInsets:UIEdgeInsetsMake(0, 70, 0, 0)];
+            if (self.frame.size.width>100) {
+                [button setImageEdgeInsets:UIEdgeInsetsMake(0, 130, 0, 0)];
+            }else
+            {
+                [button setImageEdgeInsets:UIEdgeInsetsMake(0, 70, 0, 0)];
+            }
             button.tag=i+100;
             [button addTarget:target action:@selector(pressButton:) forControlEvents:UIControlEventTouchUpInside];
             button.frame=CGRectMake(0, i*30, self.bounds.size.width, 30);

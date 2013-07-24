@@ -11,6 +11,7 @@
 #import "YELAlarmListCell.h"
 #import "TSPopoverController.h"
 #import "YELPopView.h"
+#import "YELAlarmDetailViewController.h"
 @interface YELAlarmListViewController ()<PullingRefreshTableViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     BOOL refreshing;
@@ -20,11 +21,18 @@
     NSString *level;
     NSString *area;
     NSString *domain;
+    YELPopView *levelPopview;
+    YELPopView *sysPopview;
+    YELPopView *areaPopview;
+    TSPopoverController *popoverController;
     
 }
 - (IBAction)pressLevelButton:(UIButton *)sender forEvent:(UIEvent *)event;
 - (IBAction)pressSysButton:(UIButton *)sender forEvent:(UIEvent *)event;
 - (IBAction)pressAreaButton:(UIButton *)sender forEvent:(UIEvent *)event;
+@property (weak, nonatomic) IBOutlet UIButton *levelButton;
+@property (weak, nonatomic) IBOutlet UIButton *sysButton;
+@property (weak, nonatomic) IBOutlet UIButton *areaButton;
 
 
 @end
@@ -56,6 +64,7 @@
     
     [[YELHttpHelper defaultHelper]getWarningWithParamter:dict sucess:^(NSDictionary *dictionary) {
         int code=[[dictionary objectForKey:@"code"] intValue];
+
         if (code==0) {
             NSArray *array=[dictionary objectForKey:@"data"];
             if (page==1) {
@@ -102,10 +111,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    if (page == 0)
-    {
-        [myTableView launchRefreshing];
-    }
+
 }
 - (void)viewDidLoad
 {
@@ -118,10 +124,14 @@
     [myTableView setSeparatorColor:[UIColor clearColor]];
     [myTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [self.view addSubview:myTableView];
+    if (page == 0)
+    {
+        [myTableView launchRefreshing];
+    }
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *titleStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"CONTENT"];
+    NSString *titleStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"EVENTTYP"];
     NSString *sysStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"SYS"];
     NSInteger height=[YELAlarmListCell neededHeightForCell:titleStr sysHeight:sysStr];
     return height;
@@ -144,12 +154,12 @@
 }
 -(void)tableView:(UITableView *)tableView willDisplayCell:(YELAlarmListCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *titleStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"CONTENT"];
+    NSString *titleStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"EVENTTYP"];
     NSString *nameStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"AREA"];
     NSString *sysStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"SYS"];
     NSString *timeStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"TIME"];
     NSString *rnStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"RN"];
-    
+
     NSInteger titleHeight=[YELAlarmListCell neededHeightForDescription:titleStr font:[UIFont systemFontOfSize:17.0]];
     NSInteger sysHeight=[YELAlarmListCell neededHeightForDescription:sysStr font:[UIFont systemFontOfSize:15.0]];
     cell.titleLabel.text=titleStr;
@@ -187,6 +197,12 @@
     cell.timeImageView.image=leftImage;
     cell.timeImageView.frame=CGRectMake(22, height/2-leftImage.size.height/2, leftImage.size.width, leftImage.size.height);
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YELAlarmDetailViewController *detailController=[[YELAlarmDetailViewController alloc]initWithNibName:@"YELAlarmDetailViewController" bundle:nil];
+    detailController.dataSource=[dataSource objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:detailController animated:YES];
+}
 #pragma mark - PullingRefreshTableViewDelegate
 - (void)pullingTableViewDidStartRefreshing:(PullingRefreshTableView *)tableView
 {
@@ -219,6 +235,9 @@
 -(void)viewDidUnload
 {
     myTableView=nil;
+    [self setLevelButton:nil];
+    [self setSysButton:nil];
+    [self setAreaButton:nil];
     [super viewDidUnload];
     
 }
@@ -252,17 +271,38 @@
     [super didReceiveMemoryWarning];
 }
 - (IBAction)pressLevelButton:(UIButton *)sender forEvent:(UIEvent *)event {
-    NSArray *array=[NSArray arrayWithObjects:@"全部",@"重要",@"紧急", nil];
-    YELPopView *popview=[[YELPopView alloc]initWithFrame:CGRectMake(0, 0, 100, [array count]*30) array:array target:self];
-    TSPopoverController *popoverController=[[TSPopoverController alloc]initWithView:popview];
+    
+    if (!levelPopview) {
+        NSArray *array=[NSArray arrayWithObjects:@"全部",@"重要",@"紧急", nil];
+        levelPopview=[[YELPopView alloc]initWithFrame:CGRectMake(0, 0, 100, [array count]*30) array:array target:self];
+        levelPopview.tag=50;
+    }
+    popoverController=[[TSPopoverController alloc]initWithView:levelPopview];
     popoverController.alpha=0.7;
     [popoverController showPopoverWithTouch:event];
 }
 
 - (IBAction)pressSysButton:(UIButton *)sender forEvent:(UIEvent *)event {
+    if (!sysPopview) {
+        NSArray *array=[NSArray arrayWithObjects:@"全部",@"BSS",@"信息化基础",@"MSS",@"DSS", nil];
+        sysPopview=[[YELPopView alloc]initWithFrame:CGRectMake(0, 0, 150, [array count]*30) array:array target:self];
+        sysPopview.tag=51;
+    }
+    popoverController=[[TSPopoverController alloc]initWithView:sysPopview];
+    popoverController.alpha=0.7;
+    [popoverController showPopoverWithTouch:event];
 }
 
 - (IBAction)pressAreaButton:(UIButton *)sender forEvent:(UIEvent *)event {
+    if (!areaPopview) {
+        NSArray *array=[NSArray arrayWithObjects:@"总部",@"省份", nil];
+        areaPopview=[[YELPopView alloc]initWithFrame:CGRectMake(0, 0, 100, [array count]*30) array:array target:self];
+        areaPopview.tag=52;
+    }
+    popoverController=[[TSPopoverController alloc]initWithView:areaPopview];
+    popoverController.alpha=0.7;
+    [popoverController showPopoverWithTouch:event];
+    
 }
 -(void)pressButton:(UIButton *)sender
 {
@@ -275,9 +315,60 @@
                     button.selected=NO;
                 }
             }
-
+            
         }
     }
-    DLog(@"dsds=%d",sender.tag);
+    if (sender.superview.tag==50) {
+        if (sender.tag==100) {
+            [self.levelButton setTitle:@"全部" forState:UIControlStateNormal];
+            level=@"";
+            
+        }else if (sender.tag==101)
+        {
+            [self.levelButton setTitle:@"重要" forState:UIControlStateNormal];
+            level=@"4";
+        }else if (sender.tag==102)
+        {
+            [self.levelButton setTitle:@"紧急" forState:UIControlStateNormal];
+            level=@"5";
+        }
+        DLog(@"5050");
+    }else if(sender.superview.tag==51)
+    {
+        if (sender.tag==100) {
+            [self.sysButton setTitle:@"全部" forState:UIControlStateNormal];
+            domain=@"";
+        }else if (sender.tag==101)
+        {
+            [self.sysButton setTitle:@"BSS" forState:UIControlStateNormal];
+            domain=@"BSS域";
+        }else if (sender.tag==102)
+        {
+            [self.sysButton setTitle:@"信息化基础" forState:UIControlStateNormal];
+            domain=@"信息化基础";
+        }else if (sender.tag==103)
+        {
+            [self.sysButton setTitle:@"MSS" forState:UIControlStateNormal];
+            domain=@"MSS域";
+        }else if (sender.tag==104)
+        {
+            [self.sysButton setTitle:@"DSS" forState:UIControlStateNormal];
+            domain=@"DSS域";
+        }
+        DLog(@"5151");
+    }else if (sender.superview.tag==52)
+    {
+        if (sender.tag==100) {
+            [self.areaButton setTitle:@"总部" forState:UIControlStateNormal];
+            area=@"总部";
+        }else if (sender.tag==101)
+        {
+            [self.areaButton setTitle:@"省份" forState:UIControlStateNormal];
+            area=@"省分";
+        }
+        DLog(@"5252");
+    }
+    [myTableView launchRefreshing];
+    [popoverController dismissPopoverAnimatd:YES];
 }
 @end

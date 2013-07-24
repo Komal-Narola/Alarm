@@ -59,8 +59,6 @@
         _businessImageView =[[UIImageView alloc]init];
         [self.contentView addSubview:_businessImageView];
         
-        
-        
     }
     return self;
 }
