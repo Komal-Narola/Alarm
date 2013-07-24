@@ -1,20 +1,20 @@
 //
-//  YELTodoListCell.h
+//  YELAlarmListCell.h
 //  Alarm
 //
-//  Created by YY on 13-7-20.
+//  Created by rock on 13-7-24.
 //  Copyright (c) 2013年 Ye Erliang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface YELTodoListCell : UITableViewCell
+@interface YELAlarmListCell : UITableViewCell
 @property (nonatomic,strong)UILabel *titleLabel;
+@property (nonatomic,strong)UILabel *sysLabel;
 @property (nonatomic,strong)UILabel *timeLabel;
 @property (nonatomic,strong)UILabel *nameLabel;
 @property (nonatomic,strong)UIImageView *timeImageView;
-@property (nonatomic,strong)UILabel *leftTimeLabel;
 @property (nonatomic,strong)UIImageView *backImageView;
-+(NSUInteger)neededHeightForDescription:(NSString *)description;
-+(NSUInteger)neededHeightForCell:(NSString *)description;
++(NSUInteger)neededHeightForCell:(NSString *)description sysHeight:(NSString *)systext;
++ (NSUInteger)neededHeightForDescription:(NSString *)description font:(UIFont *)font;
 @end

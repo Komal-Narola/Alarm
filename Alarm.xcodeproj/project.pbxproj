@@ -90,6 +90,25 @@
 		DD1F7FA41797E51C00E2E571 /* set@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F7FA31797E51C00E2E571 /* set@2x.png */; };
 		DD1F7FA81797E63900E2E571 /* YELSettingControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1F7FA61797E63900E2E571 /* YELSettingControllerViewController.m */; };
 		DD1F7FA91797E63900E2E571 /* YELSettingControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD1F7FA71797E63900E2E571 /* YELSettingControllerViewController.xib */; };
+		DD276FC8179F9ACB0011DBBC /* YELAlarmListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD276FC7179F9ACB0011DBBC /* YELAlarmListCell.m */; };
+		DD276FCC179FA40D0011DBBC /* YELMyAlarmListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD276FCA179FA40C0011DBBC /* YELMyAlarmListViewController.m */; };
+		DD276FCD179FA40D0011DBBC /* YELMyAlarmListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD276FCB179FA40C0011DBBC /* YELMyAlarmListViewController.xib */; };
+		DD276FD9179FB3A00011DBBC /* jinggao0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FCF179FB3A00011DBBC /* jinggao0@2x.png */; };
+		DD276FDA179FB3A00011DBBC /* jinggao1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FD0179FB3A00011DBBC /* jinggao1@2x.png */; };
+		DD276FDB179FB3A00011DBBC /* jinggao2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FD1179FB3A00011DBBC /* jinggao2@2x.png */; };
+		DD276FDC179FB3A00011DBBC /* jinggao3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FD2179FB3A00011DBBC /* jinggao3@2x.png */; };
+		DD276FDD179FB3A00011DBBC /* jinggao4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FD3179FB3A00011DBBC /* jinggao4@2x.png */; };
+		DD276FDE179FB3A00011DBBC /* jinggao5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FD4179FB3A00011DBBC /* jinggao5@2x.png */; };
+		DD276FDF179FB3A00011DBBC /* jinggao6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FD5179FB3A00011DBBC /* jinggao6@2x.png */; };
+		DD276FE0179FB3A00011DBBC /* jinggao7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FD6179FB3A00011DBBC /* jinggao7@2x.png */; };
+		DD276FE1179FB3A00011DBBC /* jinggao8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FD7179FB3A00011DBBC /* jinggao8@2x.png */; };
+		DD276FE2179FB3A00011DBBC /* jinggao9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FD8179FB3A00011DBBC /* jinggao9@2x.png */; };
+		DD276FEF179FCEC70011DBBC /* TSActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = DD276FE5179FCEC70011DBBC /* TSActionSheet.m */; };
+		DD276FF0179FCEC70011DBBC /* TSPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD276FE7179FCEC70011DBBC /* TSPopoverController.m */; };
+		DD276FF1179FCEC70011DBBC /* TSPopoverPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD276FE9179FCEC70011DBBC /* TSPopoverPopoverView.m */; };
+		DD276FF2179FCEC70011DBBC /* TSPopoverTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD276FEC179FCEC70011DBBC /* TSPopoverTouchView.m */; };
+		DD276FF3179FCEC70011DBBC /* UIBarButtonItem+WEPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = DD276FEE179FCEC70011DBBC /* UIBarButtonItem+WEPopover.m */; };
+		DD276FF6179FD6F20011DBBC /* xuxian@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FF5179FD6F10011DBBC /* xuxian@2x.png */; };
 		DD3EF061179D046F008700CD /* pagecontrol-thumb-normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF05F179D046E008700CD /* pagecontrol-thumb-normal@2x.png */; };
 		DD3EF062179D046F008700CD /* pagecontrol-thumb-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF060179D046F008700CD /* pagecontrol-thumb-selected@2x.png */; };
 		DD3EF064179D0A8C008700CD /* mainPageBackGround@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF063179D0A8C008700CD /* mainPageBackGround@2x.png */; };
@@ -105,7 +124,7 @@
 		DD3EF07C179D126D008700CD /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF078179D126D008700CD /* 12.png */; };
 		DD3EF07D179D126D008700CD /* 13.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF079179D126D008700CD /* 13.png */; };
 		DD3EF07E179D126D008700CD /* 14.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF07A179D126D008700CD /* 14.png */; };
-		DD3EF07F179D126D008700CD /* 16.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF07B179D126D008700CD /* 16.png */; };
+		DD3EF07F179D126D008700CD /* 16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF07B179D126D008700CD /* 16@2x.png */; };
 		DD9902C917969758006D1C48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9902C817969758006D1C48 /* UIKit.framework */; };
 		DD9902CB17969758006D1C48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9902CA17969758006D1C48 /* Foundation.framework */; };
 		DD9902CD17969758006D1C48 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9902CC17969758006D1C48 /* CoreGraphics.framework */; };
@@ -267,6 +286,33 @@
 		DD1F7FA51797E63900E2E571 /* YELSettingControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELSettingControllerViewController.h; sourceTree = "<group>"; };
 		DD1F7FA61797E63900E2E571 /* YELSettingControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELSettingControllerViewController.m; sourceTree = "<group>"; };
 		DD1F7FA71797E63900E2E571 /* YELSettingControllerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YELSettingControllerViewController.xib; sourceTree = "<group>"; };
+		DD276FC6179F9ACB0011DBBC /* YELAlarmListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELAlarmListCell.h; sourceTree = "<group>"; };
+		DD276FC7179F9ACB0011DBBC /* YELAlarmListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELAlarmListCell.m; sourceTree = "<group>"; };
+		DD276FC9179FA40B0011DBBC /* YELMyAlarmListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELMyAlarmListViewController.h; sourceTree = "<group>"; };
+		DD276FCA179FA40C0011DBBC /* YELMyAlarmListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELMyAlarmListViewController.m; sourceTree = "<group>"; };
+		DD276FCB179FA40C0011DBBC /* YELMyAlarmListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YELMyAlarmListViewController.xib; sourceTree = "<group>"; };
+		DD276FCF179FB3A00011DBBC /* jinggao0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao0@2x.png"; sourceTree = "<group>"; };
+		DD276FD0179FB3A00011DBBC /* jinggao1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao1@2x.png"; sourceTree = "<group>"; };
+		DD276FD1179FB3A00011DBBC /* jinggao2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao2@2x.png"; sourceTree = "<group>"; };
+		DD276FD2179FB3A00011DBBC /* jinggao3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao3@2x.png"; sourceTree = "<group>"; };
+		DD276FD3179FB3A00011DBBC /* jinggao4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao4@2x.png"; sourceTree = "<group>"; };
+		DD276FD4179FB3A00011DBBC /* jinggao5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao5@2x.png"; sourceTree = "<group>"; };
+		DD276FD5179FB3A00011DBBC /* jinggao6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao6@2x.png"; sourceTree = "<group>"; };
+		DD276FD6179FB3A00011DBBC /* jinggao7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao7@2x.png"; sourceTree = "<group>"; };
+		DD276FD7179FB3A00011DBBC /* jinggao8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao8@2x.png"; sourceTree = "<group>"; };
+		DD276FD8179FB3A00011DBBC /* jinggao9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao9@2x.png"; sourceTree = "<group>"; };
+		DD276FE4179FCEC70011DBBC /* TSActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSActionSheet.h; sourceTree = "<group>"; };
+		DD276FE5179FCEC70011DBBC /* TSActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSActionSheet.m; sourceTree = "<group>"; };
+		DD276FE6179FCEC70011DBBC /* TSPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPopoverController.h; sourceTree = "<group>"; };
+		DD276FE7179FCEC70011DBBC /* TSPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPopoverController.m; sourceTree = "<group>"; };
+		DD276FE8179FCEC70011DBBC /* TSPopoverPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPopoverPopoverView.h; sourceTree = "<group>"; };
+		DD276FE9179FCEC70011DBBC /* TSPopoverPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPopoverPopoverView.m; sourceTree = "<group>"; };
+		DD276FEA179FCEC70011DBBC /* TSPopoverTouchesDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPopoverTouchesDelegate.h; sourceTree = "<group>"; };
+		DD276FEB179FCEC70011DBBC /* TSPopoverTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPopoverTouchView.h; sourceTree = "<group>"; };
+		DD276FEC179FCEC70011DBBC /* TSPopoverTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPopoverTouchView.m; sourceTree = "<group>"; };
+		DD276FED179FCEC70011DBBC /* UIBarButtonItem+WEPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WEPopover.h"; sourceTree = "<group>"; };
+		DD276FEE179FCEC70011DBBC /* UIBarButtonItem+WEPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+WEPopover.m"; sourceTree = "<group>"; };
+		DD276FF5179FD6F10011DBBC /* xuxian@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xuxian@2x.png"; sourceTree = "<group>"; };
 		DD3EF05F179D046E008700CD /* pagecontrol-thumb-normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pagecontrol-thumb-normal@2x.png"; sourceTree = "<group>"; };
 		DD3EF060179D046F008700CD /* pagecontrol-thumb-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pagecontrol-thumb-selected@2x.png"; sourceTree = "<group>"; };
 		DD3EF063179D0A8C008700CD /* mainPageBackGround@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mainPageBackGround@2x.png"; sourceTree = "<group>"; };
@@ -282,7 +328,7 @@
 		DD3EF078179D126D008700CD /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
 		DD3EF079179D126D008700CD /* 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13.png; sourceTree = "<group>"; };
 		DD3EF07A179D126D008700CD /* 14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 14.png; sourceTree = "<group>"; };
-		DD3EF07B179D126D008700CD /* 16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 16.png; sourceTree = "<group>"; };
+		DD3EF07B179D126D008700CD /* 16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "16@2x.png"; sourceTree = "<group>"; };
 		DD9902C517969758006D1C48 /* Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9902C817969758006D1C48 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DD9902CA17969758006D1C48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -392,6 +438,8 @@
 				DD0FBF50179E671A009B7976 /* YELSystemStateCell.m */,
 				662A7FC8179ECF44000F5C83 /* YELProvinecCell.h */,
 				662A7FC9179ECF44000F5C83 /* YELProvinecCell.m */,
+				DD276FC6179F9ACB0011DBBC /* YELAlarmListCell.h */,
+				DD276FC7179F9ACB0011DBBC /* YELAlarmListCell.m */,
 			);
 			name = CustomCell;
 			sourceTree = "<group>";
@@ -426,6 +474,9 @@
 				66BB2FE3179A421100881EA3 /* YELAlarmListViewController.h */,
 				66BB2FE4179A421100881EA3 /* YELAlarmListViewController.m */,
 				66BB2FE5179A421200881EA3 /* YELAlarmListViewController.xib */,
+				DD276FC9179FA40B0011DBBC /* YELMyAlarmListViewController.h */,
+				DD276FCA179FA40C0011DBBC /* YELMyAlarmListViewController.m */,
+				DD276FCB179FA40C0011DBBC /* YELMyAlarmListViewController.xib */,
 				66BB2FE8179A423F00881EA3 /* YELProvinceAlarmStatisticsViewController.h */,
 				66BB2FE9179A423F00881EA3 /* YELProvinceAlarmStatisticsViewController.m */,
 				66BB2FEA179A423F00881EA3 /* YELProvinceAlarmStatisticsViewController.xib */,
@@ -539,6 +590,41 @@
 			path = OPENUDID;
 			sourceTree = "<group>";
 		};
+		DD276FCE179FB3A00011DBBC /* jinggao */ = {
+			isa = PBXGroup;
+			children = (
+				DD276FCF179FB3A00011DBBC /* jinggao0@2x.png */,
+				DD276FD0179FB3A00011DBBC /* jinggao1@2x.png */,
+				DD276FD1179FB3A00011DBBC /* jinggao2@2x.png */,
+				DD276FD2179FB3A00011DBBC /* jinggao3@2x.png */,
+				DD276FD3179FB3A00011DBBC /* jinggao4@2x.png */,
+				DD276FD4179FB3A00011DBBC /* jinggao5@2x.png */,
+				DD276FD5179FB3A00011DBBC /* jinggao6@2x.png */,
+				DD276FD6179FB3A00011DBBC /* jinggao7@2x.png */,
+				DD276FD7179FB3A00011DBBC /* jinggao8@2x.png */,
+				DD276FD8179FB3A00011DBBC /* jinggao9@2x.png */,
+			);
+			path = jinggao;
+			sourceTree = "<group>";
+		};
+		DD276FE3179FCEC70011DBBC /* TSPopover */ = {
+			isa = PBXGroup;
+			children = (
+				DD276FE4179FCEC70011DBBC /* TSActionSheet.h */,
+				DD276FE5179FCEC70011DBBC /* TSActionSheet.m */,
+				DD276FE6179FCEC70011DBBC /* TSPopoverController.h */,
+				DD276FE7179FCEC70011DBBC /* TSPopoverController.m */,
+				DD276FE8179FCEC70011DBBC /* TSPopoverPopoverView.h */,
+				DD276FE9179FCEC70011DBBC /* TSPopoverPopoverView.m */,
+				DD276FEA179FCEC70011DBBC /* TSPopoverTouchesDelegate.h */,
+				DD276FEB179FCEC70011DBBC /* TSPopoverTouchView.h */,
+				DD276FEC179FCEC70011DBBC /* TSPopoverTouchView.m */,
+				DD276FED179FCEC70011DBBC /* UIBarButtonItem+WEPopover.h */,
+				DD276FEE179FCEC70011DBBC /* UIBarButtonItem+WEPopover.m */,
+			);
+			path = TSPopover;
+			sourceTree = "<group>";
+		};
 		DD9902BC17969758006D1C48 = {
 			isa = PBXGroup;
 			children = (
@@ -610,6 +696,7 @@
 		DDF19E6C1797976700CE21C4 /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
+				DD276FE3179FCEC70011DBBC /* TSPopover */,
 				662A7FC4179EC1AC000F5C83 /* UIKIT */,
 				66833C0F179A4E1B00B01AA2 /* CustomCell */,
 				66BB2FF7179A464900881EA3 /* PullingRefrestTableView */,
@@ -640,16 +727,18 @@
 		DDF19E791797A01E00CE21C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DD276FCE179FB3A00011DBBC /* jinggao */,
 				DD3EF078179D126D008700CD /* 12.png */,
 				DD3EF079179D126D008700CD /* 13.png */,
 				DD3EF07A179D126D008700CD /* 14.png */,
-				DD3EF07B179D126D008700CD /* 16.png */,
+				DD3EF07B179D126D008700CD /* 16@2x.png */,
 				DD0FBF54179E92FB009B7976 /* er@2x.png */,
 				DD0FBF55179E92FB009B7976 /* fuyi@2x.png */,
 				DD0FBF56179E92FB009B7976 /* ling@2x.png */,
 				DD0FBF57179E92FB009B7976 /* san@2x.png */,
 				DD0FBF58179E92FB009B7976 /* si@2x.png */,
 				DD0FBF59179E92FB009B7976 /* yi@2x.png */,
+				DD276FF5179FD6F10011DBBC /* xuxian@2x.png */,
 				DD0FBF52179E8135009B7976 /* zuosanjiao@2x.png */,
 				DD3EF070179D1256008700CD /* popview@2x.png */,
 				DD3EF071179D1256008700CD /* redButton@2x.png */,
@@ -769,7 +858,7 @@
 				DD3EF07C179D126D008700CD /* 12.png in Resources */,
 				DD3EF07D179D126D008700CD /* 13.png in Resources */,
 				DD3EF07E179D126D008700CD /* 14.png in Resources */,
-				DD3EF07F179D126D008700CD /* 16.png in Resources */,
+				DD3EF07F179D126D008700CD /* 16@2x.png in Resources */,
 				DD0FBF4D179E4369009B7976 /* buttonanzhu@2x.png in Resources */,
 				DD0FBF53179E8135009B7976 /* zuosanjiao@2x.png in Resources */,
 				DD0FBF5A179E92FB009B7976 /* er@2x.png in Resources */,
@@ -778,6 +867,18 @@
 				DD0FBF5D179E92FB009B7976 /* san@2x.png in Resources */,
 				DD0FBF5E179E92FB009B7976 /* si@2x.png in Resources */,
 				DD0FBF5F179E92FB009B7976 /* yi@2x.png in Resources */,
+				DD276FCD179FA40D0011DBBC /* YELMyAlarmListViewController.xib in Resources */,
+				DD276FD9179FB3A00011DBBC /* jinggao0@2x.png in Resources */,
+				DD276FDA179FB3A00011DBBC /* jinggao1@2x.png in Resources */,
+				DD276FDB179FB3A00011DBBC /* jinggao2@2x.png in Resources */,
+				DD276FDC179FB3A00011DBBC /* jinggao3@2x.png in Resources */,
+				DD276FDD179FB3A00011DBBC /* jinggao4@2x.png in Resources */,
+				DD276FDE179FB3A00011DBBC /* jinggao5@2x.png in Resources */,
+				DD276FDF179FB3A00011DBBC /* jinggao6@2x.png in Resources */,
+				DD276FE0179FB3A00011DBBC /* jinggao7@2x.png in Resources */,
+				DD276FE1179FB3A00011DBBC /* jinggao8@2x.png in Resources */,
+				DD276FE2179FB3A00011DBBC /* jinggao9@2x.png in Resources */,
+				DD276FF6179FD6F20011DBBC /* xuxian@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -844,6 +945,13 @@
 				DD0FBF51179E671A009B7976 /* YELSystemStateCell.m in Sources */,
 				662A7FC7179EC1E5000F5C83 /* YELPopView.m in Sources */,
 				662A7FCA179ECF44000F5C83 /* YELProvinecCell.m in Sources */,
+				DD276FC8179F9ACB0011DBBC /* YELAlarmListCell.m in Sources */,
+				DD276FCC179FA40D0011DBBC /* YELMyAlarmListViewController.m in Sources */,
+				DD276FEF179FCEC70011DBBC /* TSActionSheet.m in Sources */,
+				DD276FF0179FCEC70011DBBC /* TSPopoverController.m in Sources */,
+				DD276FF1179FCEC70011DBBC /* TSPopoverPopoverView.m in Sources */,
+				DD276FF2179FCEC70011DBBC /* TSPopoverTouchView.m in Sources */,
+				DD276FF3179FCEC70011DBBC /* UIBarButtonItem+WEPopover.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

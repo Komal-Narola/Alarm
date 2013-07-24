@@ -41,11 +41,13 @@
 //修改密码API
 #define APIChangePwd              [APIURL stringByAppendingString:@"user/modifyPwd.json"]
 //获取图片API
-#define APIGetImage              [APIURL stringByAppendingString:@"image/getImages.json"]
+#define APIGetImage               [APIURL stringByAppendingString:@"image/getImages.json"]
 //获取系统运行状态API
-#define APIGetgetSystemState              [APIURL stringByAppendingString:@"systemstate/getSystemState.json"]
+#define APIGetgetSystemState      [APIURL stringByAppendingString:@"systemstate/getSystemState.json"]
 //获取系统运行状态API
-#define APIGetgetAllProvinces              [APIURL stringByAppendingString:@"allprovinces/allprovince.json"]
+#define APIGetgetAllProvinces     [APIURL stringByAppendingString:@"allprovinces/allprovince.json"]
+//获取系统运行状态API
+#define APIGetWaring              [APIURL stringByAppendingString:@"warning/getWarning.json"]
 //获取待办事项API
-#define APIGetOrderList              [APIURL stringByAppendingString:@"waitOrder/getOrderList.json"]
+#define APIGetOrderList           [APIURL stringByAppendingString:@"waitOrder/getOrderList.json"]
 #endif
