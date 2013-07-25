@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface YELProvinecCell : UITableViewCell
+@property (nonatomic,strong)UILabel *provinecLabel;
+@property (nonatomic,strong)UILabel *monthLabel;
+@property (nonatomic,strong)UILabel *preMonthLabel;
+@property (nonatomic,strong)UILabel *biLabel;
 
 @end

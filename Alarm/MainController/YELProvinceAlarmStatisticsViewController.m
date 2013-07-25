@@ -33,6 +33,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title=@"省份告警统计分析";
+        dataSource=[[NSMutableArray alloc]init];
         level=@"4";
     }
     return self;
@@ -59,17 +60,25 @@
             if (page==1) {
                 [dataSource removeAllObjects];
             }
-            [dataSource addObjectsFromArray:array];
-            if ([dataSource count]<10) {
-                [myTableView tableViewDidFinishedLoading];
-                myTableView.reachedTheEnd  = YES;
-                [myTableView reloadData];
+            if ([array count]!=0) {
+                [dataSource addObjectsFromArray:array];
+                if ([dataSource count]<10) {
+                    [myTableView tableViewDidFinishedLoading];
+                    myTableView.reachedTheEnd  = YES;
+                    [myTableView reloadData];
+                }else
+                {
+                    [myTableView tableViewDidFinishedLoading];
+                    myTableView.reachedTheEnd  = NO;
+                    [myTableView reloadData];
+                }
             }else
             {
                 [myTableView tableViewDidFinishedLoading];
-                myTableView.reachedTheEnd  = NO;
+                myTableView.reachedTheEnd  = YES;
                 [myTableView reloadData];
             }
+
         }else
         {
             [MBHUDView hudWithBody:[dictionary objectForKey:@"msg"] type:MBAlertViewHUDTypeDefault hidesAfter:1.0 show:YES];
@@ -136,13 +145,12 @@
 {
     [super viewDidLoad];
     [self initUiKit];
-    myTableView=[[PullingRefreshTableView alloc]initWithFrame:CGRectMake(0, 60, 320, [UIScreen mainScreen].applicationFrame.size.height-44-30) pullingDelegate:self];
+    myTableView=[[PullingRefreshTableView alloc]initWithFrame:CGRectMake(0, 60, 320, [UIScreen mainScreen].applicationFrame.size.height-44-60) pullingDelegate:self];
     myTableView.delegate=self;
     myTableView.dataSource=self;
-    [myTableView setBackgroundColor:[UIColor clearColor]];
-    [myTableView setBackgroundView:nil];
-    [myTableView setSeparatorColor:[UIColor clearColor]];
-    [myTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+//    [myTableView setBackgroundView:nil];
+//    [myTableView setSeparatorColor:[UIColor clearColor]];
+//    [myTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [self.view addSubview:myTableView];
     // Do any additional setup after loading the view from its nib.
 }
@@ -153,7 +161,7 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellWithIdentifier = @"ToDoList";
+    static NSString *CellWithIdentifier = @"ProvinecCell";
     YELProvinecCell *cell = (YELProvinecCell*)[tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
     if (cell == nil)
     {
@@ -161,6 +169,40 @@
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     return cell;
+}
+-(void)tableView:(UITableView *)tableView willDisplayCell:(YELProvinecCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"aaaa=%d",indexPath.row);
+    if (indexPath.row==0) {
+        [cell.provinecLabel setBackgroundColor:[UIColor colorWithRed:128/255.0f green:0 blue:0 alpha:1.0]];
+    }else if (indexPath.row==1)
+    {
+        [cell.provinecLabel setBackgroundColor:[UIColor colorWithRed:255/255.0f green:0 blue:0 alpha:1.0]];
+    }else if (indexPath.row==2)
+    {
+        [cell.provinecLabel setBackgroundColor:[UIColor colorWithRed:255/255.0f green:102/255.0 blue:102/255.0 alpha:1.0]];
+    }else
+    {
+        [cell.provinecLabel setBackgroundColor:[UIColor darkGrayColor]];
+    }
+    cell.provinecLabel.text=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"PROVINCE"];
+    NSNumber *monthNum=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"MONTH1"];
+    cell.monthLabel.text=[NSString stringWithFormat:@"%@",monthNum];
+    NSNumber *preMonthNum=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"MONTH2"];
+    cell.preMonthLabel.text=[NSString stringWithFormat:@"%@",preMonthNum];
+    NSString *ratioStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"RATIO"];
+    NSRange range=[ratioStr rangeOfString:@"↑"];
+    if (range.location!=NSNotFound) {
+        [cell.biLabel setTextColor:[UIColor redColor]];
+    }
+    NSRange xRange=[ratioStr rangeOfString:@"↓"];
+    if (xRange.location!=NSNotFound) {
+        [cell.biLabel setTextColor:[UIColor greenColor]];
+    }
+    if (range.location==NSNotFound && xRange.location==NSNotFound) {
+        [cell.biLabel setTextColor:[UIColor blackColor]];
+    }
+    cell.biLabel.text=ratioStr;
     
 }
 #pragma mark - PullingRefreshTableViewDelegate
