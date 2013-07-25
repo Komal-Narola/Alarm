@@ -46,6 +46,7 @@
         // Custom initialization
         dataSource=[[NSMutableArray alloc]init];
         self.title=@"集团告警列表";
+        [self.tabBarItem setImage:LOADIMAGE(@"gound@2x", @"png")];
         area=@"总部";
         level=@"";
         domain=@"";
@@ -278,7 +279,7 @@
         levelPopview.tag=50;
     }
     popoverController=[[TSPopoverController alloc]initWithView:levelPopview];
-    popoverController.alpha=0.7;
+    popoverController.alpha=0.9;
     [popoverController showPopoverWithTouch:event];
 }
 
@@ -289,7 +290,7 @@
         sysPopview.tag=51;
     }
     popoverController=[[TSPopoverController alloc]initWithView:sysPopview];
-    popoverController.alpha=0.7;
+    popoverController.alpha=0.9;
     [popoverController showPopoverWithTouch:event];
 }
 
@@ -300,7 +301,7 @@
         areaPopview.tag=52;
     }
     popoverController=[[TSPopoverController alloc]initWithView:areaPopview];
-    popoverController.alpha=0.7;
+    popoverController.alpha=0.9;
     [popoverController showPopoverWithTouch:event];
     
 }
@@ -332,7 +333,6 @@
             [self.levelButton setTitle:@"紧急" forState:UIControlStateNormal];
             level=@"5";
         }
-        DLog(@"5050");
     }else if(sender.superview.tag==51)
     {
         if (sender.tag==100) {
@@ -355,7 +355,6 @@
             [self.sysButton setTitle:@"DSS" forState:UIControlStateNormal];
             domain=@"DSS域";
         }
-        DLog(@"5151");
     }else if (sender.superview.tag==52)
     {
         if (sender.tag==100) {
@@ -366,7 +365,6 @@
             [self.areaButton setTitle:@"省份" forState:UIControlStateNormal];
             area=@"省分";
         }
-        DLog(@"5252");
     }
     [myTableView launchRefreshing];
     [popoverController dismissPopoverAnimatd:YES];

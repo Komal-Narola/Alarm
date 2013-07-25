@@ -49,17 +49,10 @@
 		DD0FBF4D179E4369009B7976 /* buttonanzhu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBF4C179E4369009B7976 /* buttonanzhu@2x.png */; };
 		DD0FBF51179E671A009B7976 /* YELSystemStateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0FBF50179E671A009B7976 /* YELSystemStateCell.m */; };
 		DD0FBF53179E8135009B7976 /* zuosanjiao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBF52179E8135009B7976 /* zuosanjiao@2x.png */; };
-		DD0FBF5A179E92FB009B7976 /* er@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBF54179E92FB009B7976 /* er@2x.png */; };
-		DD0FBF5B179E92FB009B7976 /* fuyi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBF55179E92FB009B7976 /* fuyi@2x.png */; };
-		DD0FBF5C179E92FB009B7976 /* ling@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBF56179E92FB009B7976 /* ling@2x.png */; };
-		DD0FBF5D179E92FB009B7976 /* san@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBF57179E92FB009B7976 /* san@2x.png */; };
-		DD0FBF5E179E92FB009B7976 /* si@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBF58179E92FB009B7976 /* si@2x.png */; };
-		DD0FBF5F179E92FB009B7976 /* yi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBF59179E92FB009B7976 /* yi@2x.png */; };
 		DD1F7F341797A09900E2E571 /* naviLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F7F331797A09900E2E571 /* naviLine@2x.png */; };
 		DD1F7F361797ACE300E2E571 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1F7F351797ACE300E2E571 /* QuartzCore.framework */; };
 		DD1F7F3E1797B74100E2E571 /* loginBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F7F3D1797B74100E2E571 /* loginBtn@2x.png */; };
 		DD1F7F401797BCC000E2E571 /* gou@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F7F3F1797BCC000E2E571 /* gou@2x.png */; };
-		DD1F7F441797C50700E2E571 /* 80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F7F431797C50700E2E571 /* 80@2x.png */; };
 		DD1F7F491797C59800E2E571 /* YELMainControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1F7F471797C59800E2E571 /* YELMainControllerViewController.m */; };
 		DD1F7F4A1797C59800E2E571 /* YELMainControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD1F7F481797C59800E2E571 /* YELMainControllerViewController.xib */; };
 		DD1F7F631797C9FF00E2E571 /* NSString+Trim.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1F7F4E1797C9FF00E2E571 /* NSString+Trim.m */; };
@@ -123,8 +116,25 @@
 		DD3EF077179D1256008700CD /* yellowButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF073179D1256008700CD /* yellowButton@2x.png */; };
 		DD3EF07C179D126D008700CD /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF078179D126D008700CD /* 12.png */; };
 		DD3EF07D179D126D008700CD /* 13.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF079179D126D008700CD /* 13.png */; };
-		DD3EF07E179D126D008700CD /* 14.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF07A179D126D008700CD /* 14.png */; };
 		DD3EF07F179D126D008700CD /* 16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF07B179D126D008700CD /* 16@2x.png */; };
+		DD4D2D4817A0B9CB00D9C028 /* gound@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D4617A0B9CB00D9C028 /* gound@2x.png */; };
+		DD4D2D4917A0B9CB00D9C028 /* my@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D4717A0B9CB00D9C028 /* my@2x.png */; };
+		DD4D2D4D17A0BCA700D9C028 /* YELSystemRunDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4D2D4B17A0BCA700D9C028 /* YELSystemRunDetailViewController.m */; };
+		DD4D2D4E17A0BCA700D9C028 /* YELSystemRunDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D4C17A0BCA700D9C028 /* YELSystemRunDetailViewController.xib */; };
+		DD4D2D5617A0CD9D00D9C028 /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D5017A0CD9D00D9C028 /* 1@2x.png */; };
+		DD4D2D5717A0CD9D00D9C028 /* 2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D5117A0CD9D00D9C028 /* 2@2x.png */; };
+		DD4D2D5817A0CD9D00D9C028 /* 3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D5217A0CD9D00D9C028 /* 3@2x.png */; };
+		DD4D2D5917A0CD9D00D9C028 /* 4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D5317A0CD9D00D9C028 /* 4@2x.png */; };
+		DD4D2D5A17A0CD9D00D9C028 /* 5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D5417A0CD9D00D9C028 /* 5@2x.png */; };
+		DD4D2D5B17A0CD9D00D9C028 /* 6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D5517A0CD9D00D9C028 /* 6@2x.png */; };
+		DD4D2D5F17A0FBBD00D9C028 /* KGModal.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4D2D5E17A0FBBD00D9C028 /* KGModal.m */; };
+		DD4D2D6217A1024E00D9C028 /* YELDoTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4D2D6117A1024E00D9C028 /* YELDoTableView.m */; };
+		DD4D2D6A17A1143600D9C028 /* er@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D6417A1143600D9C028 /* er@2x.png */; };
+		DD4D2D6B17A1143600D9C028 /* fuyi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D6517A1143600D9C028 /* fuyi@2x.png */; };
+		DD4D2D6C17A1143600D9C028 /* ling@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D6617A1143600D9C028 /* ling@2x.png */; };
+		DD4D2D6D17A1143600D9C028 /* san@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D6717A1143600D9C028 /* san@2x.png */; };
+		DD4D2D6E17A1143600D9C028 /* si@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D6817A1143600D9C028 /* si@2x.png */; };
+		DD4D2D6F17A1143600D9C028 /* yi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D6917A1143600D9C028 /* yi@2x.png */; };
 		DD9902C917969758006D1C48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9902C817969758006D1C48 /* UIKit.framework */; };
 		DD9902CB17969758006D1C48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9902CA17969758006D1C48 /* Foundation.framework */; };
 		DD9902CD17969758006D1C48 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9902CC17969758006D1C48 /* CoreGraphics.framework */; };
@@ -138,6 +148,9 @@
 		DD9902F0179698F6006D1C48 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9902EF179698F6006D1C48 /* Default-568h@2x.png */; };
 		DD9902F31796A2AC006D1C48 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9902F21796A2AC006D1C48 /* icon.png */; };
 		DD9902F51796A2B5006D1C48 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9902F41796A2B5006D1C48 /* icon@2x.png */; };
+		DDD2B48117A119AA00D994F1 /* 80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDD2B48017A119AA00D994F1 /* 80@2x.png */; };
+		DDD2B48517A1229E00D994F1 /* YELMyAlarmListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD2B48317A1229E00D994F1 /* YELMyAlarmListDetailViewController.m */; };
+		DDD2B48617A1229E00D994F1 /* YELMyAlarmListDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDD2B48417A1229E00D994F1 /* YELMyAlarmListDetailViewController.xib */; };
 		DDF19E6F1797978100CE21C4 /* ETNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF19E6E1797978100CE21C4 /* ETNavigationViewController.m */; };
 		DDF19E7317979AC700CE21C4 /* UIColor+String.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF19E7217979AC700CE21C4 /* UIColor+String.m */; };
 		DDF19E7B1797A01E00CE21C4 /* backButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF19E7A1797A01E00CE21C4 /* backButton@2x.png */; };
@@ -216,18 +229,11 @@
 		DD0FBF4F179E671A009B7976 /* YELSystemStateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELSystemStateCell.h; sourceTree = "<group>"; };
 		DD0FBF50179E671A009B7976 /* YELSystemStateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELSystemStateCell.m; sourceTree = "<group>"; };
 		DD0FBF52179E8135009B7976 /* zuosanjiao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zuosanjiao@2x.png"; sourceTree = "<group>"; };
-		DD0FBF54179E92FB009B7976 /* er@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "er@2x.png"; sourceTree = "<group>"; };
-		DD0FBF55179E92FB009B7976 /* fuyi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fuyi@2x.png"; sourceTree = "<group>"; };
-		DD0FBF56179E92FB009B7976 /* ling@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ling@2x.png"; sourceTree = "<group>"; };
-		DD0FBF57179E92FB009B7976 /* san@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "san@2x.png"; sourceTree = "<group>"; };
-		DD0FBF58179E92FB009B7976 /* si@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "si@2x.png"; sourceTree = "<group>"; };
-		DD0FBF59179E92FB009B7976 /* yi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yi@2x.png"; sourceTree = "<group>"; };
 		DD1F7F331797A09900E2E571 /* naviLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "naviLine@2x.png"; sourceTree = "<group>"; };
 		DD1F7F351797ACE300E2E571 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DD1F7F371797ADA400E2E571 /* YELSysConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELSysConfig.h; sourceTree = "<group>"; };
 		DD1F7F3D1797B74100E2E571 /* loginBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loginBtn@2x.png"; sourceTree = "<group>"; };
 		DD1F7F3F1797BCC000E2E571 /* gou@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gou@2x.png"; sourceTree = "<group>"; };
-		DD1F7F431797C50700E2E571 /* 80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "80@2x.png"; sourceTree = "<group>"; };
 		DD1F7F461797C59800E2E571 /* YELMainControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELMainControllerViewController.h; sourceTree = "<group>"; };
 		DD1F7F471797C59800E2E571 /* YELMainControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELMainControllerViewController.m; sourceTree = "<group>"; };
 		DD1F7F481797C59800E2E571 /* YELMainControllerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YELMainControllerViewController.xib; sourceTree = "<group>"; };
@@ -328,8 +334,28 @@
 		DD3EF073179D1256008700CD /* yellowButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowButton@2x.png"; sourceTree = "<group>"; };
 		DD3EF078179D126D008700CD /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
 		DD3EF079179D126D008700CD /* 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13.png; sourceTree = "<group>"; };
-		DD3EF07A179D126D008700CD /* 14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 14.png; sourceTree = "<group>"; };
 		DD3EF07B179D126D008700CD /* 16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "16@2x.png"; sourceTree = "<group>"; };
+		DD4D2D4617A0B9CB00D9C028 /* gound@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gound@2x.png"; sourceTree = "<group>"; };
+		DD4D2D4717A0B9CB00D9C028 /* my@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my@2x.png"; sourceTree = "<group>"; };
+		DD4D2D4A17A0BCA700D9C028 /* YELSystemRunDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELSystemRunDetailViewController.h; sourceTree = "<group>"; };
+		DD4D2D4B17A0BCA700D9C028 /* YELSystemRunDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELSystemRunDetailViewController.m; sourceTree = "<group>"; };
+		DD4D2D4C17A0BCA700D9C028 /* YELSystemRunDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YELSystemRunDetailViewController.xib; sourceTree = "<group>"; };
+		DD4D2D5017A0CD9D00D9C028 /* 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1@2x.png"; sourceTree = "<group>"; };
+		DD4D2D5117A0CD9D00D9C028 /* 2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2@2x.png"; sourceTree = "<group>"; };
+		DD4D2D5217A0CD9D00D9C028 /* 3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3@2x.png"; sourceTree = "<group>"; };
+		DD4D2D5317A0CD9D00D9C028 /* 4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4@2x.png"; sourceTree = "<group>"; };
+		DD4D2D5417A0CD9D00D9C028 /* 5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5@2x.png"; sourceTree = "<group>"; };
+		DD4D2D5517A0CD9D00D9C028 /* 6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6@2x.png"; sourceTree = "<group>"; };
+		DD4D2D5D17A0FBBD00D9C028 /* KGModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGModal.h; sourceTree = "<group>"; };
+		DD4D2D5E17A0FBBD00D9C028 /* KGModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGModal.m; sourceTree = "<group>"; };
+		DD4D2D6017A1024E00D9C028 /* YELDoTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELDoTableView.h; sourceTree = "<group>"; };
+		DD4D2D6117A1024E00D9C028 /* YELDoTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELDoTableView.m; sourceTree = "<group>"; };
+		DD4D2D6417A1143600D9C028 /* er@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "er@2x.png"; sourceTree = "<group>"; };
+		DD4D2D6517A1143600D9C028 /* fuyi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fuyi@2x.png"; sourceTree = "<group>"; };
+		DD4D2D6617A1143600D9C028 /* ling@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ling@2x.png"; sourceTree = "<group>"; };
+		DD4D2D6717A1143600D9C028 /* san@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "san@2x.png"; sourceTree = "<group>"; };
+		DD4D2D6817A1143600D9C028 /* si@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "si@2x.png"; sourceTree = "<group>"; };
+		DD4D2D6917A1143600D9C028 /* yi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yi@2x.png"; sourceTree = "<group>"; };
 		DD9902C517969758006D1C48 /* Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9902C817969758006D1C48 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DD9902CA17969758006D1C48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -348,6 +374,10 @@
 		DD9902EF179698F6006D1C48 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		DD9902F21796A2AC006D1C48 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 		DD9902F41796A2B5006D1C48 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../icon@2x.png"; sourceTree = "<group>"; };
+		DDD2B48017A119AA00D994F1 /* 80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "80@2x.png"; sourceTree = "<group>"; };
+		DDD2B48217A1229D00D994F1 /* YELMyAlarmListDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELMyAlarmListDetailViewController.h; sourceTree = "<group>"; };
+		DDD2B48317A1229E00D994F1 /* YELMyAlarmListDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELMyAlarmListDetailViewController.m; sourceTree = "<group>"; };
+		DDD2B48417A1229E00D994F1 /* YELMyAlarmListDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YELMyAlarmListDetailViewController.xib; sourceTree = "<group>"; };
 		DDF19E6D1797978100CE21C4 /* ETNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETNavigationViewController.h; sourceTree = "<group>"; };
 		DDF19E6E1797978100CE21C4 /* ETNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETNavigationViewController.m; sourceTree = "<group>"; };
 		DDF19E7117979AC700CE21C4 /* UIColor+String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+String.h"; sourceTree = "<group>"; };
@@ -381,6 +411,8 @@
 			children = (
 				662A7FC5179EC1E5000F5C83 /* YELPopView.h */,
 				662A7FC6179EC1E5000F5C83 /* YELPopView.m */,
+				DD4D2D6017A1024E00D9C028 /* YELDoTableView.h */,
+				DD4D2D6117A1024E00D9C028 /* YELDoTableView.m */,
 			);
 			name = UIKIT;
 			sourceTree = "<group>";
@@ -462,18 +494,24 @@
 				66BB2FD9179A41C500881EA3 /* YELSystemRunStateViewController.h */,
 				66BB2FDA179A41C500881EA3 /* YELSystemRunStateViewController.m */,
 				66BB2FDB179A41C500881EA3 /* YELSystemRunStateViewController.xib */,
+				DD4D2D4A17A0BCA700D9C028 /* YELSystemRunDetailViewController.h */,
+				DD4D2D4B17A0BCA700D9C028 /* YELSystemRunDetailViewController.m */,
+				DD4D2D4C17A0BCA700D9C028 /* YELSystemRunDetailViewController.xib */,
 				66BB2FDE179A41FA00881EA3 /* YELAlarmNumberViewController.h */,
 				66BB2FDF179A41FA00881EA3 /* YELAlarmNumberViewController.m */,
 				66BB2FE0179A41FA00881EA3 /* YELAlarmNumberViewController.xib */,
 				66BB2FE3179A421100881EA3 /* YELAlarmListViewController.h */,
 				66BB2FE4179A421100881EA3 /* YELAlarmListViewController.m */,
 				66BB2FE5179A421200881EA3 /* YELAlarmListViewController.xib */,
-				DD276FC9179FA40B0011DBBC /* YELMyAlarmListViewController.h */,
-				DD276FCA179FA40C0011DBBC /* YELMyAlarmListViewController.m */,
-				DD276FCB179FA40C0011DBBC /* YELMyAlarmListViewController.xib */,
 				6630C96B17A00E4B00E7EA0E /* YELAlarmDetailViewController.h */,
 				6630C96C17A00E4B00E7EA0E /* YELAlarmDetailViewController.m */,
 				6630C96D17A00E4B00E7EA0E /* YELAlarmDetailViewController.xib */,
+				DD276FC9179FA40B0011DBBC /* YELMyAlarmListViewController.h */,
+				DD276FCA179FA40C0011DBBC /* YELMyAlarmListViewController.m */,
+				DD276FCB179FA40C0011DBBC /* YELMyAlarmListViewController.xib */,
+				DDD2B48217A1229D00D994F1 /* YELMyAlarmListDetailViewController.h */,
+				DDD2B48317A1229E00D994F1 /* YELMyAlarmListDetailViewController.m */,
+				DDD2B48417A1229E00D994F1 /* YELMyAlarmListDetailViewController.xib */,
 				66BB2FE8179A423F00881EA3 /* YELProvinceAlarmStatisticsViewController.h */,
 				66BB2FE9179A423F00881EA3 /* YELProvinceAlarmStatisticsViewController.m */,
 				66BB2FEA179A423F00881EA3 /* YELProvinceAlarmStatisticsViewController.xib */,
@@ -622,6 +660,41 @@
 			path = TSPopover;
 			sourceTree = "<group>";
 		};
+		DD4D2D4F17A0CD9D00D9C028 /* mainpageImage */ = {
+			isa = PBXGroup;
+			children = (
+				DD4D2D5017A0CD9D00D9C028 /* 1@2x.png */,
+				DD4D2D5117A0CD9D00D9C028 /* 2@2x.png */,
+				DD4D2D5217A0CD9D00D9C028 /* 3@2x.png */,
+				DD4D2D5317A0CD9D00D9C028 /* 4@2x.png */,
+				DD4D2D5417A0CD9D00D9C028 /* 5@2x.png */,
+				DD4D2D5517A0CD9D00D9C028 /* 6@2x.png */,
+			);
+			path = mainpageImage;
+			sourceTree = "<group>";
+		};
+		DD4D2D5C17A0FB9C00D9C028 /* PopView */ = {
+			isa = PBXGroup;
+			children = (
+				DD4D2D5D17A0FBBD00D9C028 /* KGModal.h */,
+				DD4D2D5E17A0FBBD00D9C028 /* KGModal.m */,
+			);
+			name = PopView;
+			sourceTree = "<group>";
+		};
+		DD4D2D6317A1143600D9C028 /* sysState */ = {
+			isa = PBXGroup;
+			children = (
+				DD4D2D6417A1143600D9C028 /* er@2x.png */,
+				DD4D2D6517A1143600D9C028 /* fuyi@2x.png */,
+				DD4D2D6617A1143600D9C028 /* ling@2x.png */,
+				DD4D2D6717A1143600D9C028 /* san@2x.png */,
+				DD4D2D6817A1143600D9C028 /* si@2x.png */,
+				DD4D2D6917A1143600D9C028 /* yi@2x.png */,
+			);
+			path = sysState;
+			sourceTree = "<group>";
+		};
 		DD9902BC17969758006D1C48 = {
 			isa = PBXGroup;
 			children = (
@@ -693,6 +766,7 @@
 		DDF19E6C1797976700CE21C4 /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
+				DD4D2D5C17A0FB9C00D9C028 /* PopView */,
 				DD276FE3179FCEC70011DBBC /* TSPopover */,
 				662A7FC4179EC1AC000F5C83 /* UIKIT */,
 				66833C0F179A4E1B00B01AA2 /* CustomCell */,
@@ -723,17 +797,15 @@
 		DDF19E791797A01E00CE21C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DD4D2D6317A1143600D9C028 /* sysState */,
+				DD4D2D4F17A0CD9D00D9C028 /* mainpageImage */,
 				DD276FCE179FB3A00011DBBC /* jinggao */,
 				DD3EF078179D126D008700CD /* 12.png */,
 				DD3EF079179D126D008700CD /* 13.png */,
-				DD3EF07A179D126D008700CD /* 14.png */,
+				DDD2B48017A119AA00D994F1 /* 80@2x.png */,
+				DD4D2D4617A0B9CB00D9C028 /* gound@2x.png */,
+				DD4D2D4717A0B9CB00D9C028 /* my@2x.png */,
 				DD3EF07B179D126D008700CD /* 16@2x.png */,
-				DD0FBF54179E92FB009B7976 /* er@2x.png */,
-				DD0FBF55179E92FB009B7976 /* fuyi@2x.png */,
-				DD0FBF56179E92FB009B7976 /* ling@2x.png */,
-				DD0FBF57179E92FB009B7976 /* san@2x.png */,
-				DD0FBF58179E92FB009B7976 /* si@2x.png */,
-				DD0FBF59179E92FB009B7976 /* yi@2x.png */,
 				DD276FF5179FD6F10011DBBC /* xuxian@2x.png */,
 				DD0FBF52179E8135009B7976 /* zuosanjiao@2x.png */,
 				DD3EF071179D1256008700CD /* redButton@2x.png */,
@@ -751,7 +823,6 @@
 				DD1F7FA31797E51C00E2E571 /* set@2x.png */,
 				DD1F7F9F1797E1C800E2E571 /* login_xiadd@2x.png */,
 				DD1F7FA01797E1C800E2E571 /* login_zhongdd@2x.png */,
-				DD1F7F431797C50700E2E571 /* 80@2x.png */,
 				DD1F7F3F1797BCC000E2E571 /* gou@2x.png */,
 				DD1F7F3D1797B74100E2E571 /* loginBtn@2x.png */,
 				DD1F7F331797A09900E2E571 /* naviLine@2x.png */,
@@ -823,7 +894,6 @@
 				DD1F7F341797A09900E2E571 /* naviLine@2x.png in Resources */,
 				DD1F7F3E1797B74100E2E571 /* loginBtn@2x.png in Resources */,
 				DD1F7F401797BCC000E2E571 /* gou@2x.png in Resources */,
-				DD1F7F441797C50700E2E571 /* 80@2x.png in Resources */,
 				DD1F7F4A1797C59800E2E571 /* YELMainControllerViewController.xib in Resources */,
 				DD1F7FA11797E1C800E2E571 /* login_xiadd@2x.png in Resources */,
 				DD1F7FA21797E1C800E2E571 /* login_zhongdd@2x.png in Resources */,
@@ -849,16 +919,9 @@
 				DD3EF077179D1256008700CD /* yellowButton@2x.png in Resources */,
 				DD3EF07C179D126D008700CD /* 12.png in Resources */,
 				DD3EF07D179D126D008700CD /* 13.png in Resources */,
-				DD3EF07E179D126D008700CD /* 14.png in Resources */,
 				DD3EF07F179D126D008700CD /* 16@2x.png in Resources */,
 				DD0FBF4D179E4369009B7976 /* buttonanzhu@2x.png in Resources */,
 				DD0FBF53179E8135009B7976 /* zuosanjiao@2x.png in Resources */,
-				DD0FBF5A179E92FB009B7976 /* er@2x.png in Resources */,
-				DD0FBF5B179E92FB009B7976 /* fuyi@2x.png in Resources */,
-				DD0FBF5C179E92FB009B7976 /* ling@2x.png in Resources */,
-				DD0FBF5D179E92FB009B7976 /* san@2x.png in Resources */,
-				DD0FBF5E179E92FB009B7976 /* si@2x.png in Resources */,
-				DD0FBF5F179E92FB009B7976 /* yi@2x.png in Resources */,
 				DD276FCD179FA40D0011DBBC /* YELMyAlarmListViewController.xib in Resources */,
 				DD276FD9179FB3A00011DBBC /* jinggao0@2x.png in Resources */,
 				DD276FDA179FB3A00011DBBC /* jinggao1@2x.png in Resources */,
@@ -872,6 +935,23 @@
 				DD276FE2179FB3A00011DBBC /* jinggao9@2x.png in Resources */,
 				DD276FF6179FD6F20011DBBC /* xuxian@2x.png in Resources */,
 				6630C96F17A00E4C00E7EA0E /* YELAlarmDetailViewController.xib in Resources */,
+				DD4D2D4817A0B9CB00D9C028 /* gound@2x.png in Resources */,
+				DD4D2D4917A0B9CB00D9C028 /* my@2x.png in Resources */,
+				DD4D2D4E17A0BCA700D9C028 /* YELSystemRunDetailViewController.xib in Resources */,
+				DD4D2D5617A0CD9D00D9C028 /* 1@2x.png in Resources */,
+				DD4D2D5717A0CD9D00D9C028 /* 2@2x.png in Resources */,
+				DD4D2D5817A0CD9D00D9C028 /* 3@2x.png in Resources */,
+				DD4D2D5917A0CD9D00D9C028 /* 4@2x.png in Resources */,
+				DD4D2D5A17A0CD9D00D9C028 /* 5@2x.png in Resources */,
+				DD4D2D5B17A0CD9D00D9C028 /* 6@2x.png in Resources */,
+				DD4D2D6A17A1143600D9C028 /* er@2x.png in Resources */,
+				DD4D2D6B17A1143600D9C028 /* fuyi@2x.png in Resources */,
+				DD4D2D6C17A1143600D9C028 /* ling@2x.png in Resources */,
+				DD4D2D6D17A1143600D9C028 /* san@2x.png in Resources */,
+				DD4D2D6E17A1143600D9C028 /* si@2x.png in Resources */,
+				DD4D2D6F17A1143600D9C028 /* yi@2x.png in Resources */,
+				DDD2B48117A119AA00D994F1 /* 80@2x.png in Resources */,
+				DDD2B48617A1229E00D994F1 /* YELMyAlarmListDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -946,6 +1026,10 @@
 				DD276FF3179FCEC70011DBBC /* UIBarButtonItem+WEPopover.m in Sources */,
 				6630C96E17A00E4C00E7EA0E /* YELAlarmDetailViewController.m in Sources */,
 				6630C97217A00F4600E7EA0E /* YELDetailCell.m in Sources */,
+				DD4D2D4D17A0BCA700D9C028 /* YELSystemRunDetailViewController.m in Sources */,
+				DD4D2D5F17A0FBBD00D9C028 /* KGModal.m in Sources */,
+				DD4D2D6217A1024E00D9C028 /* YELDoTableView.m in Sources */,
+				DDD2B48517A1229E00D994F1 /* YELMyAlarmListDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -983,7 +1067,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chenlong Zhou (JCE92PF6Q2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chenlong Zhou (JCE92PF6Q2)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -998,6 +1083,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "C32C2CD5-2951-4E62-8FB5-F8860BE61D7B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C32C2CD5-2951-4E62-8FB5-F8860BE61D7B";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1014,7 +1101,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Chenlong Zhou (D6J9TYP22S)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Chenlong Zhou (D6J9TYP22S)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1022,6 +1110,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "6193D714-98EA-41A0-BC06-C24D38050D9E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6193D714-98EA-41A0-BC06-C24D38050D9E";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

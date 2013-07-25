@@ -86,6 +86,32 @@ static YELHttpHelper *_httpHelper = nil;
         faild(errorMsg);
     }];
 }
+//我的告警列表接口
+- (void)getMyWarningWithParamter:(NSDictionary *)dictionary sucess:(void (^) (NSDictionary *dictionary))sucess falid:(void (^) (NSString *errorMsg))faild{
+    
+    [[HttpRequestHelper defaultController]asyncGetRequest:APIGetMyWaring parameter:dictionary requestStrComplete:^(NSString *responseStr) {
+        NSData *data = [responseStr dataUsingEncoding: NSUTF8StringEncoding];
+        NSDictionary *dictionary=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        if (dictionary) {
+            sucess(dictionary);
+        }
+    } requestFailed:^(NSString *errorMsg) {
+        faild(errorMsg);
+    }];
+}
+//催办接口列表
+- (void)getDoPersonWithParamter:(NSDictionary *)dictionary sucess:(void (^) (NSDictionary *dictionary))sucess falid:(void (^) (NSString *errorMsg))faild{
+    
+    [[HttpRequestHelper defaultController]asyncGetRequest:APIGetWaringUser parameter:dictionary requestStrComplete:^(NSString *responseStr) {
+        NSData *data = [responseStr dataUsingEncoding: NSUTF8StringEncoding];
+        NSDictionary *dictionary=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        if (dictionary) {
+            sucess(dictionary);
+        }
+    } requestFailed:^(NSString *errorMsg) {
+        faild(errorMsg);
+    }];
+}
 //各省分告警统计分析接口
 - (void)getAllProvincesWithParamter:(NSDictionary *)dictionary sucess:(void (^) (NSDictionary *dictionary))sucess falid:(void (^) (NSString *errorMsg))faild{
     

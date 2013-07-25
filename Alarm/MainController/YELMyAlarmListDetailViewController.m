@@ -1,22 +1,21 @@
 //
-//  YELAlarmDetailViewController.m
+//  YELMyAlarmListDetailViewController.m
 //  Alarm
 //
-//  Created by YY on 13-7-24.
+//  Created by rock on 13-7-25.
 //  Copyright (c) 2013年 Ye Erliang. All rights reserved.
 //
-
-#import "YELAlarmDetailViewController.h"
+#import "YELMyAlarmListDetailViewController.h"
 #import "YELDetailCell.h"
 #import "YELDoTableView.h"
 #import "KGModal.h"
 #define TOP 2
-@interface YELAlarmDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface YELMyAlarmListDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @end
 
-@implementation YELAlarmDetailViewController
+@implementation YELMyAlarmListDetailViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,7 +30,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -87,15 +85,16 @@
     }else
     {
         NSString *timeStr=[self.dataSource objectForKey:@"TIME"];
-        NSString *areaStr=[self.dataSource objectForKey:@"AREA"];
-        NSString *dominStr=[self.dataSource objectForKey:@"DOMAIN"];
-        NSString *contentStr=[self.dataSource objectForKey:@"CONTENT"];
-        NSString *rangeStr=[self.dataSource objectForKey:@"RANGE"];
-        NSString *levelStr=[self.dataSource objectForKey:@"ELEVEL"];
+        NSString *areaStr=[self.dataSource objectForKey:@"DOMAIN"];
+        NSString *dominStr=[self.dataSource objectForKey:@"CONTENT"];
+        NSString *contentStr=[self.dataSource objectForKey:@"RANGE"];
+        NSString *rangeStr=[self.dataSource objectForKey:@"ELEVEL"];
+        NSString *levelStr=[self.dataSource objectForKey:@"FAULTTYPE"];
         NSString *sysStr=[self.dataSource objectForKey:@"SYS"];
         NSString *personStr=[self.dataSource objectForKey:@"MPERSON"];
         NSInteger contentheight=[YELDetailCell neededHeightForDescription:contentStr];
         NSInteger sysheight=[YELDetailCell neededHeightForDescription:sysStr];
+        NSInteger dominHeight=[YELDetailCell neededHeightForDescription:dominStr];
         
         YELDetailCell *detailCell=(YELDetailCell *)cell;
         detailCell.timeTitleLabel.frame=CGRectMake(5, 5, 70, 20);
@@ -112,10 +111,10 @@
         detailCell.areaContentLabel.text=areaStr;
         
         detailCell.dominTitleLabel.frame=CGRectMake(orginX, detailCell.areaTitleLabel.frame.origin.y+height+TOP, width, height);
-        detailCell.dominContentLabel.frame=CGRectMake(rightorginX, detailCell.dominTitleLabel.frame.origin.y, rightwidth, height);
+        detailCell.dominContentLabel.frame=CGRectMake(rightorginX, detailCell.dominTitleLabel.frame.origin.y, rightwidth, dominHeight);
         detailCell.dominContentLabel.text=dominStr;
         
-        detailCell.detailTitleLabel.frame=CGRectMake(orginX, detailCell.dominTitleLabel.frame.origin.y+height+TOP, width, height);
+        detailCell.detailTitleLabel.frame=CGRectMake(orginX, detailCell.dominTitleLabel.frame.origin.y+dominHeight+TOP, width, height);
         detailCell.detailContentLabel.frame=CGRectMake(rightorginX, detailCell.detailTitleLabel.frame.origin.y, rightwidth, contentheight);
         detailCell.detailContentLabel.text=contentStr;
         
@@ -135,17 +134,26 @@
         detailCell.personContentLabel.frame=CGRectMake(rightorginX, detailCell.personTitleLabel.frame.origin.y, rightwidth, height);
         detailCell.personContentLabel.text=personStr;
         
-        detailCell.doButton.frame=CGRectMake(orginX, detailCell.personTitleLabel.frame.origin.y+height+5, 290, 30);
+        detailCell.doButton.frame=CGRectMake(65, detailCell.personTitleLabel.frame.origin.y+height+5, 60, 30);
+        [detailCell.doButton setTitle:@"认领" forState:UIControlStateNormal];
         [detailCell.doButton addTarget:self action:@selector(pressDoButton) forControlEvents:UIControlEventTouchUpInside];
+        detailCell.doButton.enabled=NO;
+        
+        detailCell.sureButton.frame=CGRectMake(185, detailCell.personTitleLabel.frame.origin.y+height+5, 60, 30);
+        [detailCell.sureButton setTitle:@"确认" forState:UIControlStateNormal];
+        [detailCell.sureButton addTarget:self action:@selector(pressDoButton) forControlEvents:UIControlEventTouchUpInside];
+        detailCell.sureButton.enabled=NO;
+        
+        
         detailCell.timeTitleLabel.text=@"产生时间:";
-        [detailCell.areaTitleLabel setText:@"归  属  地:"];
-        [detailCell.dominTitleLabel setText:@"归  属  域:"];
-        [detailCell.detailTitleLabel setText:@"事件描述:"];
-        [detailCell.rangTitleLabel setText:@"事件范围:"];
-        [detailCell.levelTitleLabel setText:@"事件级别:"];
+        [detailCell.areaTitleLabel setText:@"归  属  域:"];
+        [detailCell.dominTitleLabel setText:@"事件描述:"];
+        [detailCell.detailTitleLabel setText:@"事件范围:"];
+        [detailCell.rangTitleLabel setText:@"事件级别:"];
+        [detailCell.levelTitleLabel setText:@"事件性质:"];
         [detailCell.sysTitleLabel setText:@"所属系统:"];
         [detailCell.personTitleLabel setText:@"负  责  人:"];
-        [detailCell.doButton setTitle:@"催  办" forState:UIControlStateNormal];
+        
     }
 }
 -(void)pressDoButton

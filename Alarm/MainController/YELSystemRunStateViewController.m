@@ -8,18 +8,25 @@
 
 #import "YELSystemRunStateViewController.h"
 #import "YELSystemStateCell.h"
-@interface YELSystemRunStateViewController ()
+#import "YELSystemRunDetailViewController.h"
+#import "YELPopView.h"
+#import "TSPopoverController.h"
+
+@interface YELSystemRunStateViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     NSArray *_dataSource;
+    NSString *_areaString;
+    YELPopView *areaPopview;
+    TSPopoverController *popoverController;
 }
 @property (weak, nonatomic) IBOutlet UITableView *_myTableView;
-- (IBAction)pressButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *stateButton;
+- (IBAction)pressAreaButton:(UIButton *)sender forEvent:(UIEvent *)event;
+
 
 @end
 
 @implementation YELSystemRunStateViewController
-NSString *const HeadQuarters= @"总部";
-NSString *const Province= @"省分";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +34,7 @@ NSString *const Province= @"省分";
     if (self) {
         // Custom initialization
         self.title=@"系统运行状态";
+        _areaString=@"总部";
     }
     return self;
 }
@@ -35,17 +43,16 @@ NSString *const Province= @"省分";
 {
     [super viewDidLoad];
     [self sendRequest];
-    // Do any additional setup after loading the view from its nib.
 }
 -(void)sendRequest
 {
-    NSDictionary *dict=[NSDictionary dictionaryWithObjectsAndKeys:HeadQuarters,@"domain",TOKEN,@"token", nil];
+    NSDictionary *dict=[NSDictionary dictionaryWithObjectsAndKeys:_areaString,@"domain",TOKEN,@"token", nil];
     [[YELHttpHelper defaultHelper]getSystemStateWithParamter:dict sucess:^(NSDictionary *dictionary) {
         int code=[[dictionary objectForKey:@"code"]intValue];
         if (code==0) {
             NSArray *array=[dictionary objectForKey:@"data"];
-            _dataSource=[[NSArray alloc]initWithArray:array];
-            [self._myTableView reloadData];
+                _dataSource=[[NSArray alloc]initWithArray:array];
+                [self._myTableView reloadData];
         }else
         {
             [MBHUDView hudWithBody:[dictionary objectForKey:@"msg"] type:MBAlertViewHUDTypeDefault hidesAfter:1.0 show:YES];
@@ -114,7 +121,7 @@ NSString *const Province= @"省分";
     if (cell == nil)
     {
         cell=[[YELSystemStateCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellWithIdentifier];
-        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        [cell setSelectionStyle:UITableViewCellSelectionStyleGray];
         if (indexPath.row%2==0) {
             cell.contentView.backgroundColor=[UIColor whiteColor];
             
@@ -154,6 +161,15 @@ NSString *const Province= @"省分";
     cell.businessImageView.image=[self getPic:bu];
     cell.businessImageView.frame=CGRectMake(273+23-cell.businessImageView.image.size.width/2, height/2-cell.businessImageView.image.size.height/2, cell.businessImageView.image.size.width, cell.businessImageView.image.size.height);
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    YELSystemRunDetailViewController *systemRunDetail=[[YELSystemRunDetailViewController alloc]initWithNibName:@"YELSystemRunDetailViewController" bundle:nil];
+    systemRunDetail.dataSourceDictionary=[_dataSource objectAtIndex:indexPath.row];
+    systemRunDetail.areaString=_areaString;
+    [self.navigationController pushViewController:systemRunDetail animated:YES];
+}
+
 -(UIImage *)getPic :(int)pt
 {
     switch (pt) {
@@ -184,10 +200,42 @@ NSString *const Province= @"省分";
 - (void)viewDidUnload
 {
     [self set_myTableView:nil];
+    [self setStateButton:nil];
     [super viewDidUnload];
 }
-- (IBAction)pressButton:(id)sender {
-    UIButton *button=(UIButton *)sender;
 
+- (IBAction)pressAreaButton:(UIButton *)sender forEvent:(UIEvent *)event {
+    if (!areaPopview) {
+        NSArray *array=[NSArray arrayWithObjects:@"全部",@"省份", nil];
+        areaPopview=[[YELPopView alloc]initWithFrame:CGRectMake(0, 0, 100, [array count]*30) array:array target:self];
+    }
+    popoverController=[[TSPopoverController alloc]initWithView:areaPopview];
+    popoverController.alpha=0.9;
+    [popoverController showPopoverWithTouch:event];
+}
+-(void)pressButton:(UIButton *)sender
+{
+    sender.selected=!sender.selected;
+    if (sender.selected) {
+        for (UIView *bt in sender.superview.subviews) {
+            if ([bt isKindOfClass:[UIButton class]]) {
+                UIButton *button=(UIButton *)bt;
+                if (button != sender) {
+                    button.selected=NO;
+                }
+            }
+            
+        }
+    }
+    if (sender.tag==100) {
+        [self.stateButton setTitle:@"总部" forState:UIControlStateNormal];
+        _areaString=@"总部";
+    }else if (sender.tag==101)
+    {
+        [self.stateButton setTitle:@"省份" forState:UIControlStateNormal];
+        _areaString=@"省分";
+    }
+    [self sendRequest];
+    [popoverController dismissPopoverAnimatd:YES];
 }
 @end

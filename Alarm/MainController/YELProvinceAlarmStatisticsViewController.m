@@ -8,13 +8,22 @@
 
 #import "YELProvinceAlarmStatisticsViewController.h"
 #import "YELProvinecCell.h"
+#import "YELPopView.h"
+#import "TSPopoverController.h"
 @interface YELProvinceAlarmStatisticsViewController ()
 {
     BOOL refreshing;
     NSInteger page;
     NSMutableArray *dataSource;
     PullingRefreshTableView *myTableView;
+    NSString *level;
+    YELPopView *levelPopView;
+    TSPopoverController *popoverController;
 }
+@property (weak, nonatomic) IBOutlet UIButton *levelButton;
+- (IBAction)pressLevelButton:(UIButton *)sender forEvent:(UIEvent *)event;
+
+
 @end
 
 @implementation YELProvinceAlarmStatisticsViewController
@@ -23,8 +32,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
         self.title=@"省份告警统计分析";
+        level=@"4";
     }
     return self;
 }
@@ -38,9 +47,8 @@
 }
 -(void)sendRequest
 {
-    NSDictionary *dict=[NSDictionary dictionaryWithObjectsAndKeys:TOKEN,@"token"
-                        @"1",@"level",
-                        @"BBS",@"region",
+    NSDictionary *dict=[NSDictionary dictionaryWithObjectsAndKeys:TOKEN,@"token",
+                        level,@"level",
                         PAGESIZE,@"pagesize",
                         [NSString stringWithFormat:@"%d",page],@"pageNo",
                         nil];
@@ -90,11 +98,45 @@
     }
 }
 
+-(void)initUiKit
+{
+    UIView *headView=[[UIView alloc]initWithFrame:CGRectMake(0, 30, 320, 30)];
+    [headView setBackgroundColor:[UIColor whiteColor]];
+    UILabel *dominLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 79, 30)];
+    dominLabel.text=@"所在省";
+    [dominLabel setTextAlignment:NSTextAlignmentCenter];
+    [dominLabel setFont:[UIFont boldSystemFontOfSize:15.0]];
+    [dominLabel setBackgroundColor:[UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1.0]];
+    [headView addSubview:dominLabel];
+    
+    UILabel *systemLabel=[[UILabel alloc]initWithFrame:CGRectMake(81, 0, 79, 30)];
+    systemLabel.text=@"上月";
+    [systemLabel setTextAlignment:NSTextAlignmentCenter];
+    [systemLabel setBackgroundColor:[UIColor lightGrayColor]];
+    [systemLabel setFont:[UIFont boldSystemFontOfSize:15.0]];
+    [headView addSubview:systemLabel];
+    
+    UILabel *platformsLabel=[[UILabel alloc]initWithFrame:CGRectMake(161, 0, 79, 30)];
+    platformsLabel.text=@"上上月";
+    [platformsLabel setTextAlignment:NSTextAlignmentCenter];
+    [platformsLabel setBackgroundColor:[UIColor lightGrayColor]];
+    [platformsLabel setFont:[UIFont boldSystemFontOfSize:15.0]];
+    [headView addSubview:platformsLabel];
+    
+    UILabel *applyLabel=[[UILabel alloc]initWithFrame:CGRectMake(241, 0, 79, 30)];
+    applyLabel.text=@"环比";
+    [applyLabel setTextAlignment:NSTextAlignmentCenter];
+    [applyLabel setBackgroundColor:[UIColor lightGrayColor]];
+    [applyLabel setFont:[UIFont boldSystemFontOfSize:15.0]];
+    [headView addSubview:applyLabel];
+    [self.view addSubview:headView];
 
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    myTableView=[[PullingRefreshTableView alloc]initWithFrame:CGRectMake(0, 0, 320, [UIScreen mainScreen].applicationFrame.size.height-44 ) pullingDelegate:self];
+    [self initUiKit];
+    myTableView=[[PullingRefreshTableView alloc]initWithFrame:CGRectMake(0, 60, 320, [UIScreen mainScreen].applicationFrame.size.height-44-30) pullingDelegate:self];
     myTableView.delegate=self;
     myTableView.dataSource=self;
     [myTableView setBackgroundColor:[UIColor clearColor]];
@@ -104,6 +146,7 @@
     [self.view addSubview:myTableView];
     // Do any additional setup after loading the view from its nib.
 }
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [dataSource count];
@@ -154,6 +197,45 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidUnload {
+    [self setLevelButton:nil];
+    [super viewDidUnload];
+}
+- (IBAction)pressLevelButton:(UIButton *)sender forEvent:(UIEvent *)event {
+    if (!levelPopView) {
+        NSArray *array=[NSArray arrayWithObjects:@"重要",@"紧急", nil];
+        levelPopView=[[YELPopView alloc]initWithFrame:CGRectMake(0, 0, 100, [array count]*30) array:array target:self];
+    }
+    popoverController=[[TSPopoverController alloc]initWithView:levelPopView];
+    popoverController.alpha=0.9;
+    [popoverController showPopoverWithTouch:event];
+}
+-(void)pressButton:(UIButton *)sender
+{
+    sender.selected=!sender.selected;
+    if (sender.selected) {
+        for (UIView *bt in sender.superview.subviews) {
+            if ([bt isKindOfClass:[UIButton class]]) {
+                UIButton *button=(UIButton *)bt;
+                if (button != sender) {
+                    button.selected=NO;
+                }
+            }
+            
+        }
+    }
+    if (sender.tag==100) {
+        [self.levelButton setTitle:@"重要" forState:UIControlStateNormal];
+        level=@"4";
+    }else if (sender.tag==101)
+    {
+        [self.levelButton setTitle:@"紧急" forState:UIControlStateNormal];
+        level=@"5";
+    }
+    [myTableView launchRefreshing];
+    [popoverController dismissPopoverAnimatd:YES];
 }
 
 @end

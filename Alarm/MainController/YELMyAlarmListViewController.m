@@ -11,6 +11,7 @@
 #import "TSPopoverController.h"
 #import "YELPopView.h"
 #import "YELAlarmListCell.h"
+#import "YELMyAlarmListDetailViewController.h"
 @interface YELMyAlarmListViewController ()<UITableViewDataSource,UITableViewDelegate,PullingRefreshTableViewDelegate>
 {
     BOOL refreshing;
@@ -38,24 +39,24 @@
     if (self) {
         // Custom initialization
         self.title=@"我的告警列表";
+        [self.tabBarItem setImage:LOADIMAGE(@"my@2x", @"png")];
         dataSource=[[NSMutableArray alloc]init];
-        level=@"";
-        huifu=@"3";
+        level=@"4,5";
+        huifu=@"1,2";
     }
     return self;
 }
-/*
+
 -(void)sendRequest
 {
     NSDictionary *dict=[NSDictionary dictionaryWithObjectsAndKeys:TOKEN,@"token",
-                        level,@"level",
-                        domain,@"domain",
-                        area,@"area",
+                        level,@"eventlevel",
+                        huifu,@"faulttype",
                         PAGESIZE,@"pageSize",
                         [NSString stringWithFormat:@"%d",page],@"pageNo",
                         nil];
     
-    [[YELHttpHelper defaultHelper]getWarningWithParamter:dict sucess:^(NSDictionary *dictionary) {
+    [[YELHttpHelper defaultHelper]getMyWarningWithParamter:dict sucess:^(NSDictionary *dictionary) {
         int code=[[dictionary objectForKey:@"code"] intValue];
         
         if (code==0) {
@@ -86,7 +87,7 @@
     }];
     
 }
- */
+ 
 //判断是刷新还是加载更多
 - (void)loadData
 {
@@ -95,11 +96,11 @@
     {
         page = 1;
         refreshing = NO;
-       // [self sendRequest];
+        [self sendRequest];
     }
     else
     {
-       // [self sendRequest];
+        [self sendRequest];
     }
 }
 -(void)viewWillAppear:(BOOL)animated
@@ -125,7 +126,7 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *titleStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"CONTENT"];
+    NSString *titleStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"EVENTTYP"];
     NSString *sysStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"SYS"];
     NSInteger height=[YELAlarmListCell neededHeightForCell:titleStr sysHeight:sysStr];
     return height;
@@ -148,8 +149,8 @@
 }
 -(void)tableView:(UITableView *)tableView willDisplayCell:(YELAlarmListCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *titleStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"CONTENT"];
-    NSString *nameStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"AREA"];
+    NSString *titleStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"EVENTTYP"];
+    NSString *nameStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"DOMAIN"];
     NSString *sysStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"SYS"];
     NSString *timeStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"TIME"];
     NSString *rnStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"RN"];
@@ -159,7 +160,7 @@
     cell.titleLabel.text=titleStr;
     cell.titleLabel.frame=CGRectMake(70, 2+5, 225, titleHeight);
     
-    NSMutableAttributedString *attriString=[[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"归属地:%@",nameStr]];
+    NSMutableAttributedString *attriString=[[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"归属域:%@",nameStr]];
     [attriString addAttribute:NSForegroundColorAttributeName
                         value:[UIColor lightGrayColor]
                         range:NSMakeRange(4, [nameStr length])];
@@ -190,6 +191,12 @@
     UIImage *leftImage=[self getImage:[rnStr intValue]];
     cell.timeImageView.image=leftImage;
     cell.timeImageView.frame=CGRectMake(22, height/2-leftImage.size.height/2, leftImage.size.width, leftImage.size.height);
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YELMyAlarmListDetailViewController *detailController=[[YELMyAlarmListDetailViewController alloc]initWithNibName:@"YELMyAlarmListDetailViewController" bundle:nil];
+    detailController.dataSource=[dataSource objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:detailController animated:YES];
 }
 #pragma mark - PullingRefreshTableViewDelegate
 - (void)pullingTableViewDidStartRefreshing:(PullingRefreshTableView *)tableView
@@ -274,7 +281,7 @@
     if (sender.superview.tag==50) {
         if (sender.tag==100) {
             [self.levelButton setTitle:@"全部" forState:UIControlStateNormal];
-            level=@"";
+            level=@"4,5";
             
         }else if (sender.tag==101)
         {
@@ -285,12 +292,11 @@
             [self.levelButton setTitle:@"紧急" forState:UIControlStateNormal];
             level=@"5";
         }
-        DLog(@"5050");
     }else if(sender.superview.tag==51)
     {
         if (sender.tag==100) {
             [self.huifuButton setTitle:@"全部" forState:UIControlStateNormal];
-            huifu=@"3";
+            huifu=@"1,2";
         }else if (sender.tag==101)
         {
             [self.huifuButton setTitle:@"不可恢复" forState:UIControlStateNormal];
@@ -300,7 +306,7 @@
             [self.huifuButton setTitle:@"可恢复" forState:UIControlStateNormal];
             huifu=@"1";
         }
-        DLog(@"5151");
+
     }
     [myTableView launchRefreshing];
     [popoverController dismissPopoverAnimatd:YES];
@@ -313,7 +319,7 @@
         levelPopview.tag=50;
     }
     popoverController=[[TSPopoverController alloc]initWithView:levelPopview];
-    popoverController.alpha=0.7;
+    popoverController.alpha=0.9;
     [popoverController showPopoverWithTouch:event];
 }
 - (IBAction)presshuifuButton:(UIButton *)sender forEvent:(UIEvent *)event {
@@ -323,7 +329,7 @@
         huifuPopview.tag=51;
     }
     popoverController=[[TSPopoverController alloc]initWithView:huifuPopview];
-    popoverController.alpha=0.7;
+    popoverController.alpha=0.9;
     [popoverController showPopoverWithTouch:event];
 }
 @end

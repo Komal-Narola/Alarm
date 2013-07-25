@@ -103,14 +103,13 @@
         for (int y =0 ; y<2; y++) {
             UIButton *button=[UIButton buttonWithType:UIButtonTypeCustom];
             button.frame=CGRectMake(20*(i+1) + (i*80), 30+(y*120), 80, 80);
-            [button setBackgroundColor:[UIColor redColor]];
+
             NSArray *buttonArray=[NSArray arrayWithObjects:
-                            [NSArray arrayWithObjects:@"",@"", nil],
-                            [NSArray arrayWithObjects:@"",@"",nil],
-                            [NSArray arrayWithObjects:@"",@"", nil],
+                            [NSArray arrayWithObjects:@"1@2x",@"4@2x", nil],
+                            [NSArray arrayWithObjects:@"2@2x",@"5@2x",nil],
+                            [NSArray arrayWithObjects:@"3@2x",@"6@2x", nil],
                             nil];
-//            [button setBackgroundImage:LOADIMAGE([[buttonArray objectAtIndex:i] objectAtIndex:y], @"png") forState:UIControlStateNormal];
-            [button setBackgroundColor:[UIColor yellowColor]];
+            [button setBackgroundImage:LOADIMAGE([[buttonArray objectAtIndex:i] objectAtIndex:y], @"png") forState:UIControlStateNormal];
             [button addTarget:self action:@selector(pressButton:) forControlEvents:UIControlEventTouchUpInside];
             button.tag=num;
             num++;
@@ -160,12 +159,14 @@
         YELProvinceAlarmStatisticsViewController *province=[[YELProvinceAlarmStatisticsViewController alloc]initWithNibName:@"YELProvinceAlarmStatisticsViewController" bundle:nil];
         [self.navigationController pushViewController:province animated:YES];
         
-    }else if (sender.tag==5)
-    {
-        YELTodoListViewController *todoList=[[YELTodoListViewController alloc]initWithNibName:@"YELTodoListViewController" bundle:nil];
-        [self.navigationController pushViewController:todoList animated:YES];
-        
-    }else if (sender.tag==6)
+    }
+//    else if (sender.tag==5)
+//    {
+//        YELTodoListViewController *todoList=[[YELTodoListViewController alloc]initWithNibName:@"YELTodoListViewController" bundle:nil];
+//        [self.navigationController pushViewController:todoList animated:YES];
+//        
+//    }
+    else if (sender.tag==6)
     {
         YELHeadquartersAlarmTrendViewController *headquarters=[[YELHeadquartersAlarmTrendViewController alloc]initWithNibName:@"YELHeadquartersAlarmTrendViewController" bundle:nil];
         [self.navigationController pushViewController:headquarters animated:YES];

@@ -26,6 +26,7 @@
 @property (nonatomic,strong)UILabel *sysContentLabel;
 @property (nonatomic,strong)UILabel *personContentLabel;
 @property (nonatomic,strong)UIButton *doButton;
+@property (nonatomic,strong)UIButton *sureButton;
 +(NSUInteger)neededHeightForCell:(NSString *)description sysStr:(NSString *)sysStr;
 + (NSUInteger)neededHeightForDescription:(NSString *)description;
 @end

@@ -196,7 +196,7 @@
                           delay:0.0
                         options:UIViewAnimationOptionAllowAnimatedContent
                      animations:^{
-                         popoverView.alpha = 1;
+                         popoverView.alpha = self.alpha;
                      }
                      completion:^(BOOL finished) {
                      }

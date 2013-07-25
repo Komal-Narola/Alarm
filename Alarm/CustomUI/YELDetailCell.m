@@ -16,7 +16,7 @@
     if (self) {
         [self setBackgroundColor:[UIColor whiteColor]];
         _timeTitleLabel=[[UILabel alloc]init];
-        _timeTitleLabel.text=@"产生时间:";
+       
         [_timeTitleLabel setBackgroundColor:[UIColor clearColor]];
         [_timeTitleLabel setFont:[UIFont systemFontOfSize:15.0f]];
         [self.contentView addSubview:_timeTitleLabel];
@@ -30,7 +30,7 @@
         _areaTitleLabel=[[UILabel alloc]init];
         [_areaTitleLabel setBackgroundColor:[UIColor clearColor]];
         [_areaTitleLabel setFont:[UIFont systemFontOfSize:15.0f]];
-        [_areaTitleLabel setText:@"归  属  地:"];
+       
         [self.contentView addSubview:_areaTitleLabel];
         
         _areaContentLabel=[[UILabel alloc]init];
@@ -42,19 +42,21 @@
         _dominTitleLabel=[[UILabel alloc]init];
         [_dominTitleLabel setBackgroundColor:[UIColor clearColor]];
         [_dominTitleLabel setFont:[UIFont systemFontOfSize:15.0f]];
-        [_dominTitleLabel setText:@"归  属  域:"];
+        
         [self.contentView addSubview:_dominTitleLabel];
         
         _dominContentLabel=[[UILabel alloc]init];
         [_dominContentLabel setBackgroundColor:[UIColor clearColor]];
         [_dominContentLabel setFont:[UIFont systemFontOfSize:15.0]];
+        [_dominContentLabel setNumberOfLines:0];
+        [_dominContentLabel setLineBreakMode:NSLineBreakByCharWrapping];
         [_dominContentLabel setTextColor:[UIColor redColor]];
         [self.contentView addSubview:_dominContentLabel];
         
         _detailTitleLabel=[[UILabel alloc]init];
         [_detailTitleLabel setBackgroundColor:[UIColor clearColor]];
         [_detailTitleLabel setFont:[UIFont systemFontOfSize:15.0f]];
-        [_detailTitleLabel setText:@"事件描述:"];
+       
         [self.contentView addSubview:_detailTitleLabel];
         
         _detailContentLabel=[[UILabel alloc]init];
@@ -68,7 +70,7 @@
         _rangTitleLabel=[[UILabel alloc]init];
         [_rangTitleLabel setBackgroundColor:[UIColor clearColor]];
         [_rangTitleLabel setFont:[UIFont systemFontOfSize:15.0f]];
-        [_rangTitleLabel setText:@"事件范围:"];
+        
         [self.contentView addSubview:_rangTitleLabel];
         
         _rangContentLabel=[[UILabel alloc]init];
@@ -80,7 +82,7 @@
         _levelTitleLabel=[[UILabel alloc]init];
         [_levelTitleLabel setBackgroundColor:[UIColor clearColor]];
         [_levelTitleLabel setFont:[UIFont systemFontOfSize:15.0f]];
-        [_levelTitleLabel setText:@"事件级别:"];
+        
         [self.contentView addSubview:_levelTitleLabel];
         
         _levelContentLabel=[[UILabel alloc]init];
@@ -92,7 +94,7 @@
         _sysTitleLabel=[[UILabel alloc]init];
         [_sysTitleLabel setBackgroundColor:[UIColor clearColor]];
         [_sysTitleLabel setFont:[UIFont systemFontOfSize:15.0f]];
-        [_sysTitleLabel setText:@"所属系统:"];
+       
         [self.contentView addSubview:_sysTitleLabel];
         
         _sysContentLabel=[[UILabel alloc]init];
@@ -106,7 +108,7 @@
         _personTitleLabel=[[UILabel alloc]init];
         [_personTitleLabel setBackgroundColor:[UIColor clearColor]];
         [_personTitleLabel setFont:[UIFont systemFontOfSize:15.0f]];
-        [_personTitleLabel setText:@"负  责  人:"];
+        
         [self.contentView addSubview:_personTitleLabel];
         
         _personContentLabel=[[UILabel alloc]init];
@@ -119,9 +121,17 @@
         [_doButton.layer setCornerRadius:5.0];
         [_doButton setBackgroundColor:[UIColor darkGrayColor]];
         [_doButton.titleLabel setFont:[UIFont systemFontOfSize:15.0]];
-        [_doButton setTitle:@"催  办" forState:UIControlStateNormal];
+        
         [_doButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.contentView addSubview:_doButton];
+        
+        _sureButton=[UIButton buttonWithType:UIButtonTypeCustom];
+        [_sureButton.layer setCornerRadius:5.0];
+        [_sureButton setBackgroundColor:[UIColor darkGrayColor]];
+        [_sureButton.titleLabel setFont:[UIFont systemFontOfSize:15.0]];
+        
+        [_sureButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self.contentView addSubview:_sureButton];
     }
     return self;
 }
