@@ -37,21 +37,32 @@
 //图片下载地址
 #define IMAGEURL                @"http://202.99.45.117:20881/minf/"
 //登陆API
-#define APILogin              [APIURL stringByAppendingString:@"user/login.json"]
+#define APILogin                [APIURL stringByAppendingString:@"user/login.json"]
 //修改密码API
-#define APIChangePwd              [APIURL stringByAppendingString:@"user/modifyPwd.json"]
+#define APIChangePwd            [APIURL stringByAppendingString:@"user/modifyPwd.json"]
 //获取图片API
-#define APIGetImage               [APIURL stringByAppendingString:@"image/getImages.json"]
+#define APIGetImage             [APIURL stringByAppendingString:@"image/getImages.json"]
 //获取系统运行状态API
-#define APIGetgetSystemState      [APIURL stringByAppendingString:@"systemstate/getSystemState.json"]
+#define APIGetgetSystemState    [APIURL stringByAppendingString:@"systemstate/getSystemState.json"]
 //获取省份
-#define APIGetgetAllProvinces     [APIURL stringByAppendingString:@"allprovinces/allprovince.json"]
-//获取告警类表API
-#define APIGetWaring              [APIURL stringByAppendingString:@"warning/getWarning.json"]
-//获取告警类表API
-#define APIGetMyWaring              [APIURL stringByAppendingString:@"eventDisposeController/getEventList.json"]
+#define APIGetgetAllProvinces   [APIURL stringByAppendingString:@"allprovinces/allprovince.json"]
+//获取告警列表API
+#define APIGetWaring            [APIURL stringByAppendingString:@"warning/getWarning.json"]
+//获取我的告警列表API
+#define APIGetMyWaring          [APIURL stringByAppendingString:@"eventDisposeController/getEventList.json"]
 //获取催办列表API
-#define APIGetWaringUser              [APIURL stringByAppendingString:@"warning/getWarningUsers.json"]
+#define APIGetWaringUser        [APIURL stringByAppendingString:@"warning/getWarningUsers.json"]
 //获取待办事项API
-#define APIGetOrderList           [APIURL stringByAppendingString:@"waitOrder/getOrderList.json"]
+#define APIGetOrderList         [APIURL stringByAppendingString:@"waitOrder/getOrderList.json"]
+//获取当月集团频发告警的系统前十名
+#define APIGetTopPin            [APIURL stringByAppendingString:@"warningtopten/getCentralSystemWarning.json"]
+//本月集团频发告警设备top10
+#define APIGetTopShe            [APIURL stringByAppendingString:@"warningtopten/getCentralEquipmentWarning.json"]
+//本月集团频发告警类别top10
+#define APIGetTopLei            [APIURL stringByAppendingString:@"warningtopten/getCentralCategoryWarning.json"]
+//本月集团频发告警机房top10
+#define APIGetTopJi             [APIURL stringByAppendingString:@"warningtopten/getCentralRoomWarning.json"]
+//本月省分频发告警类别top10
+#define APIGetTopSheng          [APIURL stringByAppendingString:@"warningtopten/getProvinceCategoryWarning.json"]
+
 #endif

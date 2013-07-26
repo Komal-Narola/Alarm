@@ -154,12 +154,13 @@
         tabbarController.navigationItem.title=@"告警列表";
         [self.navigationController pushViewController:tabbarController animated:YES];
         
-    }else if (sender.tag==4)
-    {
-        YELProvinceAlarmStatisticsViewController *province=[[YELProvinceAlarmStatisticsViewController alloc]initWithNibName:@"YELProvinceAlarmStatisticsViewController" bundle:nil];
-        [self.navigationController pushViewController:province animated:YES];
-        
     }
+//    else if (sender.tag==4)
+//    {
+//        YELProvinceAlarmStatisticsViewController *province=[[YELProvinceAlarmStatisticsViewController alloc]initWithNibName:@"YELProvinceAlarmStatisticsViewController" bundle:nil];
+//        [self.navigationController pushViewController:province animated:YES];
+//        
+//    }
 //    else if (sender.tag==5)
 //    {
 //        YELTodoListViewController *todoList=[[YELTodoListViewController alloc]initWithNibName:@"YELTodoListViewController" bundle:nil];

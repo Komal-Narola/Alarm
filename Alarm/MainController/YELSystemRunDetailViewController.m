@@ -136,7 +136,7 @@
     
     UIImage *leftImage=[self getImage:[rnStr intValue]];
     cell.timeImageView.image=leftImage;
-    cell.timeImageView.frame=CGRectMake(22, height/2-leftImage.size.height/2, leftImage.size.width, leftImage.size.height);
+    cell.timeImageView.frame=CGRectMake(9, height/2-leftImage.size.height/2, leftImage.size.width, leftImage.size.height);
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

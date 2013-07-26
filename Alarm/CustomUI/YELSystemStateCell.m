@@ -59,6 +59,10 @@
         _businessImageView =[[UIImageView alloc]init];
         [self.contentView addSubview:_businessImageView];
         
+        _bottomLine=[[UIImageView alloc]init];
+        [_bottomLine setBackgroundColor:[UIColor colorWithHexString:@"#cfcfcf"]];
+        [self.contentView addSubview:_bottomLine];
+        
     }
     return self;
 }

@@ -49,6 +49,19 @@
 		DD0FBF4D179E4369009B7976 /* buttonanzhu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBF4C179E4369009B7976 /* buttonanzhu@2x.png */; };
 		DD0FBF51179E671A009B7976 /* YELSystemStateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0FBF50179E671A009B7976 /* YELSystemStateCell.m */; };
 		DD0FBF53179E8135009B7976 /* zuosanjiao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBF52179E8135009B7976 /* zuosanjiao@2x.png */; };
+		DD1F5F4F17A2386300647BB6 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1F5F4E17A2386300647BB6 /* CoreTelephony.framework */; };
+		DD1F5F5117A24A3A00647BB6 /* set@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F5F5017A24A3A00647BB6 /* set@2x.png */; };
+		DD1F5F5E17A24C5600647BB6 /* jinggao0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F5F5317A24C5600647BB6 /* jinggao0@2x.png */; };
+		DD1F5F5F17A24C5600647BB6 /* jinggao1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F5F5417A24C5600647BB6 /* jinggao1@2x.png */; };
+		DD1F5F6017A24C5600647BB6 /* jinggao10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F5F5517A24C5600647BB6 /* jinggao10@2x.png */; };
+		DD1F5F6117A24C5600647BB6 /* jinggao2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F5F5617A24C5600647BB6 /* jinggao2@2x.png */; };
+		DD1F5F6217A24C5600647BB6 /* jinggao3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F5F5717A24C5600647BB6 /* jinggao3@2x.png */; };
+		DD1F5F6317A24C5600647BB6 /* jinggao4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F5F5817A24C5600647BB6 /* jinggao4@2x.png */; };
+		DD1F5F6417A24C5600647BB6 /* jinggao5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F5F5917A24C5600647BB6 /* jinggao5@2x.png */; };
+		DD1F5F6517A24C5600647BB6 /* jinggao6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F5F5A17A24C5600647BB6 /* jinggao6@2x.png */; };
+		DD1F5F6617A24C5600647BB6 /* jinggao7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F5F5B17A24C5600647BB6 /* jinggao7@2x.png */; };
+		DD1F5F6717A24C5600647BB6 /* jinggao8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F5F5C17A24C5600647BB6 /* jinggao8@2x.png */; };
+		DD1F5F6817A24C5600647BB6 /* jinggao9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F5F5D17A24C5600647BB6 /* jinggao9@2x.png */; };
 		DD1F7F341797A09900E2E571 /* naviLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F7F331797A09900E2E571 /* naviLine@2x.png */; };
 		DD1F7F361797ACE300E2E571 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1F7F351797ACE300E2E571 /* QuartzCore.framework */; };
 		DD1F7F3E1797B74100E2E571 /* loginBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F7F3D1797B74100E2E571 /* loginBtn@2x.png */; };
@@ -82,22 +95,11 @@
 		DD1F7F9E1797DA9600E2E571 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1F7F9D1797DA9600E2E571 /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DD1F7FA11797E1C800E2E571 /* login_xiadd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F7F9F1797E1C800E2E571 /* login_xiadd@2x.png */; };
 		DD1F7FA21797E1C800E2E571 /* login_zhongdd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F7FA01797E1C800E2E571 /* login_zhongdd@2x.png */; };
-		DD1F7FA41797E51C00E2E571 /* set@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F7FA31797E51C00E2E571 /* set@2x.png */; };
 		DD1F7FA81797E63900E2E571 /* YELSettingControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1F7FA61797E63900E2E571 /* YELSettingControllerViewController.m */; };
 		DD1F7FA91797E63900E2E571 /* YELSettingControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD1F7FA71797E63900E2E571 /* YELSettingControllerViewController.xib */; };
 		DD276FC8179F9ACB0011DBBC /* YELAlarmListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD276FC7179F9ACB0011DBBC /* YELAlarmListCell.m */; };
 		DD276FCC179FA40D0011DBBC /* YELMyAlarmListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD276FCA179FA40C0011DBBC /* YELMyAlarmListViewController.m */; };
 		DD276FCD179FA40D0011DBBC /* YELMyAlarmListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD276FCB179FA40C0011DBBC /* YELMyAlarmListViewController.xib */; };
-		DD276FD9179FB3A00011DBBC /* jinggao0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FCF179FB3A00011DBBC /* jinggao0@2x.png */; };
-		DD276FDA179FB3A00011DBBC /* jinggao1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FD0179FB3A00011DBBC /* jinggao1@2x.png */; };
-		DD276FDB179FB3A00011DBBC /* jinggao2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FD1179FB3A00011DBBC /* jinggao2@2x.png */; };
-		DD276FDC179FB3A00011DBBC /* jinggao3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FD2179FB3A00011DBBC /* jinggao3@2x.png */; };
-		DD276FDD179FB3A00011DBBC /* jinggao4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FD3179FB3A00011DBBC /* jinggao4@2x.png */; };
-		DD276FDE179FB3A00011DBBC /* jinggao5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FD4179FB3A00011DBBC /* jinggao5@2x.png */; };
-		DD276FDF179FB3A00011DBBC /* jinggao6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FD5179FB3A00011DBBC /* jinggao6@2x.png */; };
-		DD276FE0179FB3A00011DBBC /* jinggao7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FD6179FB3A00011DBBC /* jinggao7@2x.png */; };
-		DD276FE1179FB3A00011DBBC /* jinggao8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FD7179FB3A00011DBBC /* jinggao8@2x.png */; };
-		DD276FE2179FB3A00011DBBC /* jinggao9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD276FD8179FB3A00011DBBC /* jinggao9@2x.png */; };
 		DD276FEF179FCEC70011DBBC /* TSActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = DD276FE5179FCEC70011DBBC /* TSActionSheet.m */; };
 		DD276FF0179FCEC70011DBBC /* TSPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD276FE7179FCEC70011DBBC /* TSPopoverController.m */; };
 		DD276FF1179FCEC70011DBBC /* TSPopoverPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD276FE9179FCEC70011DBBC /* TSPopoverPopoverView.m */; };
@@ -229,6 +231,19 @@
 		DD0FBF4F179E671A009B7976 /* YELSystemStateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELSystemStateCell.h; sourceTree = "<group>"; };
 		DD0FBF50179E671A009B7976 /* YELSystemStateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELSystemStateCell.m; sourceTree = "<group>"; };
 		DD0FBF52179E8135009B7976 /* zuosanjiao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zuosanjiao@2x.png"; sourceTree = "<group>"; };
+		DD1F5F4E17A2386300647BB6 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		DD1F5F5017A24A3A00647BB6 /* set@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set@2x.png"; sourceTree = "<group>"; };
+		DD1F5F5317A24C5600647BB6 /* jinggao0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao0@2x.png"; sourceTree = "<group>"; };
+		DD1F5F5417A24C5600647BB6 /* jinggao1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao1@2x.png"; sourceTree = "<group>"; };
+		DD1F5F5517A24C5600647BB6 /* jinggao10@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao10@2x.png"; sourceTree = "<group>"; };
+		DD1F5F5617A24C5600647BB6 /* jinggao2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao2@2x.png"; sourceTree = "<group>"; };
+		DD1F5F5717A24C5600647BB6 /* jinggao3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao3@2x.png"; sourceTree = "<group>"; };
+		DD1F5F5817A24C5600647BB6 /* jinggao4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao4@2x.png"; sourceTree = "<group>"; };
+		DD1F5F5917A24C5600647BB6 /* jinggao5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao5@2x.png"; sourceTree = "<group>"; };
+		DD1F5F5A17A24C5600647BB6 /* jinggao6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao6@2x.png"; sourceTree = "<group>"; };
+		DD1F5F5B17A24C5600647BB6 /* jinggao7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao7@2x.png"; sourceTree = "<group>"; };
+		DD1F5F5C17A24C5600647BB6 /* jinggao8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao8@2x.png"; sourceTree = "<group>"; };
+		DD1F5F5D17A24C5600647BB6 /* jinggao9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao9@2x.png"; sourceTree = "<group>"; };
 		DD1F7F331797A09900E2E571 /* naviLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "naviLine@2x.png"; sourceTree = "<group>"; };
 		DD1F7F351797ACE300E2E571 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DD1F7F371797ADA400E2E571 /* YELSysConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELSysConfig.h; sourceTree = "<group>"; };
@@ -291,7 +306,6 @@
 		DD1F7F9D1797DA9600E2E571 /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
 		DD1F7F9F1797E1C800E2E571 /* login_xiadd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_xiadd@2x.png"; sourceTree = "<group>"; };
 		DD1F7FA01797E1C800E2E571 /* login_zhongdd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_zhongdd@2x.png"; sourceTree = "<group>"; };
-		DD1F7FA31797E51C00E2E571 /* set@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set@2x.png"; sourceTree = "<group>"; };
 		DD1F7FA51797E63900E2E571 /* YELSettingControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELSettingControllerViewController.h; sourceTree = "<group>"; };
 		DD1F7FA61797E63900E2E571 /* YELSettingControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELSettingControllerViewController.m; sourceTree = "<group>"; };
 		DD1F7FA71797E63900E2E571 /* YELSettingControllerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YELSettingControllerViewController.xib; sourceTree = "<group>"; };
@@ -300,16 +314,6 @@
 		DD276FC9179FA40B0011DBBC /* YELMyAlarmListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELMyAlarmListViewController.h; sourceTree = "<group>"; };
 		DD276FCA179FA40C0011DBBC /* YELMyAlarmListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELMyAlarmListViewController.m; sourceTree = "<group>"; };
 		DD276FCB179FA40C0011DBBC /* YELMyAlarmListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YELMyAlarmListViewController.xib; sourceTree = "<group>"; };
-		DD276FCF179FB3A00011DBBC /* jinggao0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao0@2x.png"; sourceTree = "<group>"; };
-		DD276FD0179FB3A00011DBBC /* jinggao1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao1@2x.png"; sourceTree = "<group>"; };
-		DD276FD1179FB3A00011DBBC /* jinggao2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao2@2x.png"; sourceTree = "<group>"; };
-		DD276FD2179FB3A00011DBBC /* jinggao3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao3@2x.png"; sourceTree = "<group>"; };
-		DD276FD3179FB3A00011DBBC /* jinggao4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao4@2x.png"; sourceTree = "<group>"; };
-		DD276FD4179FB3A00011DBBC /* jinggao5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao5@2x.png"; sourceTree = "<group>"; };
-		DD276FD5179FB3A00011DBBC /* jinggao6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao6@2x.png"; sourceTree = "<group>"; };
-		DD276FD6179FB3A00011DBBC /* jinggao7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao7@2x.png"; sourceTree = "<group>"; };
-		DD276FD7179FB3A00011DBBC /* jinggao8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao8@2x.png"; sourceTree = "<group>"; };
-		DD276FD8179FB3A00011DBBC /* jinggao9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao9@2x.png"; sourceTree = "<group>"; };
 		DD276FE4179FCEC70011DBBC /* TSActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSActionSheet.h; sourceTree = "<group>"; };
 		DD276FE5179FCEC70011DBBC /* TSActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSActionSheet.m; sourceTree = "<group>"; };
 		DD276FE6179FCEC70011DBBC /* TSPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPopoverController.h; sourceTree = "<group>"; };
@@ -390,6 +394,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD1F5F4F17A2386300647BB6 /* CoreTelephony.framework in Frameworks */,
 				66371DAF179827F900CD4ADC /* MapKit.framework in Frameworks */,
 				66371DAD179827F300CD4ADC /* ImageIO.framework in Frameworks */,
 				DD1F7F971797CDAE00E2E571 /* libz.1.2.5.dylib in Frameworks */,
@@ -477,6 +482,24 @@
 				6622BBA6179A6EBC00140AED /* PullingRefreshTableView.m */,
 			);
 			name = PullingRefrestTableView;
+			sourceTree = "<group>";
+		};
+		DD1F5F5217A24C5600647BB6 /* jinggaoImage */ = {
+			isa = PBXGroup;
+			children = (
+				DD1F5F5317A24C5600647BB6 /* jinggao0@2x.png */,
+				DD1F5F5417A24C5600647BB6 /* jinggao1@2x.png */,
+				DD1F5F5517A24C5600647BB6 /* jinggao10@2x.png */,
+				DD1F5F5617A24C5600647BB6 /* jinggao2@2x.png */,
+				DD1F5F5717A24C5600647BB6 /* jinggao3@2x.png */,
+				DD1F5F5817A24C5600647BB6 /* jinggao4@2x.png */,
+				DD1F5F5917A24C5600647BB6 /* jinggao5@2x.png */,
+				DD1F5F5A17A24C5600647BB6 /* jinggao6@2x.png */,
+				DD1F5F5B17A24C5600647BB6 /* jinggao7@2x.png */,
+				DD1F5F5C17A24C5600647BB6 /* jinggao8@2x.png */,
+				DD1F5F5D17A24C5600647BB6 /* jinggao9@2x.png */,
+			);
+			path = jinggaoImage;
 			sourceTree = "<group>";
 		};
 		DD1F7F451797C57C00E2E571 /* MainController */ = {
@@ -625,23 +648,6 @@
 			path = OPENUDID;
 			sourceTree = "<group>";
 		};
-		DD276FCE179FB3A00011DBBC /* jinggao */ = {
-			isa = PBXGroup;
-			children = (
-				DD276FCF179FB3A00011DBBC /* jinggao0@2x.png */,
-				DD276FD0179FB3A00011DBBC /* jinggao1@2x.png */,
-				DD276FD1179FB3A00011DBBC /* jinggao2@2x.png */,
-				DD276FD2179FB3A00011DBBC /* jinggao3@2x.png */,
-				DD276FD3179FB3A00011DBBC /* jinggao4@2x.png */,
-				DD276FD4179FB3A00011DBBC /* jinggao5@2x.png */,
-				DD276FD5179FB3A00011DBBC /* jinggao6@2x.png */,
-				DD276FD6179FB3A00011DBBC /* jinggao7@2x.png */,
-				DD276FD7179FB3A00011DBBC /* jinggao8@2x.png */,
-				DD276FD8179FB3A00011DBBC /* jinggao9@2x.png */,
-			);
-			path = jinggao;
-			sourceTree = "<group>";
-		};
 		DD276FE3179FCEC70011DBBC /* TSPopover */ = {
 			isa = PBXGroup;
 			children = (
@@ -698,6 +704,7 @@
 		DD9902BC17969758006D1C48 = {
 			isa = PBXGroup;
 			children = (
+				DD1F5F4E17A2386300647BB6 /* CoreTelephony.framework */,
 				DD9902CE17969758006D1C48 /* Alarm */,
 				DDF19E791797A01E00CE21C4 /* Resources */,
 				DD9902C717969758006D1C48 /* Frameworks */,
@@ -799,7 +806,7 @@
 			children = (
 				DD4D2D6317A1143600D9C028 /* sysState */,
 				DD4D2D4F17A0CD9D00D9C028 /* mainpageImage */,
-				DD276FCE179FB3A00011DBBC /* jinggao */,
+				DD1F5F5217A24C5600647BB6 /* jinggaoImage */,
 				DD3EF078179D126D008700CD /* 12.png */,
 				DD3EF079179D126D008700CD /* 13.png */,
 				DDD2B48017A119AA00D994F1 /* 80@2x.png */,
@@ -817,10 +824,10 @@
 				DD3EF069179D124F008700CD /* daosanjiao@2x.png */,
 				DD3EF06A179D124F008700CD /* daosanjiaoselect@2x.png */,
 				DD0FBF4C179E4369009B7976 /* buttonanzhu@2x.png */,
+				DD1F5F5017A24A3A00647BB6 /* set@2x.png */,
 				DD3EF05F179D046E008700CD /* pagecontrol-thumb-normal@2x.png */,
 				DD3EF060179D046F008700CD /* pagecontrol-thumb-selected@2x.png */,
 				667DCB63179984FE005571B5 /* button@2x.png */,
-				DD1F7FA31797E51C00E2E571 /* set@2x.png */,
 				DD1F7F9F1797E1C800E2E571 /* login_xiadd@2x.png */,
 				DD1F7FA01797E1C800E2E571 /* login_zhongdd@2x.png */,
 				DD1F7F3F1797BCC000E2E571 /* gou@2x.png */,
@@ -897,7 +904,6 @@
 				DD1F7F4A1797C59800E2E571 /* YELMainControllerViewController.xib in Resources */,
 				DD1F7FA11797E1C800E2E571 /* login_xiadd@2x.png in Resources */,
 				DD1F7FA21797E1C800E2E571 /* login_zhongdd@2x.png in Resources */,
-				DD1F7FA41797E51C00E2E571 /* set@2x.png in Resources */,
 				DD1F7FA91797E63900E2E571 /* YELSettingControllerViewController.xib in Resources */,
 				66371D7F1798119600CD4ADC /* YELChangePwdViewController.xib in Resources */,
 				667DCB64179984FE005571B5 /* button@2x.png in Resources */,
@@ -923,16 +929,6 @@
 				DD0FBF4D179E4369009B7976 /* buttonanzhu@2x.png in Resources */,
 				DD0FBF53179E8135009B7976 /* zuosanjiao@2x.png in Resources */,
 				DD276FCD179FA40D0011DBBC /* YELMyAlarmListViewController.xib in Resources */,
-				DD276FD9179FB3A00011DBBC /* jinggao0@2x.png in Resources */,
-				DD276FDA179FB3A00011DBBC /* jinggao1@2x.png in Resources */,
-				DD276FDB179FB3A00011DBBC /* jinggao2@2x.png in Resources */,
-				DD276FDC179FB3A00011DBBC /* jinggao3@2x.png in Resources */,
-				DD276FDD179FB3A00011DBBC /* jinggao4@2x.png in Resources */,
-				DD276FDE179FB3A00011DBBC /* jinggao5@2x.png in Resources */,
-				DD276FDF179FB3A00011DBBC /* jinggao6@2x.png in Resources */,
-				DD276FE0179FB3A00011DBBC /* jinggao7@2x.png in Resources */,
-				DD276FE1179FB3A00011DBBC /* jinggao8@2x.png in Resources */,
-				DD276FE2179FB3A00011DBBC /* jinggao9@2x.png in Resources */,
 				DD276FF6179FD6F20011DBBC /* xuxian@2x.png in Resources */,
 				6630C96F17A00E4C00E7EA0E /* YELAlarmDetailViewController.xib in Resources */,
 				DD4D2D4817A0B9CB00D9C028 /* gound@2x.png in Resources */,
@@ -952,6 +948,18 @@
 				DD4D2D6F17A1143600D9C028 /* yi@2x.png in Resources */,
 				DDD2B48117A119AA00D994F1 /* 80@2x.png in Resources */,
 				DDD2B48617A1229E00D994F1 /* YELMyAlarmListDetailViewController.xib in Resources */,
+				DD1F5F5117A24A3A00647BB6 /* set@2x.png in Resources */,
+				DD1F5F5E17A24C5600647BB6 /* jinggao0@2x.png in Resources */,
+				DD1F5F5F17A24C5600647BB6 /* jinggao1@2x.png in Resources */,
+				DD1F5F6017A24C5600647BB6 /* jinggao10@2x.png in Resources */,
+				DD1F5F6117A24C5600647BB6 /* jinggao2@2x.png in Resources */,
+				DD1F5F6217A24C5600647BB6 /* jinggao3@2x.png in Resources */,
+				DD1F5F6317A24C5600647BB6 /* jinggao4@2x.png in Resources */,
+				DD1F5F6417A24C5600647BB6 /* jinggao5@2x.png in Resources */,
+				DD1F5F6517A24C5600647BB6 /* jinggao6@2x.png in Resources */,
+				DD1F5F6617A24C5600647BB6 /* jinggao7@2x.png in Resources */,
+				DD1F5F6717A24C5600647BB6 /* jinggao8@2x.png in Resources */,
+				DD1F5F6817A24C5600647BB6 /* jinggao9@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

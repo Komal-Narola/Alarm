@@ -12,17 +12,14 @@
 #import "TSPopoverController.h"
 @interface YELProvinceAlarmStatisticsViewController ()
 {
-    BOOL refreshing;
-    NSInteger page;
     NSMutableArray *dataSource;
-    PullingRefreshTableView *myTableView;
     NSString *level;
     YELPopView *levelPopView;
     TSPopoverController *popoverController;
 }
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (weak, nonatomic) IBOutlet UIButton *levelButton;
 - (IBAction)pressLevelButton:(UIButton *)sender forEvent:(UIEvent *)event;
-
 
 @end
 
@@ -41,73 +38,42 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    if (page == 0)
-    {
-        [myTableView launchRefreshing];
-    }
+    [self sendRequest];
 }
 -(void)sendRequest
 {
     NSDictionary *dict=[NSDictionary dictionaryWithObjectsAndKeys:TOKEN,@"token",
                         level,@"level",
-                        PAGESIZE,@"pagesize",
-                        [NSString stringWithFormat:@"%d",page],@"pageNo",
+                        @"100",@"pageSize",
+                        @"1",@"pageNo",
                         nil];
     [[YELHttpHelper defaultHelper]getAllProvincesWithParamter:dict sucess:^(NSDictionary *dictionary) {
         int code=[[dictionary objectForKey:@"code"] intValue];
         if (code==0) {
             NSArray *array=[dictionary objectForKey:@"data"];
-            if (page==1) {
-                [dataSource removeAllObjects];
-            }
-            if ([array count]!=0) {
-                [dataSource addObjectsFromArray:array];
-                if ([dataSource count]<10) {
-                    [myTableView tableViewDidFinishedLoading];
-                    myTableView.reachedTheEnd  = YES;
-                    [myTableView reloadData];
-                }else
-                {
-                    [myTableView tableViewDidFinishedLoading];
-                    myTableView.reachedTheEnd  = NO;
-                    [myTableView reloadData];
-                }
-            }else
-            {
-                [myTableView tableViewDidFinishedLoading];
-                myTableView.reachedTheEnd  = YES;
-                [myTableView reloadData];
-            }
-
+            [dataSource removeAllObjects];
+            [dataSource addObjectsFromArray:array];
+            [self scrollToTop:YES];
+            [self.myTableView reloadData];
+            
         }else
         {
             [MBHUDView hudWithBody:[dictionary objectForKey:@"msg"] type:MBAlertViewHUDTypeDefault hidesAfter:1.0 show:YES];
         }
     } falid:^(NSString *errorMsg) {
-        [myTableView tableViewDidFinishedLoading];
-        myTableView.reachedTheEnd  = YES;
         [MBHUDView hudWithBody:@"网络不给力" type:MBAlertViewHUDTypeDefault hidesAfter:1.0 show:YES];
         
     }];
 
 }
-//判断是刷新还是加载更多
-- (void)loadData
-{
-    page++;
-    if (refreshing)
-    {
-        page = 1;
-        refreshing = NO;
-        [self sendRequest];
-    }
-    else
-    {
-        [self sendRequest];
-    }
+- (void)scrollToTop:(BOOL)animated {
+    [self.myTableView setContentOffset:CGPointMake(0,0) animated:animated];
 }
-
--(void)initUiKit
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UIView *headView=[[UIView alloc]initWithFrame:CGRectMake(0, 30, 320, 30)];
     [headView setBackgroundColor:[UIColor whiteColor]];
@@ -138,23 +104,8 @@
     [applyLabel setBackgroundColor:[UIColor lightGrayColor]];
     [applyLabel setFont:[UIFont boldSystemFontOfSize:15.0]];
     [headView addSubview:applyLabel];
-    [self.view addSubview:headView];
-
+    return headView;
 }
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    [self initUiKit];
-    myTableView=[[PullingRefreshTableView alloc]initWithFrame:CGRectMake(0, 60, 320, [UIScreen mainScreen].applicationFrame.size.height-44-60) pullingDelegate:self];
-    myTableView.delegate=self;
-    myTableView.dataSource=self;
-//    [myTableView setBackgroundView:nil];
-//    [myTableView setSeparatorColor:[UIColor clearColor]];
-//    [myTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    [self.view addSubview:myTableView];
-    // Do any additional setup after loading the view from its nib.
-}
-
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [dataSource count];
@@ -172,7 +123,6 @@
 }
 -(void)tableView:(UITableView *)tableView willDisplayCell:(YELProvinecCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"aaaa=%d",indexPath.row);
     if (indexPath.row==0) {
         [cell.provinecLabel setBackgroundColor:[UIColor colorWithRed:128/255.0f green:0 blue:0 alpha:1.0]];
     }else if (indexPath.row==1)
@@ -203,36 +153,6 @@
         [cell.biLabel setTextColor:[UIColor blackColor]];
     }
     cell.biLabel.text=ratioStr;
-    
-}
-#pragma mark - PullingRefreshTableViewDelegate
-- (void)pullingTableViewDidStartRefreshing:(PullingRefreshTableView *)tableView
-{
-    refreshing = YES;
-    [self performSelector:@selector(loadData) withObject:nil afterDelay:1.f];
-}
-
-- (NSDate *)pullingTableViewRefreshingFinishedDate{
-    NSDateFormatter *df = [[NSDateFormatter alloc] init ];
-    df.dateFormat = @"yyyy-MM-dd HH:mm";
-    NSDate *curDate = [NSDate date];
-    NSString * curTime = [df stringFromDate:curDate];
-    NSDate *date = [df dateFromString:curTime];
-    return date;
-}
-
-- (void)pullingTableViewDidStartLoading:(PullingRefreshTableView *)tableView
-{
-    [self performSelector:@selector(loadData) withObject:nil afterDelay:1.f];
-}
-#pragma mark - Scroll
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    [myTableView tableViewDidScroll:scrollView];
-    
-}
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    [myTableView tableViewDidEndDragging:scrollView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -243,6 +163,7 @@
 
 - (void)viewDidUnload {
     [self setLevelButton:nil];
+    [self setMyTableView:nil];
     [super viewDidUnload];
 }
 - (IBAction)pressLevelButton:(UIButton *)sender forEvent:(UIEvent *)event {
@@ -276,7 +197,7 @@
         [self.levelButton setTitle:@"紧急" forState:UIControlStateNormal];
         level=@"5";
     }
-    [myTableView launchRefreshing];
+    [self sendRequest];
     [popoverController dismissPopoverAnimatd:YES];
 }
 

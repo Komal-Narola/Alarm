@@ -135,7 +135,14 @@
 -(void)tableView:(UITableView *)tableView willDisplayCell:(YELSystemStateCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *sysStr=[[_dataSource objectAtIndex:indexPath.row]objectForKey:@"SYS"];
-    NSString *dominStr=[[_dataSource objectAtIndex:indexPath.row]objectForKey:@"DOMAIN"];
+    NSString *dominStr=nil;
+    if ([_areaString isEqualToString:@"总部"]) {
+         dominStr=[[_dataSource objectAtIndex:indexPath.row]objectForKey:@"DOMAIN"];
+    }else
+    {
+        dominStr=[[_dataSource objectAtIndex:indexPath.row]objectForKey:@"PROVINCE"];
+    }
+
     int au=[[[_dataSource objectAtIndex:indexPath.row]objectForKey:@"AU"]intValue];
     int bu=[[[_dataSource objectAtIndex:indexPath.row]objectForKey:@"BU"]intValue];
     int pu=[[[_dataSource objectAtIndex:indexPath.row]objectForKey:@"PU"]intValue];
@@ -160,6 +167,7 @@
     
     cell.businessImageView.image=[self getPic:bu];
     cell.businessImageView.frame=CGRectMake(273+23-cell.businessImageView.image.size.width/2, height/2-cell.businessImageView.image.size.height/2, cell.businessImageView.image.size.width, cell.businessImageView.image.size.height);
+    cell.bottomLine.frame=CGRectMake(0, height-1, 320, 1);
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
