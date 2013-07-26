@@ -49,7 +49,6 @@
 		DD0FBF4D179E4369009B7976 /* buttonanzhu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBF4C179E4369009B7976 /* buttonanzhu@2x.png */; };
 		DD0FBF51179E671A009B7976 /* YELSystemStateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0FBF50179E671A009B7976 /* YELSystemStateCell.m */; };
 		DD0FBF53179E8135009B7976 /* zuosanjiao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBF52179E8135009B7976 /* zuosanjiao@2x.png */; };
-		DD1F5F4F17A2386300647BB6 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1F5F4E17A2386300647BB6 /* CoreTelephony.framework */; };
 		DD1F5F5117A24A3A00647BB6 /* set@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F5F5017A24A3A00647BB6 /* set@2x.png */; };
 		DD1F5F5E17A24C5600647BB6 /* jinggao0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F5F5317A24C5600647BB6 /* jinggao0@2x.png */; };
 		DD1F5F5F17A24C5600647BB6 /* jinggao1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F5F5417A24C5600647BB6 /* jinggao1@2x.png */; };
@@ -62,6 +61,10 @@
 		DD1F5F6617A24C5600647BB6 /* jinggao7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F5F5B17A24C5600647BB6 /* jinggao7@2x.png */; };
 		DD1F5F6717A24C5600647BB6 /* jinggao8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F5F5C17A24C5600647BB6 /* jinggao8@2x.png */; };
 		DD1F5F6817A24C5600647BB6 /* jinggao9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F5F5D17A24C5600647BB6 /* jinggao9@2x.png */; };
+		DD1F5F6B17A2753D00647BB6 /* YELTopNumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1F5F6A17A2753D00647BB6 /* YELTopNumCell.m */; };
+		DD1F5F6E17A2781500647BB6 /* YELTopAnotherNumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1F5F6D17A2781500647BB6 /* YELTopAnotherNumCell.m */; };
+		DD1F5F6F17A283F200647BB6 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9902F41796A2B5006D1C48 /* icon@2x.png */; };
+		DD1F5F7017A2843600647BB6 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9902F21796A2AC006D1C48 /* icon.png */; };
 		DD1F7F341797A09900E2E571 /* naviLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F7F331797A09900E2E571 /* naviLine@2x.png */; };
 		DD1F7F361797ACE300E2E571 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1F7F351797ACE300E2E571 /* QuartzCore.framework */; };
 		DD1F7F3E1797B74100E2E571 /* loginBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1F7F3D1797B74100E2E571 /* loginBtn@2x.png */; };
@@ -148,8 +151,6 @@
 		DD9902EC1796987D006D1C48 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9902EB1796987D006D1C48 /* Default@2x.png */; };
 		DD9902EE179698D6006D1C48 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9902ED179698D6006D1C48 /* Default.png */; };
 		DD9902F0179698F6006D1C48 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9902EF179698F6006D1C48 /* Default-568h@2x.png */; };
-		DD9902F31796A2AC006D1C48 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9902F21796A2AC006D1C48 /* icon.png */; };
-		DD9902F51796A2B5006D1C48 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9902F41796A2B5006D1C48 /* icon@2x.png */; };
 		DDD2B48117A119AA00D994F1 /* 80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDD2B48017A119AA00D994F1 /* 80@2x.png */; };
 		DDD2B48517A1229E00D994F1 /* YELMyAlarmListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD2B48317A1229E00D994F1 /* YELMyAlarmListDetailViewController.m */; };
 		DDD2B48617A1229E00D994F1 /* YELMyAlarmListDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDD2B48417A1229E00D994F1 /* YELMyAlarmListDetailViewController.xib */; };
@@ -244,6 +245,10 @@
 		DD1F5F5B17A24C5600647BB6 /* jinggao7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao7@2x.png"; sourceTree = "<group>"; };
 		DD1F5F5C17A24C5600647BB6 /* jinggao8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao8@2x.png"; sourceTree = "<group>"; };
 		DD1F5F5D17A24C5600647BB6 /* jinggao9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinggao9@2x.png"; sourceTree = "<group>"; };
+		DD1F5F6917A2753D00647BB6 /* YELTopNumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELTopNumCell.h; sourceTree = "<group>"; };
+		DD1F5F6A17A2753D00647BB6 /* YELTopNumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELTopNumCell.m; sourceTree = "<group>"; };
+		DD1F5F6C17A2781500647BB6 /* YELTopAnotherNumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELTopAnotherNumCell.h; sourceTree = "<group>"; };
+		DD1F5F6D17A2781500647BB6 /* YELTopAnotherNumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELTopAnotherNumCell.m; sourceTree = "<group>"; };
 		DD1F7F331797A09900E2E571 /* naviLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "naviLine@2x.png"; sourceTree = "<group>"; };
 		DD1F7F351797ACE300E2E571 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DD1F7F371797ADA400E2E571 /* YELSysConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELSysConfig.h; sourceTree = "<group>"; };
@@ -394,7 +399,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD1F5F4F17A2386300647BB6 /* CoreTelephony.framework in Frameworks */,
 				66371DAF179827F900CD4ADC /* MapKit.framework in Frameworks */,
 				66371DAD179827F300CD4ADC /* ImageIO.framework in Frameworks */,
 				DD1F7F971797CDAE00E2E571 /* libz.1.2.5.dylib in Frameworks */,
@@ -461,6 +465,10 @@
 		66833C0F179A4E1B00B01AA2 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
+				DD1F5F6917A2753D00647BB6 /* YELTopNumCell.h */,
+				DD1F5F6A17A2753D00647BB6 /* YELTopNumCell.m */,
+				DD1F5F6C17A2781500647BB6 /* YELTopAnotherNumCell.h */,
+				DD1F5F6D17A2781500647BB6 /* YELTopAnotherNumCell.m */,
 				66833C10179A4E4200B01AA2 /* YELTodoListCell.h */,
 				66833C11179A4E4200B01AA2 /* YELTodoListCell.m */,
 				DD0FBF4F179E671A009B7976 /* YELSystemStateCell.h */,
@@ -895,8 +903,6 @@
 				DD9902EC1796987D006D1C48 /* Default@2x.png in Resources */,
 				DD9902EE179698D6006D1C48 /* Default.png in Resources */,
 				DD9902F0179698F6006D1C48 /* Default-568h@2x.png in Resources */,
-				DD9902F31796A2AC006D1C48 /* icon.png in Resources */,
-				DD9902F51796A2B5006D1C48 /* icon@2x.png in Resources */,
 				DDF19E7B1797A01E00CE21C4 /* backButton@2x.png in Resources */,
 				DD1F7F341797A09900E2E571 /* naviLine@2x.png in Resources */,
 				DD1F7F3E1797B74100E2E571 /* loginBtn@2x.png in Resources */,
@@ -960,6 +966,8 @@
 				DD1F5F6617A24C5600647BB6 /* jinggao7@2x.png in Resources */,
 				DD1F5F6717A24C5600647BB6 /* jinggao8@2x.png in Resources */,
 				DD1F5F6817A24C5600647BB6 /* jinggao9@2x.png in Resources */,
+				DD1F5F6F17A283F200647BB6 /* icon@2x.png in Resources */,
+				DD1F5F7017A2843600647BB6 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1038,6 +1046,8 @@
 				DD4D2D5F17A0FBBD00D9C028 /* KGModal.m in Sources */,
 				DD4D2D6217A1024E00D9C028 /* YELDoTableView.m in Sources */,
 				DDD2B48517A1229E00D994F1 /* YELMyAlarmListDetailViewController.m in Sources */,
+				DD1F5F6B17A2753D00647BB6 /* YELTopNumCell.m in Sources */,
+				DD1F5F6E17A2781500647BB6 /* YELTopAnotherNumCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

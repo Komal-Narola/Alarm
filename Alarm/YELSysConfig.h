@@ -33,9 +33,15 @@
 #define IMAGE(A) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:A ofType:nil]]
 
 //定义一个API
-#define APIURL                @"http://202.99.45.117:20881/minf/api/"
+//测试接口
+#define APIURL                @"http://202.99.45.117:20880/minf/api/"
+//正式接口
+//#define APIURL                @"http://202.99.45.117:20881/minf/api/"
 //图片下载地址
-#define IMAGEURL                @"http://202.99.45.117:20881/minf/"
+//正式接口
+//#define IMAGEURL                @"http://202.99.45.117:20881/minf/"
+//测试接口
+#define IMAGEURL              @"http://202.99.45.117:20880/minf/"
 //登陆API
 #define APILogin                [APIURL stringByAppendingString:@"user/login.json"]
 //修改密码API

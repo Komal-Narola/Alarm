@@ -22,9 +22,15 @@
             [button setTitle:[array objectAtIndex:i] forState:UIControlStateNormal];
             [button setImage:[UIImage imageNamed:@"gou.png"] forState:UIControlStateSelected];
             [button setImage:[UIImage imageNamed:@"80.png"] forState:UIControlStateNormal];
-            if (self.frame.size.width>100) {
+            if (self.frame.size.width>200)
+            {
+                [button setImageEdgeInsets:UIEdgeInsetsMake(0, 200, 0, 0)];
+            }
+            else if (self.frame.size.width>100)
+            {
                 [button setImageEdgeInsets:UIEdgeInsetsMake(0, 130, 0, 0)];
-            }else
+            }
+            else
             {
                 [button setImageEdgeInsets:UIEdgeInsetsMake(0, 70, 0, 0)];
             }

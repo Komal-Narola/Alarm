@@ -9,11 +9,13 @@
 #import "YELAlarmNumberViewController.h"
 #import "YELPopView.h"
 #import "TSPopoverController.h"
+#import "YELTopNumCell.h"
+#import "YELTopAnotherNumCell.h"
 @interface YELAlarmNumberViewController ()
 {
     YELPopView *topPopView;
     TSPopoverController *popoverController;
-    NSMutableArray *dataSource;
+    NSArray *dataSource;
     int type;
 }
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
@@ -30,7 +32,7 @@
     if (self) {
         // Custom initialization
         self.title=@"告警排名Top10";
-        dataSource=[[NSMutableArray alloc]init];
+        dataSource=[[NSArray alloc]init];
         type=0;
     }
     return self;
@@ -43,42 +45,86 @@
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    if (type==1) {
-        
-    }else
+    UIView *headView=[[UIView alloc]initWithFrame:CGRectMake(0, 30, 320, 30)];
+    [headView setBackgroundColor:[UIColor whiteColor]];
+    if (type==1)
     {
-        UIView *headView=[[UIView alloc]initWithFrame:CGRectMake(0, 30, 320, 30)];
-        [headView setBackgroundColor:[UIColor whiteColor]];
-        UILabel *dominLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 79, 30)];
-        dominLabel.text=@"所在省";
+        //排名 设备 系统 机房 总数
+        for (int i=0; i<5; i++)
+        {
+            UILabel *dominLabel=[[UILabel alloc]initWithFrame:CGRectMake(i*64, 0, 63, 30)];
+            if (i==0) {
+                dominLabel.text=@"排名";
+                [dominLabel setBackgroundColor:[UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1.0]];
+            }
+            else if (i==1)
+            {
+                dominLabel.text=@"设备";
+                [dominLabel setBackgroundColor:[UIColor lightGrayColor]];
+            }
+            else if (i==2)
+            {
+                dominLabel.text=@"系统";
+                [dominLabel setBackgroundColor:[UIColor lightGrayColor]];
+            }
+            else if (i==3)
+            {
+                dominLabel.text=@"机房";
+                [dominLabel setBackgroundColor:[UIColor lightGrayColor]];
+            }
+            else if (i==4)
+            {
+                dominLabel.text=@"总数";
+                [dominLabel setBackgroundColor:[UIColor lightGrayColor]];
+            }
+            [dominLabel setTextAlignment:NSTextAlignmentCenter];
+            [headView addSubview:dominLabel];
+        }
+        
+    }
+    else
+    {
+        UILabel *dominLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 70, 30)];
+        dominLabel.text=@"排名";
         [dominLabel setTextAlignment:NSTextAlignmentCenter];
         [dominLabel setFont:[UIFont boldSystemFontOfSize:15.0]];
         [dominLabel setBackgroundColor:[UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1.0]];
         [headView addSubview:dominLabel];
         
-        UILabel *systemLabel=[[UILabel alloc]initWithFrame:CGRectMake(81, 0, 79, 30)];
-        systemLabel.text=@"上月";
+        UILabel *systemLabel=[[UILabel alloc]initWithFrame:CGRectMake(71, 0, 178, 30)];
         [systemLabel setTextAlignment:NSTextAlignmentCenter];
         [systemLabel setBackgroundColor:[UIColor lightGrayColor]];
         [systemLabel setFont:[UIFont boldSystemFontOfSize:15.0]];
         [headView addSubview:systemLabel];
         
-        UILabel *platformsLabel=[[UILabel alloc]initWithFrame:CGRectMake(161, 0, 79, 30)];
-        platformsLabel.text=@"上上月";
+        UILabel *platformsLabel=[[UILabel alloc]initWithFrame:CGRectMake(250, 0, 70, 30)];
         [platformsLabel setTextAlignment:NSTextAlignmentCenter];
         [platformsLabel setBackgroundColor:[UIColor lightGrayColor]];
         [platformsLabel setFont:[UIFont boldSystemFontOfSize:15.0]];
         [headView addSubview:platformsLabel];
         
-        UILabel *applyLabel=[[UILabel alloc]initWithFrame:CGRectMake(241, 0, 79, 30)];
-        applyLabel.text=@"环比";
-        [applyLabel setTextAlignment:NSTextAlignmentCenter];
-        [applyLabel setBackgroundColor:[UIColor lightGrayColor]];
-        [applyLabel setFont:[UIFont boldSystemFontOfSize:15.0]];
-        [headView addSubview:applyLabel];
-        return headView;
-
+        if (type==0) {
+            systemLabel.text=@"所属系统";
+            platformsLabel.text=@"告警数量";
+        }
+        else if (type==2)
+        {
+            systemLabel.text=@"类型";
+            platformsLabel.text=@"总数";
+            
+        }
+        else if (type==3)
+        {
+            systemLabel.text=@"机房";
+            platformsLabel.text=@"总数";
+            
+        }else if (type==4)
+        {
+            systemLabel.text=@"类型";
+            platformsLabel.text=@"总数";
+        }
     }
+     return headView;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -86,29 +132,73 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellWithIdentifier = @"ProvinecCell";
-    UITableViewCell *cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
-    if (cell == nil)
-    {
-        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellWithIdentifier];
-        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    if (type==1) {
+
+        static NSString *CellWithIdentifier = @"topAnotherCell";
+        YELTopAnotherNumCell *cell = (YELTopAnotherNumCell*)[tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
+        if (cell == nil)
+        {
+            cell=[[YELTopAnotherNumCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellWithIdentifier];
+            [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        }
+        return cell;
     }
-    return cell;
+    else
+    {
+        static NSString *CellWithIdentifier = @"topNumCell";
+        YELTopNumCell *cell = (YELTopNumCell*)[tableView dequeueReusableCellWithIdentifier:CellWithIdentifier];
+        if (cell == nil)
+        {
+            cell=[[YELTopNumCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellWithIdentifier];
+            [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        }
+        return cell;
+    }
+
 }
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    if (indexPath.row==0) {
-//        [cell.provinecLabel setBackgroundColor:[UIColor colorWithRed:128/255.0f green:0 blue:0 alpha:1.0]];
-//    }else if (indexPath.row==1)
-//    {
-//        [cell.provinecLabel setBackgroundColor:[UIColor colorWithRed:255/255.0f green:0 blue:0 alpha:1.0]];
-//    }else if (indexPath.row==2)
-//    {
-//        [cell.provinecLabel setBackgroundColor:[UIColor colorWithRed:255/255.0f green:102/255.0 blue:102/255.0 alpha:1.0]];
-//    }else
-//    {
-//        [cell.provinecLabel setBackgroundColor:[UIColor darkGrayColor]];
-//    }
+    if (type==1) {
+        
+    }else
+    {
+        YELTopNumCell *topCell=(YELTopNumCell*)cell;
+        if (indexPath.row==0) {
+            [topCell.topLabel setBackgroundColor:[UIColor colorWithRed:128/255.0f green:0 blue:0 alpha:1.0]];
+        }else if (indexPath.row==1)
+        {
+            [topCell.topLabel setBackgroundColor:[UIColor colorWithRed:255/255.0f green:0 blue:0 alpha:1.0]];
+        }else if (indexPath.row==2)
+        {
+            [topCell.topLabel setBackgroundColor:[UIColor colorWithRed:255/255.0f green:102/255.0 blue:102/255.0 alpha:1.0]];
+        }else
+        {
+            [topCell.topLabel setBackgroundColor:[UIColor darkGrayColor]];
+        }
+        NSNumber *topnumber=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"POSITION"];
+        topCell.topLabel.text=[NSString stringWithFormat:@"%@",topnumber];
+        if (type==0) {
+            
+            topCell.contentLabel.text=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"SYS"];
+            
+        }else if (type==2) {
+            
+            topCell.contentLabel.text=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"TYPE"];
+            
+        }else if (type==3)
+        {
+            topCell.contentLabel.text=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"CROOM"];
+        }
+        else if (type==4)
+        {
+//            TYPE
+            topCell.contentLabel.text=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"TYPE"];
+        }
+        
+        NSNumber *number=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"TOTAL"];
+        topCell.numLabel.text=[NSString stringWithFormat:@"%@",number];
+    }
+
 //    cell.provinecLabel.text=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"PROVINCE"];
 //    NSNumber *monthNum=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"MONTH1"];
 //    cell.monthLabel.text=[NSString stringWithFormat:@"%@",monthNum];
@@ -131,7 +221,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewDidUnload {
@@ -142,7 +231,7 @@
 - (IBAction)pressTopButton:(UIButton *)sender forEvent:(UIEvent *)event {
     if (!topPopView) {
         NSArray *array=[NSArray arrayWithObjects:@"本月集团频发告警系统",@"本月集团频发告警设备",@"本月集团频发告警类别",@"本月集团频发告警机房",@"本月省份频发告警类别", nil];
-        topPopView=[[YELPopView alloc]initWithFrame:CGRectMake(0, 0, 200, [array count]*30) array:array target:self];
+        topPopView=[[YELPopView alloc]initWithFrame:CGRectMake(0, 0, 223, [array count]*30) array:array target:self];
     }
     popoverController=[[TSPopoverController alloc]initWithView:topPopView];
     popoverController.alpha=0.9;
@@ -159,7 +248,6 @@
                     button.selected=NO;
                 }
             }
-            
         }
     }
     if (sender.tag==100) {
@@ -197,7 +285,7 @@
             int code=[[dictionary objectForKey:@"code"] intValue];
             if (code==0) {
                 NSArray *array=[dictionary objectForKey:@"data"];
-                [dataSource addObjectsFromArray:array];
+                dataSource=array;
                 [self.myTableView reloadData];
             }else
             {
@@ -216,7 +304,7 @@
             int code=[[dictionary objectForKey:@"code"] intValue];
             if (code==0) {
                 NSArray *array=[dictionary objectForKey:@"data"];
-                [dataSource addObjectsFromArray:array];
+                dataSource=array;
                 [self.myTableView reloadData];
             }else
             {
@@ -233,7 +321,7 @@
             int code=[[dictionary objectForKey:@"code"] intValue];
             if (code==0) {
                 NSArray *array=[dictionary objectForKey:@"data"];
-                [dataSource addObjectsFromArray:array];
+                dataSource=array;
                 [self.myTableView reloadData];
             }else
             {
@@ -250,7 +338,7 @@
             int code=[[dictionary objectForKey:@"code"] intValue];
             if (code==0) {
                 NSArray *array=[dictionary objectForKey:@"data"];
-                [dataSource addObjectsFromArray:array];
+                dataSource=array;
                 [self.myTableView reloadData];
                 
             }else
@@ -268,13 +356,14 @@
             int code=[[dictionary objectForKey:@"code"] intValue];
             if (code==0) {
                 NSArray *array=[dictionary objectForKey:@"data"];
-                [dataSource addObjectsFromArray:array];
+                dataSource=array;
                 [self.myTableView reloadData];
             }else
             {
                 [MBHUDView hudWithBody:[dictionary objectForKey:@"msg"] type:MBAlertViewHUDTypeDefault hidesAfter:1.0 show:YES];
             }
-        } falid:^(NSString *errorMsg) {
+        } falid:^(NSString *errorMsg)
+        {
             [MBHUDView hudWithBody:@"网络不给力" type:MBAlertViewHUDTypeDefault hidesAfter:1.0 show:YES];
         }];
     }
