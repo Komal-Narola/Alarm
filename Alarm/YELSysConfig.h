@@ -70,5 +70,6 @@
 #define APIGetTopJi             [APIURL stringByAppendingString:@"warningtopten/getCentralRoomWarning.json"]
 //本月省分频发告警类别top10
 #define APIGetTopSheng          [APIURL stringByAppendingString:@"warningtopten/getProvinceCategoryWarning.json"]
-
+//趋势图API
+#define APIGetTrend         [APIURL stringByAppendingString:@"trend/getTrend.json"]
 #endif

@@ -25,7 +25,7 @@
         [_sheLabel setFont:[UIFont systemFontOfSize:15.0]];
         [_sheLabel setNumberOfLines:0];
         [_sheLabel setLineBreakMode:NSLineBreakByCharWrapping];
-        [_sheLabel setTextColor:[UIColor whiteColor]];
+        [_sheLabel setTextColor:[UIColor blackColor]];
         [self.contentView addSubview:_sheLabel];
         
         _sysLabel=[[UILabel alloc]initWithFrame:CGRectMake(128, 0, 63, 44)];
@@ -33,7 +33,7 @@
         [_sysLabel setFont:[UIFont systemFontOfSize:15.0]];
         [_sysLabel setNumberOfLines:0];
         [_sysLabel setLineBreakMode:NSLineBreakByCharWrapping];
-        [_sysLabel setTextColor:[UIColor whiteColor]];
+        [_sysLabel setTextColor:[UIColor blackColor]];
         [self.contentView addSubview:_sysLabel];
         
         _jiLabel=[[UILabel alloc]initWithFrame:CGRectMake(192, 0, 63, 44)];
@@ -41,13 +41,13 @@
         [_jiLabel setFont:[UIFont systemFontOfSize:15.0]];
         [_jiLabel setNumberOfLines:0];
         [_jiLabel setLineBreakMode:NSLineBreakByCharWrapping];
-        [_jiLabel setTextColor:[UIColor whiteColor]];
+        [_jiLabel setTextColor:[UIColor blackColor]];
         [self.contentView addSubview:_jiLabel];
         
         _zongLabel=[[UILabel alloc]initWithFrame:CGRectMake(256, 0, 63, 44)];
         [_zongLabel setTextAlignment:NSTextAlignmentCenter];
         [_zongLabel setFont:[UIFont systemFontOfSize:15.0]];
-        [_zongLabel setTextColor:[UIColor whiteColor]];
+        [_zongLabel setTextColor:[UIColor redColor]];
         [self.contentView addSubview:_zongLabel];
         
         UIImageView *sanjiaoImageView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"zuosanjiao.png"]];

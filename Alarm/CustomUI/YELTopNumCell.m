@@ -38,11 +38,11 @@
         sanjiaoImageView.frame=CGRectMake(70-sanjiaoImageView.image.size.width, 22-sanjiaoImageView.image.size.height/2, sanjiaoImageView.image.size.width, sanjiaoImageView.image.size.height);
         [self.contentView addSubview:sanjiaoImageView];
         
-        UIImageView *lineImageOne=[[UIImageView alloc]initWithFrame:CGRectMake(71, 0, 1, 44)];
+        UIImageView *lineImageOne=[[UIImageView alloc]initWithFrame:CGRectMake(70, 0, 1, 44)];
         [lineImageOne setBackgroundColor:[UIColor colorWithHexString:@"#cfcfcf"]];
         [self.contentView addSubview:lineImageOne];
         
-        UIImageView *lineImageTwo=[[UIImageView alloc]initWithFrame:CGRectMake(248, 0, 1, 44)];
+        UIImageView *lineImageTwo=[[UIImageView alloc]initWithFrame:CGRectMake(249, 0, 1, 44)];
         [lineImageTwo setBackgroundColor:[UIColor colorWithHexString:@"#cfcfcf"]];
         [self.contentView addSubview:lineImageTwo];
         
@@ -63,8 +63,6 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 @end

@@ -158,9 +158,34 @@
 }
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (type==1) {
-        
-    }else
+    if (type==1)
+    {
+        YELTopAnotherNumCell *anotherCell=(YELTopAnotherNumCell *)cell;
+        if (indexPath.row==0)
+        {
+            [anotherCell.topLabel setBackgroundColor:[UIColor colorWithRed:128/255.0f green:0 blue:0 alpha:1.0]];
+        }
+        else if (indexPath.row==1)
+        {
+            [anotherCell.topLabel setBackgroundColor:[UIColor colorWithRed:255/255.0f green:0 blue:0 alpha:1.0]];
+        }
+        else if (indexPath.row==2)
+        {
+            [anotherCell.topLabel setBackgroundColor:[UIColor colorWithRed:255/255.0f green:102/255.0 blue:102/255.0 alpha:1.0]];
+        }
+        else
+        {
+            [anotherCell.topLabel setBackgroundColor:[UIColor darkGrayColor]];
+        }
+        NSNumber *topnumber=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"POSITION"];
+        anotherCell.topLabel.text=[NSString stringWithFormat:@"%@",topnumber];
+        anotherCell.sheLabel.text=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"DEVICE"];
+        anotherCell.sysLabel.text=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"SYS"];
+        anotherCell.jiLabel.text=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"CROOM"];
+        NSNumber *number=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"TOTAL"];
+        anotherCell.zongLabel.text=[NSString stringWithFormat:@"%@",number];
+    }
+    else
     {
         YELTopNumCell *topCell=(YELTopNumCell*)cell;
         if (indexPath.row==0) {
@@ -191,7 +216,6 @@
         }
         else if (type==4)
         {
-//            TYPE
             topCell.contentLabel.text=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"TYPE"];
         }
         
@@ -304,6 +328,7 @@
             int code=[[dictionary objectForKey:@"code"] intValue];
             if (code==0) {
                 NSArray *array=[dictionary objectForKey:@"data"];
+                DLog(@"ads=%@",array);
                 dataSource=array;
                 [self.myTableView reloadData];
             }else

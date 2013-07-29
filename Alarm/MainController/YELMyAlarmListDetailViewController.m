@@ -144,7 +144,6 @@
         [detailCell.sureButton addTarget:self action:@selector(pressDoButton) forControlEvents:UIControlEventTouchUpInside];
         detailCell.sureButton.enabled=NO;
         
-        
         detailCell.timeTitleLabel.text=@"产生时间:";
         [detailCell.areaTitleLabel setText:@"归  属  域:"];
         [detailCell.dominTitleLabel setText:@"事件描述:"];
@@ -153,7 +152,6 @@
         [detailCell.levelTitleLabel setText:@"事件性质:"];
         [detailCell.sysTitleLabel setText:@"所属系统:"];
         [detailCell.personTitleLabel setText:@"负  责  人:"];
-        
     }
 }
 -(void)pressDoButton
@@ -188,7 +186,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewDidUnload {

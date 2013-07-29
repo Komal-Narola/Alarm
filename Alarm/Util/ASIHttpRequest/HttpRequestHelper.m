@@ -79,7 +79,6 @@ static HttpRequestHelper *_defaultController = nil;
     {
         url=[self fillUrl:url fromDictionary:dictionary];
     }
-    DLog(@"aaaa=%@",url);
     __block ASIHTTPRequest *request = [self requestWithUrl:url];
     //请求成功
     [request setCompletionBlock:^{

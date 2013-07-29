@@ -203,4 +203,17 @@ static YELHttpHelper *_httpHelper = nil;
         faild(errorMsg);
     }];
 }
+//趋势图
+- (void)getTrendWithParamter:(NSDictionary *)dictionary sucess:(void (^) (NSDictionary *dictionary))sucess falid:(void (^) (NSString *errorMsg))faild{
+    
+    [[HttpRequestHelper defaultController]asyncGetRequest:APIGetTrend parameter:dictionary requestStrComplete:^(NSString *responseStr) {
+        NSData *data = [responseStr dataUsingEncoding: NSUTF8StringEncoding];
+        NSDictionary *dictionary=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        if (dictionary) {
+            sucess(dictionary);
+        }
+    } requestFailed:^(NSString *errorMsg) {
+        faild(errorMsg);
+    }];
+}
 @end
