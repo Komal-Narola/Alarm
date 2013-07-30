@@ -27,19 +27,14 @@
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden=YES;
     //存在密码 进行登录请求 如果成功直接进入主页面 不成功停留在登录页面
-    
-    NSString *pwd=[USER_DEFAULT objectForKey:PWD];
-    if(pwd!=nil) {
-        [self.rememberButton setSelected:YES];
-        [self sendRequest:pwd];
-    }
-    
-//    YELMainControllerViewController *mainController=[[YELMainControllerViewController alloc]initWithNibName:@"YELMainControllerViewController" bundle:nil];
-//    [self.navigationController pushViewController:mainController animated:YES];
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSString *pwd=[USER_DEFAULT objectForKey:PWD];
+    if(pwd!=nil) {
+        [self.rememberButton setSelected:YES];
+    }
     [self initUiKit];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -94,7 +89,7 @@
         [USER_DEFAULT removeObjectForKey:PWD];
         [USER_DEFAULT synchronize];
     }
-    [self sendRequest:self.pwdTextField.text];
+    [self sendRequest:self.pwdTextField.text luanch:YES];
 }
 -(void)viewWillDisappear:(BOOL)animated
 {
@@ -112,8 +107,10 @@
     [super touchesBegan:touches withEvent:event];
     [self.view endEditing:YES];
 }
--(void)sendRequest :(NSString *)pwd
+-(void)sendRequest :(NSString *)pwd luanch:(BOOL)luanch
 {
+    [MBHUDView dismissCurrentHUD];
+    [MBHUDView hudWithBody:@"登陆中..." type:MBAlertViewHUDTypeActivityIndicator hidesAfter:0 show:YES];
     NSString *account=[USER_DEFAULT objectForKey:ACCOUNT];
     NSString *udid=[OpenUDID value];
     NSDictionary*dict=[NSDictionary dictionaryWithObjectsAndKeys:account,@"name",
@@ -122,6 +119,7 @@
                        udid,@"imei",
                        nil];
     [[YELHttpHelper defaultHelper]loginWithParamter:dict sucess:^(NSDictionary *dict) {
+        [MBHUDView dismissCurrentHUD];
         if ([[dict objectForKey:@"code"] intValue]==0) {
             NSString *token=[dict objectForKey:@"data"];
             if (token!=nil) {
@@ -129,13 +127,14 @@
                 [USER_DEFAULT synchronize];
             }
             YELMainControllerViewController *mainController=[[YELMainControllerViewController alloc]initWithNibName:@"YELMainControllerViewController" bundle:nil];
-            [self .navigationController pushViewController:mainController animated:YES];
+            [self .navigationController pushViewController:mainController animated:luanch];
         }else
         {
             NSString *msg=[dict objectForKey:@"msg"];
             [MBHUDView hudWithBody:msg type:MBAlertViewHUDTypeDefault hidesAfter:1.0 show:YES];
         }
     } falid:^(NSString *errorMsg) {
+        
         [MBHUDView hudWithBody:@"网络不给力" type:MBAlertViewHUDTypeDefault hidesAfter:1.0 show:YES];
     }];
 }

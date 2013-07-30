@@ -18,9 +18,13 @@
     // Override point for customization after application launch.
     YELViewController *yelViewcontroller= [[YELViewController alloc] initWithNibName:@"YELViewController" bundle:nil];
     ETNavigationViewController *navigationController=[[ETNavigationViewController alloc]initWithRootViewController:yelViewcontroller];
+    NSString *pwd=[USER_DEFAULT objectForKey:PWD];
+    if(pwd!=nil) {
+        [yelViewcontroller sendRequest:pwd luanch:NO];
+    }
+     [NSThread sleepForTimeInterval:2.0];
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
-    
     //推送的形式：标记，声音，提示
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes: UIRemoteNotificationTypeBadge |UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert];
 

@@ -99,10 +99,20 @@
 
     [self.bottomScrollview setContentSize:CGSizeMake(640, self.bottomScrollview.frame.size.height)];
     int num=1;
+    int screenHeight;
+    int pre;
+    if (iPhone5) {
+        screenHeight=30;
+        pre=130;
+    }else
+    {
+        screenHeight=10;
+        pre=110;
+    }
     for (int i =0; i<3; i++) {
         for (int y =0 ; y<2; y++) {
             UIButton *button=[UIButton buttonWithType:UIButtonTypeCustom];
-            button.frame=CGRectMake(20*(i+1) + (i*80), 30+(y*120), 80, 80);
+            button.frame=CGRectMake(20*(i+1) + (i*80), screenHeight+(y*pre), 80, 80);
 
             NSArray *buttonArray=[NSArray arrayWithObjects:
                             [NSArray arrayWithObjects:@"1@2x",@"4@2x", nil],
@@ -155,18 +165,18 @@
         [self.navigationController pushViewController:tabbarController animated:YES];
         
     }
-//    else if (sender.tag==4)
-//    {
-//        YELProvinceAlarmStatisticsViewController *province=[[YELProvinceAlarmStatisticsViewController alloc]initWithNibName:@"YELProvinceAlarmStatisticsViewController" bundle:nil];
-//        [self.navigationController pushViewController:province animated:YES];
-//        
-//    }
-//    else if (sender.tag==5)
-//    {
-//        YELTodoListViewController *todoList=[[YELTodoListViewController alloc]initWithNibName:@"YELTodoListViewController" bundle:nil];
-//        [self.navigationController pushViewController:todoList animated:YES];
-//        
-//    }
+    else if (sender.tag==4)
+    {
+        YELProvinceAlarmStatisticsViewController *province=[[YELProvinceAlarmStatisticsViewController alloc]initWithNibName:@"YELProvinceAlarmStatisticsViewController" bundle:nil];
+        [self.navigationController pushViewController:province animated:YES];
+        
+    }
+    else if (sender.tag==5)
+    {
+        YELTodoListViewController *todoList=[[YELTodoListViewController alloc]initWithNibName:@"YELTodoListViewController" bundle:nil];
+        [self.navigationController pushViewController:todoList animated:YES];
+        
+    }
     else if (sender.tag==6)
     {
         YELHeadquartersAlarmTrendViewController *headquarters=[[YELHeadquartersAlarmTrendViewController alloc]initWithNibName:@"YELHeadquartersAlarmTrendViewController" bundle:nil];

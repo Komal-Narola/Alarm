@@ -31,13 +31,17 @@
 
 -(void)sendRequest
 {
-    NSDictionary *dict=[NSDictionary dictionaryWithObjectsAndKeys:TOKEN,@"token",
-                        [self.dataSourceDictionary objectForKey:@"DOMAIN"],@"domain",
-                        self.areaString,@"area",
-                        [self.dataSourceDictionary objectForKey:@"SYS"],@"sys",
-                        @"1000",@"pageSize",
-                        @"1",@"pageNo",
-                        nil];
+    NSString *str=[self.dataSourceDictionary objectForKey:@"DOMAIN"];
+    NSMutableDictionary *dict=[NSMutableDictionary dictionary];
+    [dict setValue:TOKEN forKey:@"token"];
+    [dict setValue:self.areaString forKey:@"area"];
+    [dict setValue:[self.dataSourceDictionary objectForKey:@"SYS"] forKey:@"sys"];
+    [dict setValue:@"1000" forKey:@"pageSize"];
+    [dict setValue:@"1" forKey:@"pageNo"];
+    if (str!=nil)
+    {
+        [dict setValue:[self.dataSourceDictionary objectForKey:@"DOMAIN"] forKey:@"domain"];
+    }
     
     [[YELHttpHelper defaultHelper]getWarningWithParamter:dict sucess:^(NSDictionary *dictionary) {
         int code=[[dictionary objectForKey:@"code"] intValue];

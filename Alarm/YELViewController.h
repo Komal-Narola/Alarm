@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface YELViewController : UIViewController<UITextFieldDelegate>
-
+-(void)sendRequest :(NSString *)pwd luanch:(BOOL)luanch;
 
 @end

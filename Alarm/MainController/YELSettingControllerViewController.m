@@ -31,8 +31,6 @@
 {
     [super viewDidLoad];
     [self initUiKit];
-    
-    // Do any additional setup after loading the view from its nib.
 }
 -(void)initUiKit
 {
@@ -46,10 +44,10 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-- (void)viewDidUnload {
+- (void)viewDidUnload
+{
     [self setSetView:nil];
     [super viewDidUnload];
 }
@@ -62,6 +60,7 @@
 {
     if (buttonIndex==0) {
         [USER_DEFAULT removeObjectForKey:PWD];
+        [USER_DEFAULT synchronize];
         [self.navigationController popToRootViewControllerAnimated:YES];
     }
 }

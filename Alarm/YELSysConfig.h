@@ -25,6 +25,7 @@
 #define DEVICETOKEN [USER_DEFAULT objectForKey:@"deviceToken"]
 #define PAGESIZE @"10"
 
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 #define max( a, b ) ( a > b ? a : b )
 //wangjc
 //123456

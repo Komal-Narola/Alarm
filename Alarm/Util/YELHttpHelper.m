@@ -74,7 +74,7 @@ static YELHttpHelper *_httpHelper = nil;
     }];
 }
 //告警列表接口
-- (void)getWarningWithParamter:(NSDictionary *)dictionary sucess:(void (^) (NSDictionary *dictionary))sucess falid:(void (^) (NSString *errorMsg))faild{
+- (void)getWarningWithParamter:(NSMutableDictionary *)dictionary sucess:(void (^) (NSDictionary *dictionary))sucess falid:(void (^) (NSString *errorMsg))faild{
     
     [[HttpRequestHelper defaultController]asyncGetRequest:APIGetWaring parameter:dictionary requestStrComplete:^(NSString *responseStr) {
         NSData *data = [responseStr dataUsingEncoding: NSUTF8StringEncoding];

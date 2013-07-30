@@ -54,14 +54,15 @@
             }
             [dataSource addObjectsFromArray:array];
             if ([dataSource count]<10) {
+                [myTableView reloadData];
                 [myTableView tableViewDidFinishedLoading];
                 myTableView.reachedTheEnd  = YES;
-                [myTableView reloadData];
+                
             }else
             {
+                [myTableView reloadData];
                 [myTableView tableViewDidFinishedLoading];
                 myTableView.reachedTheEnd  = NO;
-                [myTableView reloadData];
             }
         }else
         {
@@ -163,7 +164,7 @@
 - (void)pullingTableViewDidStartRefreshing:(PullingRefreshTableView *)tableView
 {
     refreshing = YES;
-    [self performSelector:@selector(loadData) withObject:nil afterDelay:1.f];
+    [self performSelector:@selector(loadData) withObject:nil afterDelay:0];
 }
 
 - (NSDate *)pullingTableViewRefreshingFinishedDate{
@@ -177,7 +178,7 @@
 
 - (void)pullingTableViewDidStartLoading:(PullingRefreshTableView *)tableView
 {
-    [self performSelector:@selector(loadData) withObject:nil afterDelay:1.f];
+    [self performSelector:@selector(loadData) withObject:nil afterDelay:0];
 }
 #pragma mark - Scroll
 

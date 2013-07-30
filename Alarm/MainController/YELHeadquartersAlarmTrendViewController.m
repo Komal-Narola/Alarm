@@ -96,25 +96,18 @@ NSString *const kBlueLine = @"Blue Line";
 }
 -(void)getasix :(int)bigNum
 {
-    [graph reloadData];
     bigNum = bigNum + bigNum*0.1;
-//    CPTXYPlotSpace *plotSpace =(CPTXYPlotSpace *)graph.defaultPlotSpace;
-    CPTXYPlotSpace *plotSpace=(CPTXYPlotSpace *)[graph plotSpaceAtIndex:1];
+    CPTXYPlotSpace *plotSpace =(CPTXYPlotSpace *)graph.defaultPlotSpace;
     plotSpace.yRange =[CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0)length:CPTDecimalFromFloat(bigNum)];
-    CPTXYAxisSet*axisSet = (CPTXYAxisSet *)graph.axisSet; //1
-    CPTXYAxis *x= axisSet.xAxis; 
-    x.majorIntervalLength=CPTDecimalFromInt(5);
+    CPTXYAxisSet*axisSet = (CPTXYAxisSet *)graph.axisSet; 
     CPTXYAxis *y   = axisSet.yAxis;
     int dian=bigNum/10;
-    y.majorIntervalLength=CPTDecimalFromInt(dian); 
-    
-   
+    y.majorIntervalLength=CPTDecimalFromInt(dian);
+    [graph reloadData];
 }
 -(void)trendgraph
 {
     graph = [[CPTXYGraph alloc]initWithFrame:CGRectZero];
-    CPTTheme *theme=[CPTTheme themeNamed:kCPTDarkGradientTheme];
-    [graph applyTheme:theme];
     float height=[UIScreen mainScreen].applicationFrame.size.height;
     CPTGraphHostingView *hostingView=[[CPTGraphHostingView alloc]initWithFrame:CGRectMake(0, 30, 320, height-88-30)];
     hostingView.hostedGraph=graph;
@@ -125,7 +118,7 @@ NSString *const kBlueLine = @"Blue Line";
     graph.paddingRight=0;
     graph.paddingTop=0;
     graph.paddingBottom=0;
-    graph.plotAreaFrame.paddingLeft = 50 ;
+    graph.plotAreaFrame.paddingLeft = 30 ;
     graph.plotAreaFrame.paddingTop = 10.0 ;
 //    graph.plotAreaFrame.paddingRight = 20.0 ;
     graph.plotAreaFrame.paddingBottom = 25.0 ;
@@ -141,12 +134,12 @@ NSString *const kBlueLine = @"Blue Line";
     CPTXYAxis*x   = axisSet.xAxis;
     x.majorIntervalLength=CPTDecimalFromInt(5);
     x. minorTickLineStyle = nil ;
-    x.orthogonalCoordinateDecimal= CPTDecimalFromString(@"1"); 
+    x.orthogonalCoordinateDecimal= CPTDecimalFromString(@"0"); 
     x.labelFormatter=labelFormatter;
 
     CPTXYAxis *y   = axisSet.yAxis; 
-    y.majorIntervalLength=CPTDecimalFromString(@"10"); 
-    y.orthogonalCoordinateDecimal= CPTDecimalFromString(@"0"); 
+    y.majorIntervalLength=CPTDecimalFromString(@"20"); 
+    y.orthogonalCoordinateDecimal= CPTDecimalFromString(@"1");
     y. minorTickLineStyle = nil ;
     y.labelFormatter=labelFormatter;
     
@@ -161,7 +154,6 @@ NSString *const kBlueLine = @"Blue Line";
     
     CPTScatterPlot *greenLinePlot  = [[CPTScatterPlot alloc] init] ;
     CPTMutableLineStyle*greenlineStyle = [CPTMutableLineStyle lineStyle];
-    //    redlineStyle.miterLimit = 1.0f;
     greenlineStyle.lineWidth = 1.0f;
     greenlineStyle.lineColor = [CPTColor greenColor];
     greenLinePlot.dataLineStyle= greenlineStyle;
@@ -171,7 +163,6 @@ NSString *const kBlueLine = @"Blue Line";
     
     CPTScatterPlot *redLinePlot  = [[CPTScatterPlot alloc] init] ;
     CPTMutableLineStyle*redlineStyle = [CPTMutableLineStyle lineStyle];
-    //    redlineStyle.miterLimit = 1.0f;
     redlineStyle.lineWidth = 1.0f;
     redlineStyle.lineColor = [CPTColor redColor];
     redLinePlot.dataLineStyle= redlineStyle;
@@ -221,9 +212,6 @@ NSString *const kBlueLine = @"Blue Line";
                 number=[[blueArray objectAtIndex:index]valueForKey:@"y"];
             }
             break;
-            //    NSString*key = (fieldEnum == CPTScatterPlotFieldX ? @"x" : @"y");
-            //
-            //    NSNumber*num = [[points objectAtIndex:index] valueForKey:key];
     }
     return number;
     
@@ -245,7 +233,7 @@ NSString *const kBlueLine = @"Blue Line";
 - (IBAction)pressDominButton:(UIButton *)sender forEvent:(UIEvent *)event {
     if (!dominPopView) {
         NSArray *array=[NSArray arrayWithObjects:@"BBS域",@"MSS域",@"DSS域",@"信息化基础", nil];
-        dominPopView=[[YELPopView alloc]initWithFrame:CGRectMake(0, 0, 100, [array count]*30) array:array target:self];
+        dominPopView=[[YELPopView alloc]initWithFrame:CGRectMake(0, 0, 150, [array count]*30) array:array target:self];
         dominPopView.tag=200;
     }
     popoverController=[[TSPopoverController alloc]initWithView:dominPopView];
@@ -359,12 +347,4 @@ NSString *const kBlueLine = @"Blue Line";
     [super viewDidUnload];
 }
 
--(int)yTotal : (NSMutableArray *)array
-{
-    int sum=0;
-    for (int i=0; i<[array count]; i++) {
-        sum +=[[[array objectAtIndex:i]objectForKey:@"y" ] intValue];
-    }
-    return sum;
-}
 @end
