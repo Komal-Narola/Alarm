@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface YELHeadquartersAlarmTrendViewController : UIViewController
-
+#import "CorePlot-CocoaTouch.h"
+@interface YELHeadquartersAlarmTrendViewController : UIViewController<CPTPlotDataSource>
+{
+    CPTXYGraph   *graph;             //画板
+}
 @end

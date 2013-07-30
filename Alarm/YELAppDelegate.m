@@ -20,9 +20,31 @@
     ETNavigationViewController *navigationController=[[ETNavigationViewController alloc]initWithRootViewController:yelViewcontroller];
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
+    
+    //推送的形式：标记，声音，提示
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes: UIRemoteNotificationTypeBadge |UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert];
+
     return YES;
 }
-
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)pToken
+{
+    NSString *deviceTokenString=[NSString stringWithFormat:@"%@",pToken];
+    deviceTokenString = [deviceTokenString stringByReplacingOccurrencesOfString:@"<" withString:@""];
+    deviceTokenString = [deviceTokenString stringByReplacingOccurrencesOfString:@">" withString:@""];
+    deviceTokenString = [deviceTokenString stringByReplacingOccurrencesOfString:@" " withString:@""];
+    [USER_DEFAULT setObject:deviceTokenString forKey:@"deviceToken"];
+    [USER_DEFAULT synchronize];
+    //注册成功，将deviceToken保存到应用服务器数据库中
+}
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
+    // 处理推送消息
+    NSLog(@"userinfo:%@",userInfo);
+    
+    NSLog(@"收到推送消息:%@",[[userInfo objectForKey:@"aps"] objectForKey:@"alert"]);
+}
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
+    NSLog(@"Registfail%@",error);
+}
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

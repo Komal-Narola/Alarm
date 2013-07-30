@@ -22,8 +22,10 @@
 #define ACCOUNT @"account"
 #define PWD @"passWord"
 #define TOKEN [USER_DEFAULT objectForKey:@"token"]
+#define DEVICETOKEN [USER_DEFAULT objectForKey:@"deviceToken"]
 #define PAGESIZE @"10"
 
+#define max( a, b ) ( a > b ? a : b )
 //wangjc
 //123456
 //读取本地图片
@@ -34,9 +36,9 @@
 
 //定义一个API
 //测试接口
-#define APIURL                @"http://202.99.45.117:20880/minf/api/"
+//#define APIURL                @"http://202.99.45.117:20880/minf/api/"
 //正式接口
-//#define APIURL                @"http://202.99.45.117:20881/minf/api/"
+#define APIURL                @"http://202.99.45.117:20881/minf/api/"
 //图片下载地址
 //正式接口
 //#define IMAGEURL                @"http://202.99.45.117:20881/minf/"
