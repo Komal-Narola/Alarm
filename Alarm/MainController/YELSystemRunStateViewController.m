@@ -214,8 +214,8 @@
 
 - (IBAction)pressAreaButton:(UIButton *)sender forEvent:(UIEvent *)event {
     if (!areaPopview) {
-        NSArray *array=[NSArray arrayWithObjects:@"全部",@"省份", nil];
-        areaPopview=[[YELPopView alloc]initWithFrame:CGRectMake(0, 0, 100, [array count]*30) array:array target:self];
+        NSArray *array=[NSArray arrayWithObjects:@"总部系统",@"省份系统", nil];
+        areaPopview=[[YELPopView alloc]initWithFrame:CGRectMake(0, 0, 150, [array count]*30) array:array target:self];
     }
     popoverController=[[TSPopoverController alloc]initWithView:areaPopview];
     popoverController.alpha=0.9;
@@ -236,11 +236,11 @@
         }
     }
     if (sender.tag==100) {
-        [self.stateButton setTitle:@"总部" forState:UIControlStateNormal];
+        [self.stateButton setTitle:@"总部系统" forState:UIControlStateNormal];
         _areaString=@"总部";
     }else if (sender.tag==101)
     {
-        [self.stateButton setTitle:@"省份" forState:UIControlStateNormal];
+        [self.stateButton setTitle:@"省份系统" forState:UIControlStateNormal];
         _areaString=@"省分";
     }
     [self sendRequest];

@@ -222,25 +222,6 @@
         NSNumber *number=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"TOTAL"];
         topCell.numLabel.text=[NSString stringWithFormat:@"%@",number];
     }
-
-//    cell.provinecLabel.text=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"PROVINCE"];
-//    NSNumber *monthNum=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"MONTH1"];
-//    cell.monthLabel.text=[NSString stringWithFormat:@"%@",monthNum];
-//    NSNumber *preMonthNum=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"MONTH2"];
-//    cell.preMonthLabel.text=[NSString stringWithFormat:@"%@",preMonthNum];
-//    NSString *ratioStr=[[dataSource objectAtIndex:indexPath.row]objectForKey:@"RATIO"];
-//    NSRange range=[ratioStr rangeOfString:@"↑"];
-//    if (range.location!=NSNotFound) {
-//        [cell.biLabel setTextColor:[UIColor redColor]];
-//    }
-//    NSRange xRange=[ratioStr rangeOfString:@"↓"];
-//    if (xRange.location!=NSNotFound) {
-//        [cell.biLabel setTextColor:[UIColor greenColor]];
-//    }
-//    if (range.location==NSNotFound && xRange.location==NSNotFound) {
-//        [cell.biLabel setTextColor:[UIColor blackColor]];
-//    }
-//    cell.biLabel.text=ratioStr;
 }
 - (void)didReceiveMemoryWarning
 {

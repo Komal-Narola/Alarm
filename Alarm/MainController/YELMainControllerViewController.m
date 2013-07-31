@@ -156,8 +156,7 @@
     }else if (sender.tag==3)
     {
         YELMyAlarmListViewController *myAlarmList=[[YELMyAlarmListViewController alloc]initWithNibName:@"YELMyAlarmListViewController" bundle:nil];
-        
-            YELAlarmListViewController *alarmList=[[YELAlarmListViewController alloc]initWithNibName:@"YELAlarmListViewController" bundle:nil];
+        YELAlarmListViewController *alarmList=[[YELAlarmListViewController alloc]initWithNibName:@"YELAlarmListViewController" bundle:nil];
         
         UITabBarController *tabbarController=[[UITabBarController alloc]init];
         tabbarController.viewControllers=[NSArray arrayWithObjects:alarmList,myAlarmList, nil];
