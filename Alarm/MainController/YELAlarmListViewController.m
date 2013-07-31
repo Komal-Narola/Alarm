@@ -14,6 +14,8 @@
 #import "YELAlarmDetailViewController.h"
 @interface YELAlarmListViewController ()<PullingRefreshTableViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
+    UIButton *leftbutton;
+    UIButton *rightbutton;
     BOOL refreshing;
     NSInteger page;
     NSMutableArray *dataSource;
@@ -116,6 +118,72 @@
 {
     [super viewWillAppear:animated];
     self.tabBarController.tabBar.hidden=YES;
+    [self customTabBar];
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+//     [self hideRealTabBar];
+    
+}
+//- (void)hideRealTabBar{
+//    for(UIView *view in self.tabBarController.view.subviews){
+//        if([view isKindOfClass:[UITabBar class]]){
+//            view.hidden = YES;
+//            break;
+//        }
+//    }
+//    
+//}
+- (void)customTabBar{
+    UIView *bottomView = [[UIView alloc] init];
+    bottomView.backgroundColor=[UIColor redColor];
+    bottomView.frame = CGRectMake(0, self.tabBarController.tabBar.frame.origin.y, self.tabBarController.tabBar.frame.size.width, self.tabBarController.tabBar.frame.size.height);
+    [self.tabBarController.view addSubview:bottomView];
+    
+    leftbutton=[UIButton buttonWithType:UIButtonTypeCustom];
+    leftbutton.frame=CGRectMake(110, 5, 45, 39);
+    UIImage *image=LOADIMAGE(@"71@2x", @"png");
+    UIImage *newbackImage=[image resizableImageWithCapInsets:UIEdgeInsetsMake(3, 3, 3, 3)];
+    [leftbutton setImage:LOADIMAGE(@"group@2x", @"png") forState:UIControlStateNormal];
+    [leftbutton setImage:LOADIMAGE(@"group_selected@2x", @"png") forState:UIControlStateSelected];
+    [leftbutton setTitle:@"集团告警" forState:UIControlStateNormal];
+    [leftbutton.titleLabel setFont:[UIFont systemFontOfSize:9]];
+    [leftbutton setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 20, -38)];
+    [leftbutton setTitleEdgeInsets:UIEdgeInsetsMake(20, -15, 0, 0)];
+    [leftbutton setBackgroundImage:newbackImage forState:UIControlStateSelected];
+
+    [leftbutton addTarget:self action:@selector(selectedTab:) forControlEvents:UIControlEventTouchUpInside];
+    leftbutton.tag=0;
+    
+    [bottomView addSubview:leftbutton];
+    
+    rightbutton=[UIButton buttonWithType:UIButtonTypeCustom];
+    rightbutton.frame=CGRectMake(160, 5, 45, 39);
+    [rightbutton setImage:LOADIMAGE(@"person@2x", @"png") forState:UIControlStateNormal];
+    [rightbutton setImage:LOADIMAGE(@"person_selected@2x", @"png") forState:UIControlStateSelected];
+    [rightbutton setTitle:@"我的告警" forState:UIControlStateNormal];
+    [rightbutton.titleLabel setFont:[UIFont systemFontOfSize:9]];
+    [rightbutton setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 20, -38)];
+    [rightbutton setTitleEdgeInsets:UIEdgeInsetsMake(20, -30, 0, 0)];
+    [rightbutton setBackgroundImage:newbackImage forState:UIControlStateSelected];
+    rightbutton.tag=1;
+    [rightbutton addTarget:self action:@selector(selectedTab:) forControlEvents:UIControlEventTouchUpInside];
+    [bottomView addSubview:rightbutton];
+    [leftbutton setSelected:YES];
+}
+- (void)selectedTab:(UIButton *)button{
+    if (button.selected!=YES) {
+        button.selected=!button.selected;
+    }
+    if (button.tag==0) {
+        [rightbutton setSelected:NO];
+    }else
+    {
+        [leftbutton setSelected:NO];
+    }
+    self.tabBarController.selectedIndex=button.tag;
+
 }
 - (void)viewDidLoad
 {

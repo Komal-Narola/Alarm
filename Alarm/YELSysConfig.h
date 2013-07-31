@@ -80,6 +80,6 @@
 //deviceToken
 //参数
 //通知接口 API
-#define APIPostToken            [APIURL stringByAppendingString:@"notification/getHistoryNotification.json?"]
+#define APINotification            [APIURL stringByAppendingString:@"notification/getHistoryNotification.json?"]
 //参数token
 #endif
