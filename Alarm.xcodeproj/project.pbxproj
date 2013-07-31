@@ -145,6 +145,7 @@
 		DD4D2D6D17A1143600D9C028 /* san@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D6717A1143600D9C028 /* san@2x.png */; };
 		DD4D2D6E17A1143600D9C028 /* si@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D6817A1143600D9C028 /* si@2x.png */; };
 		DD4D2D6F17A1143600D9C028 /* yi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D6917A1143600D9C028 /* yi@2x.png */; };
+		DD5D9CF317A91BEB00E852B8 /* 71.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5D9CF217A91BEB00E852B8 /* 71.png */; };
 		DD9902C917969758006D1C48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9902C817969758006D1C48 /* UIKit.framework */; };
 		DD9902CB17969758006D1C48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9902CA17969758006D1C48 /* Foundation.framework */; };
 		DD9902CD17969758006D1C48 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9902CC17969758006D1C48 /* CoreGraphics.framework */; };
@@ -451,6 +452,7 @@
 		DD4D2D6717A1143600D9C028 /* san@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "san@2x.png"; sourceTree = "<group>"; };
 		DD4D2D6817A1143600D9C028 /* si@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "si@2x.png"; sourceTree = "<group>"; };
 		DD4D2D6917A1143600D9C028 /* yi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yi@2x.png"; sourceTree = "<group>"; };
+		DD5D9CF217A91BEB00E852B8 /* 71.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 71.png; sourceTree = "<group>"; };
 		DD9902C517969758006D1C48 /* Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9902C817969758006D1C48 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DD9902CA17969758006D1C48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -1002,6 +1004,7 @@
 				DD4D2D4F17A0CD9D00D9C028 /* mainpageImage */,
 				DD1F5F5217A24C5600647BB6 /* jinggaoImage */,
 				DDD2B48017A119AA00D994F1 /* 80@2x.png */,
+				DD5D9CF217A91BEB00E852B8 /* 71.png */,
 				DD3EF07B179D126D008700CD /* 16@2x.png */,
 				DD276FF5179FD6F10011DBBC /* xuxian@2x.png */,
 				DD41A31717A8C29E0011E25F /* person_selected@2x.png */,
@@ -1156,6 +1159,7 @@
 				DD41A31617A8C1BF0011E25F /* group@2x.png in Resources */,
 				DD41A31917A8C29E0011E25F /* person_selected@2x.png in Resources */,
 				DD41A31A17A8C29E0011E25F /* person@2x.png in Resources */,
+				DD5D9CF317A91BEB00E852B8 /* 71.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
