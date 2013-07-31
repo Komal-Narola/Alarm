@@ -39,7 +39,8 @@
     if (self) {
         // Custom initialization
         self.title=@"我的告警列表";
-        [self.tabBarItem setImage:LOADIMAGE(@"my@2x", @"png")];
+//        [self.tabBarItem setImage:LOADIMAGE(@"my@2x", @"png")];
+        [self.tabBarItem setFinishedSelectedImage:LOADIMAGE(@"person_selected@2x", @"png") withFinishedUnselectedImage:LOADIMAGE(@"person@2x", @"png")];
         dataSource=[[NSMutableArray alloc]init];
         level=@"4,5";
         huifu=@"1,2";

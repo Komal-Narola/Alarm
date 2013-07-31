@@ -46,7 +46,8 @@
         // Custom initialization
         dataSource=[[NSMutableArray alloc]init];
         self.title=@"集团告警列表";
-        [self.tabBarItem setImage:LOADIMAGE(@"gound@2x", @"png")];
+//        [self.tabBarItem setImage:LOADIMAGE(@"gound@2x", @"png")];
+        [self.tabBarItem setFinishedSelectedImage:LOADIMAGE(@"group_selected@2x", @"png") withFinishedUnselectedImage:LOADIMAGE(@"group@2x", @"png")];
         area=@"总部";
         level=@"";
         domain=@"";

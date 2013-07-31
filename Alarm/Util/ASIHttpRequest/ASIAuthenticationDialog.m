@@ -217,9 +217,11 @@ static const NSUInteger kDomainSection = 1;
 + (void)dismiss
 {
 	if ([sharedDialog respondsToSelector:@selector(presentingViewController)])
-		[[sharedDialog presentingViewController] dismissModalViewControllerAnimated:YES];
-	else 
-		[[sharedDialog parentViewController] dismissModalViewControllerAnimated:YES];
+        [[sharedDialog presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+//		[[sharedDialog presentingViewController] dismissModalViewControllerAnimated:YES];
+	else
+        [[sharedDialog parentViewController]dismissViewControllerAnimated:YES completion:nil];
+//		[[sharedDialog parentViewController] dismissModalViewControllerAnimated:YES];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -237,9 +239,11 @@ static const NSUInteger kDomainSection = 1;
 		[[self class] dismiss];
 	} else {
 		if ([self respondsToSelector:@selector(presentingViewController)])
-			[[self presentingViewController] dismissModalViewControllerAnimated:YES];
+            [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+//			[[self presentingViewController] dismissModalViewControllerAnimated:YES];
 		else
-			[[self parentViewController] dismissModalViewControllerAnimated:YES];
+            [[self parentViewController]dismissViewControllerAnimated:YES completion:nil];
+//			[[self parentViewController] dismissModalViewControllerAnimated:YES];
 	}
 }
 
@@ -314,8 +318,8 @@ static const NSUInteger kDomainSection = 1;
 		[self setModalPresentationStyle:UIModalPresentationFormSheet];
 	}
 #endif
-
-	[[self presentingController] presentModalViewController:self animated:YES];
+    [[self presentingViewController]presentViewController:self animated:YES completion:nil];
+//	[[self presentingController] presentModalViewController:self animated:YES];
 }
 
 #pragma mark button callbacks

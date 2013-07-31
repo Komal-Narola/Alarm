@@ -123,14 +123,12 @@
 		DD3EF06D179D124F008700CD /* bottomLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF068179D124F008700CD /* bottomLine@2x.png */; };
 		DD3EF06E179D124F008700CD /* daosanjiao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF069179D124F008700CD /* daosanjiao@2x.png */; };
 		DD3EF06F179D124F008700CD /* daosanjiaoselect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF06A179D124F008700CD /* daosanjiaoselect@2x.png */; };
-		DD3EF075179D1256008700CD /* redButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF071179D1256008700CD /* redButton@2x.png */; };
 		DD3EF076179D1256008700CD /* timeImageView@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF072179D1256008700CD /* timeImageView@2x.png */; };
-		DD3EF077179D1256008700CD /* yellowButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF073179D1256008700CD /* yellowButton@2x.png */; };
-		DD3EF07C179D126D008700CD /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF078179D126D008700CD /* 12.png */; };
-		DD3EF07D179D126D008700CD /* 13.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF079179D126D008700CD /* 13.png */; };
 		DD3EF07F179D126D008700CD /* 16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3EF07B179D126D008700CD /* 16@2x.png */; };
-		DD4D2D4817A0B9CB00D9C028 /* gound@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D4617A0B9CB00D9C028 /* gound@2x.png */; };
-		DD4D2D4917A0B9CB00D9C028 /* my@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D4717A0B9CB00D9C028 /* my@2x.png */; };
+		DD41A31517A8C1BF0011E25F /* group_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD41A31317A8C1BE0011E25F /* group_selected@2x.png */; };
+		DD41A31617A8C1BF0011E25F /* group@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD41A31417A8C1BE0011E25F /* group@2x.png */; };
+		DD41A31917A8C29E0011E25F /* person_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD41A31717A8C29E0011E25F /* person_selected@2x.png */; };
+		DD41A31A17A8C29E0011E25F /* person@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD41A31817A8C29E0011E25F /* person@2x.png */; };
 		DD4D2D4D17A0BCA700D9C028 /* YELSystemRunDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4D2D4B17A0BCA700D9C028 /* YELSystemRunDetailViewController.m */; };
 		DD4D2D4E17A0BCA700D9C028 /* YELSystemRunDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D4C17A0BCA700D9C028 /* YELSystemRunDetailViewController.xib */; };
 		DD4D2D5617A0CD9D00D9C028 /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4D2D5017A0CD9D00D9C028 /* 1@2x.png */; };
@@ -428,14 +426,12 @@
 		DD3EF068179D124F008700CD /* bottomLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottomLine@2x.png"; sourceTree = "<group>"; };
 		DD3EF069179D124F008700CD /* daosanjiao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daosanjiao@2x.png"; sourceTree = "<group>"; };
 		DD3EF06A179D124F008700CD /* daosanjiaoselect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daosanjiaoselect@2x.png"; sourceTree = "<group>"; };
-		DD3EF071179D1256008700CD /* redButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redButton@2x.png"; sourceTree = "<group>"; };
 		DD3EF072179D1256008700CD /* timeImageView@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timeImageView@2x.png"; sourceTree = "<group>"; };
-		DD3EF073179D1256008700CD /* yellowButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowButton@2x.png"; sourceTree = "<group>"; };
-		DD3EF078179D126D008700CD /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
-		DD3EF079179D126D008700CD /* 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13.png; sourceTree = "<group>"; };
 		DD3EF07B179D126D008700CD /* 16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "16@2x.png"; sourceTree = "<group>"; };
-		DD4D2D4617A0B9CB00D9C028 /* gound@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gound@2x.png"; sourceTree = "<group>"; };
-		DD4D2D4717A0B9CB00D9C028 /* my@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my@2x.png"; sourceTree = "<group>"; };
+		DD41A31317A8C1BE0011E25F /* group_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "group_selected@2x.png"; sourceTree = "<group>"; };
+		DD41A31417A8C1BE0011E25F /* group@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "group@2x.png"; sourceTree = "<group>"; };
+		DD41A31717A8C29E0011E25F /* person_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "person_selected@2x.png"; sourceTree = "<group>"; };
+		DD41A31817A8C29E0011E25F /* person@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "person@2x.png"; sourceTree = "<group>"; };
 		DD4D2D4A17A0BCA700D9C028 /* YELSystemRunDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELSystemRunDetailViewController.h; sourceTree = "<group>"; };
 		DD4D2D4B17A0BCA700D9C028 /* YELSystemRunDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELSystemRunDetailViewController.m; sourceTree = "<group>"; };
 		DD4D2D4C17A0BCA700D9C028 /* YELSystemRunDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YELSystemRunDetailViewController.xib; sourceTree = "<group>"; };
@@ -1005,17 +1001,15 @@
 				DD4D2D6317A1143600D9C028 /* sysState */,
 				DD4D2D4F17A0CD9D00D9C028 /* mainpageImage */,
 				DD1F5F5217A24C5600647BB6 /* jinggaoImage */,
-				DD3EF078179D126D008700CD /* 12.png */,
-				DD3EF079179D126D008700CD /* 13.png */,
 				DDD2B48017A119AA00D994F1 /* 80@2x.png */,
-				DD4D2D4617A0B9CB00D9C028 /* gound@2x.png */,
-				DD4D2D4717A0B9CB00D9C028 /* my@2x.png */,
 				DD3EF07B179D126D008700CD /* 16@2x.png */,
 				DD276FF5179FD6F10011DBBC /* xuxian@2x.png */,
+				DD41A31717A8C29E0011E25F /* person_selected@2x.png */,
+				DD41A31817A8C29E0011E25F /* person@2x.png */,
+				DD41A31317A8C1BE0011E25F /* group_selected@2x.png */,
+				DD41A31417A8C1BE0011E25F /* group@2x.png */,
 				DD0FBF52179E8135009B7976 /* zuosanjiao@2x.png */,
-				DD3EF071179D1256008700CD /* redButton@2x.png */,
 				DD3EF072179D1256008700CD /* timeImageView@2x.png */,
-				DD3EF073179D1256008700CD /* yellowButton@2x.png */,
 				DD3EF066179D124F008700CD /* bottomImageLine@2x.png */,
 				DD3EF067179D124F008700CD /* bottomImageview@2x.png */,
 				DD3EF068179D124F008700CD /* bottomLine@2x.png */,
@@ -1116,19 +1110,13 @@
 				DD3EF06D179D124F008700CD /* bottomLine@2x.png in Resources */,
 				DD3EF06E179D124F008700CD /* daosanjiao@2x.png in Resources */,
 				DD3EF06F179D124F008700CD /* daosanjiaoselect@2x.png in Resources */,
-				DD3EF075179D1256008700CD /* redButton@2x.png in Resources */,
 				DD3EF076179D1256008700CD /* timeImageView@2x.png in Resources */,
-				DD3EF077179D1256008700CD /* yellowButton@2x.png in Resources */,
-				DD3EF07C179D126D008700CD /* 12.png in Resources */,
-				DD3EF07D179D126D008700CD /* 13.png in Resources */,
 				DD3EF07F179D126D008700CD /* 16@2x.png in Resources */,
 				DD0FBF4D179E4369009B7976 /* buttonanzhu@2x.png in Resources */,
 				DD0FBF53179E8135009B7976 /* zuosanjiao@2x.png in Resources */,
 				DD276FCD179FA40D0011DBBC /* YELMyAlarmListViewController.xib in Resources */,
 				DD276FF6179FD6F20011DBBC /* xuxian@2x.png in Resources */,
 				6630C96F17A00E4C00E7EA0E /* YELAlarmDetailViewController.xib in Resources */,
-				DD4D2D4817A0B9CB00D9C028 /* gound@2x.png in Resources */,
-				DD4D2D4917A0B9CB00D9C028 /* my@2x.png in Resources */,
 				DD4D2D4E17A0BCA700D9C028 /* YELSystemRunDetailViewController.xib in Resources */,
 				DD4D2D5617A0CD9D00D9C028 /* 1@2x.png in Resources */,
 				DD4D2D5717A0CD9D00D9C028 /* 2@2x.png in Resources */,
@@ -1164,6 +1152,10 @@
 				DD239E9517A7A65600B7AD98 /* trend_green@2x.png in Resources */,
 				DD239E9617A7A65600B7AD98 /* trend_Red_selected@2x.png in Resources */,
 				DD239E9717A7A65600B7AD98 /* trend_Red@2x.png in Resources */,
+				DD41A31517A8C1BF0011E25F /* group_selected@2x.png in Resources */,
+				DD41A31617A8C1BF0011E25F /* group@2x.png in Resources */,
+				DD41A31917A8C29E0011E25F /* person_selected@2x.png in Resources */,
+				DD41A31A17A8C29E0011E25F /* person@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1337,7 +1329,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Alarm/Alarm-Prefix.pch";
 				INFOPLIST_FILE = "Alarm/Alarm-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Alarm/Util\"",
@@ -1346,7 +1338,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Alarm;
 				PROVISIONING_PROFILE = "4844708E-DFE6-4DA8-BFCB-D64F56D28B95";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4844708E-DFE6-4DA8-BFCB-D64F56D28B95";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1362,7 +1354,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Alarm/Alarm-Prefix.pch";
 				INFOPLIST_FILE = "Alarm/Alarm-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Alarm/Util\"",
@@ -1371,7 +1363,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Alarm;
 				PROVISIONING_PROFILE = "3D4086EA-992D-4684-8DFA-3CCBA26322BF";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3D4086EA-992D-4684-8DFA-3CCBA26322BF";
 				TARGETED_DEVICE_FAMILY = 1;

@@ -14,8 +14,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [application setApplicationIconBadgeNumber:0];
+    [application setStatusBarHidden:NO];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     YELViewController *yelViewcontroller= [[YELViewController alloc] initWithNibName:@"YELViewController" bundle:nil];
     ETNavigationViewController *navigationController=[[ETNavigationViewController alloc]initWithRootViewController:yelViewcontroller];
     NSString *pwd=[USER_DEFAULT objectForKey:PWD];
@@ -42,12 +43,12 @@
 }
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
     // 处理推送消息
-    NSLog(@"userinfo:%@",userInfo);
-    
-    NSLog(@"收到推送消息:%@",[[userInfo objectForKey:@"aps"] objectForKey:@"alert"]);
+//    NSLog(@"userinfo:%@",userInfo);
+//    
+//    NSLog(@"收到推送消息:%@",[[userInfo objectForKey:@"aps"] objectForKey:@"alert"]);
 }
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
-    NSLog(@"Registfail%@",error);
+//    NSLog(@"Registfail%@",error);
 }
 - (void)applicationWillResignActive:(UIApplication *)application
 {
