@@ -37,14 +37,14 @@
 
 //定义一个API
 //测试接口
-//#define APIURL                @"http://202.99.45.117:20880/minf/api/"
+#define APIURL                @"http://202.99.45.117:20880/minf/api/"
 //正式接口
-#define APIURL                @"http://202.99.45.117:20881/minf/api/"
+//#define APIURL                @"http://202.99.45.117:20881/minf/api/"
 //图片下载地址
 //正式接口
-#define IMAGEURL                @"http://202.99.45.117:20881/minf/"
+//#define IMAGEURL                @"http://202.99.45.117:20881/minf/"
 //测试接口
-//#define IMAGEURL              @"http://202.99.45.117:20880/minf/"
+#define IMAGEURL              @"http://202.99.45.117:20880/minf/"
 //登陆API
 #define APILogin                [APIURL stringByAppendingString:@"user/login.json"]
 //修改密码API
@@ -80,6 +80,6 @@
 //deviceToken
 //参数
 //通知接口 API
-#define APINotification            [APIURL stringByAppendingString:@"notification/getHistoryNotification.json?"]
+#define APINotification            [APIURL stringByAppendingString:@"notification/getHistoryNotification.json"]
 //参数token
 #endif

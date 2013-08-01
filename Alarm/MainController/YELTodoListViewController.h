@@ -9,5 +9,4 @@
 #import <UIKit/UIKit.h>
 #import "PullingRefreshTableView.h"
 @interface YELTodoListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,PullingRefreshTableViewDelegate>
-
 @end

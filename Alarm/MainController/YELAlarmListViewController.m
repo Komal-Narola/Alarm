@@ -12,6 +12,7 @@
 #import "TSPopoverController.h"
 #import "YELPopView.h"
 #import "YELAlarmDetailViewController.h"
+#import "UIColor+String.h"
 @interface YELAlarmListViewController ()<PullingRefreshTableViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     UIButton *leftbutton;
@@ -47,9 +48,8 @@
     if (self) {
         // Custom initialization
         dataSource=[[NSMutableArray alloc]init];
-        self.title=@"集团告警列表";
-//        [self.tabBarItem setImage:LOADIMAGE(@"gound@2x", @"png")];
-        [self.tabBarItem setFinishedSelectedImage:LOADIMAGE(@"group_selected@2x", @"png") withFinishedUnselectedImage:LOADIMAGE(@"group@2x", @"png")];
+//        self.title=@"集团告警列表";
+//        [self.tabBarItem setFinishedSelectedImage:LOADIMAGE(@"group_selected@2x", @"png") withFinishedUnselectedImage:LOADIMAGE(@"group@2x", @"png")];
         area=@"总部";
         level=@"";
         domain=@"";
@@ -94,7 +94,7 @@
     } falid:^(NSString *errorMsg) {
         [myTableView tableViewDidFinishedLoading];
         myTableView.reachedTheEnd  = YES;
-        [MBHUDView hudWithBody:@"网络不给力" type:MBAlertViewHUDTypeDefault hidesAfter:1.0 show:YES];
+        [MBHUDView hudWithBody:@"网络链接超时" type:MBAlertViewHUDTypeDefault hidesAfter:1.0 show:YES];
         
     }];
     
@@ -123,21 +123,11 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-//     [self hideRealTabBar];
-    
 }
-//- (void)hideRealTabBar{
-//    for(UIView *view in self.tabBarController.view.subviews){
-//        if([view isKindOfClass:[UITabBar class]]){
-//            view.hidden = YES;
-//            break;
-//        }
-//    }
-//    
-//}
+
 - (void)customTabBar{
     UIView *bottomView = [[UIView alloc] init];
-    bottomView.backgroundColor=[UIColor redColor];
+    bottomView.backgroundColor=[UIColor colorWithHexString:@"0f517f"];
     bottomView.frame = CGRectMake(0, self.tabBarController.tabBar.frame.origin.y, self.tabBarController.tabBar.frame.size.width, self.tabBarController.tabBar.frame.size.height);
     [self.tabBarController.view addSubview:bottomView];
     
@@ -150,12 +140,10 @@
     [leftbutton setTitle:@"集团告警" forState:UIControlStateNormal];
     [leftbutton.titleLabel setFont:[UIFont systemFontOfSize:9]];
     [leftbutton setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 20, -38)];
-    [leftbutton setTitleEdgeInsets:UIEdgeInsetsMake(20, -15, 0, 0)];
+    [leftbutton setTitleEdgeInsets:UIEdgeInsetsMake(20, -30, 0, 0)];
     [leftbutton setBackgroundImage:newbackImage forState:UIControlStateSelected];
-
     [leftbutton addTarget:self action:@selector(selectedTab:) forControlEvents:UIControlEventTouchUpInside];
     leftbutton.tag=0;
-    
     [bottomView addSubview:leftbutton];
     
     rightbutton=[UIButton buttonWithType:UIButtonTypeCustom];

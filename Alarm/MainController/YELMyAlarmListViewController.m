@@ -38,9 +38,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.title=@"我的告警列表";
-//        [self.tabBarItem setImage:LOADIMAGE(@"my@2x", @"png")];
-        [self.tabBarItem setFinishedSelectedImage:LOADIMAGE(@"person_selected@2x", @"png") withFinishedUnselectedImage:LOADIMAGE(@"person@2x", @"png")];
+//        self.title=@"我的告警列表";
+//        [self.tabBarItem setFinishedSelectedImage:LOADIMAGE(@"person_selected@2x", @"png") withFinishedUnselectedImage:LOADIMAGE(@"person@2x", @"png")];
         dataSource=[[NSMutableArray alloc]init];
         level=@"4,5";
         huifu=@"1,2";
@@ -84,7 +83,7 @@
     } falid:^(NSString *errorMsg) {
         [myTableView tableViewDidFinishedLoading];
         myTableView.reachedTheEnd  = YES;
-        [MBHUDView hudWithBody:@"网络不给力" type:MBAlertViewHUDTypeDefault hidesAfter:1.0 show:YES];
+        [MBHUDView hudWithBody:@"网络链接超时" type:MBAlertViewHUDTypeDefault hidesAfter:1.0 show:YES];
         
     }];
     

@@ -32,7 +32,6 @@
 		66371DAD179827F300CD4ADC /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66371DAC179827F300CD4ADC /* ImageIO.framework */; };
 		66371DAF179827F900CD4ADC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66371DAE179827F900CD4ADC /* MapKit.framework */; };
 		66483A3217A94C8100F4CB1F /* group_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66483A3017A94C8100F4CB1F /* group_selected@2x.png */; };
-		66483A3317A94C8100F4CB1F /* group@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66483A3117A94C8100F4CB1F /* group@2x.png */; };
 		667DCB64179984FE005571B5 /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 667DCB63179984FE005571B5 /* button@2x.png */; };
 		66833C12179A4E4200B01AA2 /* YELTodoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66833C11179A4E4200B01AA2 /* YELTodoListCell.m */; };
 		66BB2FD8179A373000881EA3 /* YELUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 66BB2FD7179A373000881EA3 /* YELUtil.m */; };
@@ -157,6 +156,13 @@
 		DD9902EC1796987D006D1C48 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9902EB1796987D006D1C48 /* Default@2x.png */; };
 		DD9902EE179698D6006D1C48 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9902ED179698D6006D1C48 /* Default.png */; };
 		DD9902F0179698F6006D1C48 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9902EF179698F6006D1C48 /* Default-568h@2x.png */; };
+		DDB7283217A9FAA600EF66D5 /* group@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDB7283117A9FAA600EF66D5 /* group@2x.png */; };
+		DDB7283817A9FC3200EF66D5 /* YELNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB7283617A9FC3200EF66D5 /* YELNoticeViewController.m */; };
+		DDB7283917A9FC3200EF66D5 /* YELNoticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB7283717A9FC3200EF66D5 /* YELNoticeViewController.xib */; };
+		DDB7283E17AA05C000EF66D5 /* laba_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDB7283A17AA05C000EF66D5 /* laba_selected@2x.png */; };
+		DDB7283F17AA05C000EF66D5 /* laba@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDB7283B17AA05C000EF66D5 /* laba@2x.png */; };
+		DDB7284017AA05C000EF66D5 /* wenben_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDB7283C17AA05C000EF66D5 /* wenben_selected@2x.png */; };
+		DDB7284117AA05C000EF66D5 /* wenben@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDB7283D17AA05C000EF66D5 /* wenben@2x.png */; };
 		DDD2B48117A119AA00D994F1 /* 80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDD2B48017A119AA00D994F1 /* 80@2x.png */; };
 		DDD2B48517A1229E00D994F1 /* YELMyAlarmListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD2B48317A1229E00D994F1 /* YELMyAlarmListDetailViewController.m */; };
 		DDD2B48617A1229E00D994F1 /* YELMyAlarmListDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDD2B48417A1229E00D994F1 /* YELMyAlarmListDetailViewController.xib */; };
@@ -212,7 +218,6 @@
 		66371DAC179827F300CD4ADC /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		66371DAE179827F900CD4ADC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		66483A3017A94C8100F4CB1F /* group_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "group_selected@2x.png"; sourceTree = "<group>"; };
-		66483A3117A94C8100F4CB1F /* group@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "group@2x.png"; sourceTree = "<group>"; };
 		667DCB63179984FE005571B5 /* button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button@2x.png"; sourceTree = "<group>"; };
 		66833C10179A4E4200B01AA2 /* YELTodoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELTodoListCell.h; sourceTree = "<group>"; };
 		66833C11179A4E4200B01AA2 /* YELTodoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELTodoListCell.m; sourceTree = "<group>"; };
@@ -471,6 +476,14 @@
 		DD9902EF179698F6006D1C48 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		DD9902F21796A2AC006D1C48 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 		DD9902F41796A2B5006D1C48 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../icon@2x.png"; sourceTree = "<group>"; };
+		DDB7283117A9FAA600EF66D5 /* group@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "group@2x.png"; sourceTree = "<group>"; };
+		DDB7283517A9FC3200EF66D5 /* YELNoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELNoticeViewController.h; sourceTree = "<group>"; };
+		DDB7283617A9FC3200EF66D5 /* YELNoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELNoticeViewController.m; sourceTree = "<group>"; };
+		DDB7283717A9FC3200EF66D5 /* YELNoticeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YELNoticeViewController.xib; sourceTree = "<group>"; };
+		DDB7283A17AA05C000EF66D5 /* laba_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "laba_selected@2x.png"; sourceTree = "<group>"; };
+		DDB7283B17AA05C000EF66D5 /* laba@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "laba@2x.png"; sourceTree = "<group>"; };
+		DDB7283C17AA05C000EF66D5 /* wenben_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wenben_selected@2x.png"; sourceTree = "<group>"; };
+		DDB7283D17AA05C000EF66D5 /* wenben@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wenben@2x.png"; sourceTree = "<group>"; };
 		DDD2B48017A119AA00D994F1 /* 80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "80@2x.png"; sourceTree = "<group>"; };
 		DDD2B48217A1229D00D994F1 /* YELMyAlarmListDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YELMyAlarmListDetailViewController.h; sourceTree = "<group>"; };
 		DDD2B48317A1229E00D994F1 /* YELMyAlarmListDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YELMyAlarmListDetailViewController.m; sourceTree = "<group>"; };
@@ -638,6 +651,9 @@
 				66BB2FED179A426400881EA3 /* YELTodoListViewController.h */,
 				66BB2FEE179A426400881EA3 /* YELTodoListViewController.m */,
 				66BB2FEF179A426500881EA3 /* YELTodoListViewController.xib */,
+				DDB7283517A9FC3200EF66D5 /* YELNoticeViewController.h */,
+				DDB7283617A9FC3200EF66D5 /* YELNoticeViewController.m */,
+				DDB7283717A9FC3200EF66D5 /* YELNoticeViewController.xib */,
 				66BB2FF2179A42A500881EA3 /* YELHeadquartersAlarmTrendViewController.h */,
 				66BB2FF3179A42A500881EA3 /* YELHeadquartersAlarmTrendViewController.m */,
 				66BB2FF4179A42A500881EA3 /* YELHeadquartersAlarmTrendViewController.xib */,
@@ -1005,13 +1021,17 @@
 				DD1F5F5217A24C5600647BB6 /* jinggaoImage */,
 				DDD2B48017A119AA00D994F1 /* 80@2x.png */,
 				DD5D9CF217A91BEB00E852B8 /* 71@2x.png */,
+				DDB7283A17AA05C000EF66D5 /* laba_selected@2x.png */,
+				DDB7283B17AA05C000EF66D5 /* laba@2x.png */,
+				DDB7283C17AA05C000EF66D5 /* wenben_selected@2x.png */,
+				DDB7283D17AA05C000EF66D5 /* wenben@2x.png */,
 				DD3EF07B179D126D008700CD /* 16@2x.png */,
 				DD276FF5179FD6F10011DBBC /* xuxian@2x.png */,
 				DD41A31717A8C29E0011E25F /* person_selected@2x.png */,
 				DD41A31817A8C29E0011E25F /* person@2x.png */,
 				DD0FBF52179E8135009B7976 /* zuosanjiao@2x.png */,
 				66483A3017A94C8100F4CB1F /* group_selected@2x.png */,
-				66483A3117A94C8100F4CB1F /* group@2x.png */,
+				DDB7283117A9FAA600EF66D5 /* group@2x.png */,
 				DD3EF072179D1256008700CD /* timeImageView@2x.png */,
 				DD3EF066179D124F008700CD /* bottomImageLine@2x.png */,
 				DD3EF067179D124F008700CD /* bottomImageview@2x.png */,
@@ -1159,7 +1179,12 @@
 				DD41A31A17A8C29E0011E25F /* person@2x.png in Resources */,
 				DD5D9CF317A91BEB00E852B8 /* 71@2x.png in Resources */,
 				66483A3217A94C8100F4CB1F /* group_selected@2x.png in Resources */,
-				66483A3317A94C8100F4CB1F /* group@2x.png in Resources */,
+				DDB7283217A9FAA600EF66D5 /* group@2x.png in Resources */,
+				DDB7283917A9FC3200EF66D5 /* YELNoticeViewController.xib in Resources */,
+				DDB7283E17AA05C000EF66D5 /* laba_selected@2x.png in Resources */,
+				DDB7283F17AA05C000EF66D5 /* laba@2x.png in Resources */,
+				DDB7284017AA05C000EF66D5 /* wenben_selected@2x.png in Resources */,
+				DDB7284117AA05C000EF66D5 /* wenben@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1240,6 +1265,7 @@
 				DDD2B48517A1229E00D994F1 /* YELMyAlarmListDetailViewController.m in Sources */,
 				DD1F5F6B17A2753D00647BB6 /* YELTopNumCell.m in Sources */,
 				DD1F5F6E17A2781500647BB6 /* YELTopAnotherNumCell.m in Sources */,
+				DDB7283817A9FC3200EF66D5 /* YELNoticeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

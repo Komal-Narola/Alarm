@@ -16,6 +16,7 @@
 #import "YELTodoListViewController.h"
 #import "YELHeadquartersAlarmTrendViewController.h"
 #import "YELMyAlarmListViewController.h"
+#import "YELNoticeViewController.h"
 @interface YELMainControllerViewController ()
 {
     UIPageControl *pageControl;
@@ -173,7 +174,11 @@
     else if (sender.tag==5)
     {
         YELTodoListViewController *todoList=[[YELTodoListViewController alloc]initWithNibName:@"YELTodoListViewController" bundle:nil];
-        [self.navigationController pushViewController:todoList animated:YES];
+        YELNoticeViewController *notice=[[YELNoticeViewController alloc]initWithNibName:@"YELNoticeViewController" bundle:nil];
+        UITabBarController *tabbarController=[[UITabBarController alloc]init];
+        tabbarController.viewControllers=[NSArray arrayWithObjects:todoList,notice, nil];
+        [self.navigationController pushViewController:tabbarController animated:YES];
+
         
     }
     else if (sender.tag==6)

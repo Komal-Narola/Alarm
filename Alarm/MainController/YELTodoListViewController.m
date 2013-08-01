@@ -8,12 +8,15 @@
 
 #import "YELTodoListViewController.h"
 #import "YELTodoListCell.h"
+#import "UIColor+String.h"
 @interface YELTodoListViewController ()
 {
     BOOL refreshing;
     NSInteger page;
     NSMutableArray *dataSource;
     PullingRefreshTableView *myTableView;
+    UIButton *leftbutton;
+    UIButton *rightbutton;
 }
 
 @end
@@ -24,8 +27,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
-        self.title=@"待办事项";
         dataSource=[[NSMutableArray alloc]init];
     }
     return self;
@@ -33,11 +34,63 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.tabBarController.navigationItem.title=@"待办事项";
+    self.tabBarController.tabBar.hidden=YES;
+    [self customTabBar];
     if (page == 0)
     {
         [myTableView launchRefreshing];
     }
 }
+- (void)customTabBar{
+    UIView *bottomView = [[UIView alloc] init];
+    bottomView.backgroundColor=[UIColor colorWithHexString:@"0f517f"];
+    bottomView.frame = CGRectMake(0, self.tabBarController.tabBar.frame.origin.y, self.tabBarController.tabBar.frame.size.width, self.tabBarController.tabBar.frame.size.height);
+    [self.tabBarController.view addSubview:bottomView];
+    
+    leftbutton=[UIButton buttonWithType:UIButtonTypeCustom];
+    leftbutton.frame=CGRectMake(110, 5, 45, 39);
+    UIImage *image=LOADIMAGE(@"71@2x", @"png");
+    UIImage *newbackImage=[image resizableImageWithCapInsets:UIEdgeInsetsMake(3, 3, 3, 3)];
+    [leftbutton setImage:LOADIMAGE(@"wenben_selected@2x", @"png") forState:UIControlStateNormal];
+    [leftbutton setImage:LOADIMAGE(@"wenben@2x", @"png") forState:UIControlStateSelected];
+    [leftbutton setTitle:@"待办" forState:UIControlStateNormal];
+    [leftbutton.titleLabel setFont:[UIFont systemFontOfSize:9]];
+    [leftbutton setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 10, -20)];
+    [leftbutton setTitleEdgeInsets:UIEdgeInsetsMake(30, -25, 0, 0)];
+    [leftbutton setBackgroundImage:newbackImage forState:UIControlStateSelected];
+    [leftbutton addTarget:self action:@selector(selectedTab:) forControlEvents:UIControlEventTouchUpInside];
+    leftbutton.tag=0;
+    [bottomView addSubview:leftbutton];
+    
+    rightbutton=[UIButton buttonWithType:UIButtonTypeCustom];
+    rightbutton.frame=CGRectMake(160, 5, 45, 39);
+    [rightbutton setImage:LOADIMAGE(@"laba_selected@2x", @"png") forState:UIControlStateNormal];
+    [rightbutton setImage:LOADIMAGE(@"laba@2x", @"png") forState:UIControlStateSelected];
+    [rightbutton setTitle:@"通知" forState:UIControlStateNormal];
+    [rightbutton.titleLabel setFont:[UIFont systemFontOfSize:9]];
+    [rightbutton setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 10, -20)];
+    [rightbutton setTitleEdgeInsets:UIEdgeInsetsMake(30, -25, 0, 0)];
+    [rightbutton setBackgroundImage:newbackImage forState:UIControlStateSelected];
+    rightbutton.tag=1;
+    [rightbutton addTarget:self action:@selector(selectedTab:) forControlEvents:UIControlEventTouchUpInside];
+    [bottomView addSubview:rightbutton];
+    [leftbutton setSelected:YES];
+}
+- (void)selectedTab:(UIButton *)button{
+    if (button.selected!=YES) {
+        button.selected=!button.selected;
+    }
+    if (button.tag==0) {
+        [rightbutton setSelected:NO];
+    }else
+    {
+        [leftbutton setSelected:NO];
+    }
+    self.tabBarController.selectedIndex=button.tag;
+    
+}
+
 -(void)sendRequest
 {
     NSDictionary *dict=[NSDictionary dictionaryWithObjectsAndKeys:
@@ -71,7 +124,7 @@
     } falid:^(NSString *errorMsg) {
         [myTableView tableViewDidFinishedLoading];
         myTableView.reachedTheEnd  = YES;
-        [MBHUDView hudWithBody:@"网络不给力" type:MBAlertViewHUDTypeDefault hidesAfter:1.0 show:YES];
+        [MBHUDView hudWithBody:@"网络链接超时" type:MBAlertViewHUDTypeDefault hidesAfter:1.0 show:YES];
 
     }];
 }
@@ -95,7 +148,7 @@
 {
     [super viewDidLoad];
 
-    myTableView=[[PullingRefreshTableView alloc]initWithFrame:CGRectMake(0, 0, 320, [UIScreen mainScreen].applicationFrame.size.height-44 ) pullingDelegate:self];
+    myTableView=[[PullingRefreshTableView alloc]initWithFrame:CGRectMake(0, 0, 320, [UIScreen mainScreen].applicationFrame.size.height-49-44) pullingDelegate:self];
     myTableView.delegate=self;
     myTableView.dataSource=self;
     [myTableView setBackgroundColor:[UIColor clearColor]];
@@ -204,6 +257,7 @@
 
 }
  */
+
 - (void)viewDidUnload {
     myTableView=nil;
     [super viewDidUnload];

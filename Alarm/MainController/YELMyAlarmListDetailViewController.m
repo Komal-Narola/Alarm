@@ -179,7 +179,7 @@
         }
     } falid:^(NSString *errorMsg) {
         [MBHUDView dismissCurrentHUD];
-        [MBHUDView hudWithBody:@"网络不给力" type:MBAlertViewHUDTypeDefault hidesAfter:1.0 show:YES];
+        [MBHUDView hudWithBody:@"网络链接超时" type:MBAlertViewHUDTypeDefault hidesAfter:1.0 show:YES];
     }];
 }
 

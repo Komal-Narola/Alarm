@@ -39,6 +39,7 @@
     deviceTokenString = [deviceTokenString stringByReplacingOccurrencesOfString:@" " withString:@""];
     [USER_DEFAULT setObject:deviceTokenString forKey:@"deviceToken"];
     [USER_DEFAULT synchronize];
+    [self sendRequest];
     //注册成功，将deviceToken保存到应用服务器数据库中
 }
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
@@ -76,5 +77,13 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
+-(void)sendRequest
+{
+    NSDictionary *dict=[NSDictionary dictionaryWithObjectsAndKeys:DEVICETOKEN,@"deviceToken", nil];
+    [[YELHttpHelper defaultHelper]getDeviceTokenWithParamter:dict sucess:^(NSDictionary *dictionary) {
+        DLog(@"dfa");
+    } falid:^(NSString *errorMsg) {
+        DLog(@"error");
+    }];
+}
 @end

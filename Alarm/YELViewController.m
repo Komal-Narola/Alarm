@@ -62,7 +62,6 @@
     [self setRememberButton:nil];
     [super viewDidUnload];
 }
-
 - (IBAction)rememberPwd:(UIButton *)sender {
     sender.selected=!sender.selected;
 }
@@ -135,7 +134,7 @@
         }
     } falid:^(NSString *errorMsg) {
         
-        [MBHUDView hudWithBody:@"网络不给力" type:MBAlertViewHUDTypeDefault hidesAfter:1.0 show:YES];
+        [MBHUDView hudWithBody:@"网络链接超时" type:MBAlertViewHUDTypeDefault hidesAfter:1.0 show:YES];
     }];
 }
 @end
