@@ -14,7 +14,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [application setApplicationIconBadgeNumber:0];
+    
     [application setStatusBarHidden:NO];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     YELViewController *yelViewcontroller= [[YELViewController alloc] initWithNibName:@"YELViewController" bundle:nil];
@@ -69,6 +69,7 @@
 }
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+    [application setApplicationIconBadgeNumber:0];
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
